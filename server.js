@@ -8,6 +8,10 @@ const skillExtractionResponse = require("./public/mock/skillExtractionResponse.j
 const riskPathwayResponse = require("./public/mock/riskPathwayResponse.json");
 const interventionResponse = require("./public/mock/interventionResponse.json");
 const indonesiaConfig = require("./data/country-configs/indonesia.json");
+const { registerDataIntakeRoutes } = require("./data-intake");
+const { callClaude, CLAUDE_MODEL } = require("./server/claude-client");
+const { runSkillExtraction } = require("./server/skill-extraction");
+const { runRiskScoring } = require("./server/risk-scoring");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -35,42 +39,23 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 app.use(express.json());
 
+registerDataIntakeRoutes(app);
+
 async function callClaudeJSON(systemPrompt, payload, fallbackResponse) {
   if (USE_MOCK_API || !ANTHROPIC_API_KEY || ANTHROPIC_API_KEY === "your_key_here") {
     return fallbackResponse;
   }
-
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-      "x-api-key": ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01"
-    },
-    body: JSON.stringify({
-      model: "claude-3-5-sonnet-latest",
-      max_tokens: 800,
-      system: `${systemPrompt} Return valid JSON only. Do not include markdown fences.`,
-      messages: [
-        {
-          role: "user",
-          content: JSON.stringify(payload)
-        }
-      ]
-    })
-  });
-
-  if (!response.ok) {
-    throw new Error(`Claude request failed with ${response.status}`);
+  try {
+    return await callClaude({
+      apiKey: ANTHROPIC_API_KEY,
+      system: systemPrompt,
+      user: payload,
+      max_tokens: 2048
+    });
+  } catch (e) {
+    console.error("[callClaudeJSON]", e.message || e);
+    throw e;
   }
-
-  const data = await response.json();
-  const text = data?.content?.[0]?.text;
-  if (!text) {
-    throw new Error("Claude response missing text");
-  }
-
-  return JSON.parse(text);
 }
 
 app.get("/api/demo/user", (req, res) => {
@@ -78,30 +63,67 @@ app.get("/api/demo/user", (req, res) => {
 });
 
 app.post("/api/skills/extract", async (req, res) => {
+  res.type("application/json");
+  const transcript = req.body?.transcript || req.body?.text || "";
+  const trimmed = String(transcript).trim();
+
+  if (!trimmed) {
+    const empty = await runSkillExtraction("", {
+      apiKey: ANTHROPIC_API_KEY || "",
+      skillExtractionFallback: skillExtractionResponse
+    });
+    return res.status(400).json(empty);
+  }
+
+  if (USE_MOCK_API) {
+    return res.json(skillExtractionResponse);
+  }
+
+  if (!ANTHROPIC_API_KEY || ANTHROPIC_API_KEY === "your_key_here") {
+    return res.status(503).json({
+      error: "anthropic_key_missing",
+      message: "Set ANTHROPIC_API_KEY in .env.local and USE_MOCK_API=false for live skill extraction."
+    });
+  }
+
   try {
-    const transcript = req.body?.transcript || req.body?.text || "";
-    const result = await callClaudeJSON(
-      "Extract employability skills from transcript and return { extractedSkills: [{name, confidence}], missingCriticalSkills: [] }.",
-      { transcript },
-      skillExtractionResponse
-    );
+    const result = await runSkillExtraction(trimmed, {
+      apiKey: ANTHROPIC_API_KEY,
+      skillExtractionFallback: skillExtractionResponse
+    });
+    if (result.error === "transcript_required") {
+      return res.status(400).json(result);
+    }
     res.json(result);
   } catch (error) {
+    console.error("[/api/skills/extract]", error);
     res.json(skillExtractionResponse);
   }
 });
 
 app.post("/api/risk/score", async (req, res) => {
+  res.type("application/json");
+  const skills = req.body?.skills || [];
+
+  if (USE_MOCK_API) {
+    return res.json(riskPathwayResponse);
+  }
+
+  if (!ANTHROPIC_API_KEY || ANTHROPIC_API_KEY === "your_key_here") {
+    return res.status(503).json({
+      error: "anthropic_key_missing",
+      message: "Set ANTHROPIC_API_KEY in .env.local and USE_MOCK_API=false for live risk scoring."
+    });
+  }
+
   try {
-    const skills = req.body?.skills || [];
-    const fallback = riskPathwayResponse;
-    const result = await callClaudeJSON(
-      "Score livelihood risk and return { userId, overallRiskScore, riskLevel, drivers, recommendedPathways }.",
-      { skills },
-      fallback
-    );
+    const result = await runRiskScoring(skills, {
+      apiKey: ANTHROPIC_API_KEY,
+      riskPathwayFallback: riskPathwayResponse
+    });
     res.json(result);
   } catch (error) {
+    console.error("[/api/risk/score]", error);
     res.json(riskPathwayResponse);
   }
 });
@@ -220,5 +242,7 @@ app.get("/api/data/projections/wittgenstein", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`API server running on http://localhost:${port} (USE_MOCK_API=${USE_MOCK_API})`);
+  console.log(
+    `API server running on http://localhost:${port} (USE_MOCK_API=${USE_MOCK_API}, CLAUDE_MODEL=${CLAUDE_MODEL})`
+  );
 });

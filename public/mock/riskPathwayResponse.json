@@ -1,5 +1,69 @@
 {
   "userId": "usr_10021",
+  "country": "Indonesia",
+  "risks": [
+    {
+      "skill": "Passenger road transport (Grab-style driving)",
+      "isco_code": "8322",
+      "level": "at_risk",
+      "frey_osborne_raw": 0.89,
+      "calibrated_score": 0.55,
+      "reason": "Frey–Osborne US SOC 53-3041 (Taxi Drivers and Chauffeurs) automation_probability is 0.89; national internet penetration 72.78% (WDI IT.NET.USER.ZS, 2024, IDN.json) increases platform-mediated substitution exposure.",
+      "avg_earnings_trend": "Frey–Osborne reference wage USD 26,790/yr for SOC 53-3041; Indonesia GDP per capita rose 2020→2024 per NY.GDP.PCAP.CD in IDN.json.",
+      "sector_growth": "Employment in services (% of total employment) SL.SRV.EMPL.ZS: 49.06% (2020) → 49.75% (2024), +0.69 pp (IDN.json).",
+      "displacement_by_year": { "2027": 0.22, "2029": 0.38, "2031": 0.52 },
+      "adjacent_skills": ["Route optimization", "Small-fleet dispatch coordination"]
+    },
+    {
+      "skill": "Retail sales floor",
+      "isco_code": "5223",
+      "level": "declining",
+      "frey_osborne_raw": 0.92,
+      "calibrated_score": 0.62,
+      "reason": "Frey–Osborne SOC 41-2031 (Retail Salespersons) automation_probability 0.92; high connectivity (72.78% internet users, 2024) accelerates self-checkout and e-commerce leakage.",
+      "avg_earnings_trend": "Frey–Osborne reference wage USD 27,180/yr for SOC 41-2031 (employed count 4,528,550 in extract).",
+      "sector_growth": "Employment in agriculture SL.AGR.EMPL.ZS: 29.31% (2020) → 27.96% (2024), −1.35 pp (IDN.json) — macro rotation context.",
+      "displacement_by_year": { "2027": 0.28, "2029": 0.45, "2031": 0.61 },
+      "adjacent_skills": ["Merchandising analytics", "Customer retention via CRM"]
+    }
+  ],
+  "automationRisks": [
+    {
+      "skill": "Passenger road transport (Grab-style driving)",
+      "isco_code": "8322",
+      "level": "at_risk",
+      "frey_osborne_raw": 0.89,
+      "calibrated_score": 0.55,
+      "reason": "Frey–Osborne US SOC 53-3041 (Taxi Drivers and Chauffeurs) automation_probability is 0.89; national internet penetration 72.78% (WDI IT.NET.USER.ZS, 2024, IDN.json) increases platform-mediated substitution exposure.",
+      "avg_earnings_trend": "Frey–Osborne reference wage USD 26,790/yr for SOC 53-3041; Indonesia GDP per capita rose 2020→2024 per NY.GDP.PCAP.CD in IDN.json.",
+      "sector_growth": "Employment in services (% of total employment) SL.SRV.EMPL.ZS: 49.06% (2020) → 49.75% (2024), +0.69 pp (IDN.json).",
+      "displacement_by_year": { "2027": 0.22, "2029": 0.38, "2031": 0.52 },
+      "adjacent_skills": ["Route optimization", "Small-fleet dispatch coordination"]
+    },
+    {
+      "skill": "Retail sales floor",
+      "isco_code": "5223",
+      "level": "declining",
+      "frey_osborne_raw": 0.92,
+      "calibrated_score": 0.62,
+      "reason": "Frey–Osborne SOC 41-2031 (Retail Salespersons) automation_probability 0.92; high connectivity (72.78% internet users, 2024) accelerates self-checkout and e-commerce leakage.",
+      "avg_earnings_trend": "Frey–Osborne reference wage USD 27,180/yr for SOC 41-2031 (employed count 4,528,550 in extract).",
+      "sector_growth": "Employment in agriculture SL.AGR.EMPL.ZS: 29.31% (2020) → 27.96% (2024), −1.35 pp (IDN.json) — macro rotation context.",
+      "displacement_by_year": { "2027": 0.28, "2029": 0.45, "2031": 0.61 },
+      "adjacent_skills": ["Merchandising analytics", "Customer retention via CRM"]
+    }
+  ],
+  "local_comparison": {
+    "occupation": "Retail Seller",
+    "location_a": {
+      "city": "Makassar",
+      "risk": "high",
+      "internet_pct": 72.8,
+      "calibrated_score": 0.71
+    },
+    "location_b": { "city": "Sumba", "risk": "low", "internet_pct": 18, "calibrated_score": 0.22 }
+  },
+  "data_sources": ["Frey & Osborne (2017)", "World Bank WDI", "ITU"],
   "countryIso3": "IDN",
   "overallRiskScore": 0.33733097258333333,
   "riskLevel": "low",

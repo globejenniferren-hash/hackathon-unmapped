@@ -11,7 +11,8 @@
     "fetch:esco": "node scripts/fetch-esco-occupations.js",
     "fetch:wittgenstein": "node scripts/fetch-wittgenstein.js",
     "fetch:datasets": "npm run fetch:worldbank && npm run fetch:frey-osborne && npm run fetch:wittgenstein && npm run fetch:esco",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:claude": "node scripts/test-claude-endpoints.js"
   },
   "repository": {
     "type": "git",
