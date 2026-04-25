@@ -413,13 +413,63 @@ function mockProposalsForScenario(scenario) {
   return [];
 }
 
+function rawTextTriggersMapLaborMock(rawText) {
+  if (!rawText || typeof rawText !== "string") return false;
+  const t = rawText.toLowerCase();
+  return (
+    /\bsulawesi\b/.test(t) ||
+    /\bjakarta\b/.test(t) ||
+    /\bdki\b/.test(t) ||
+    /\bnusa\s*tenggara\b/.test(t) ||
+    /\bntt\b/.test(t) ||
+    /nusa\s*tenggara\s*timur/.test(t)
+  );
+}
+
+let _mapIngestionMockCache;
+
+/** Deep clone of public/mock/dataIngestionMapResponse.json (province map ingest). */
+function getDataIngestionMapMockClone() {
+  if (_mapIngestionMockCache === undefined) {
+    try {
+      const p = path.join(__dirname, "public", "mock", "dataIngestionMapResponse.json");
+      _mapIngestionMockCache = JSON.parse(fs.readFileSync(p, "utf8"));
+    } catch {
+      _mapIngestionMockCache = null;
+    }
+  }
+  if (!_mapIngestionMockCache) return null;
+  return JSON.parse(JSON.stringify(_mapIngestionMockCache));
+}
+
+function latestNationalInternetPct() {
+  const series = wbIndicators().internet_users_pct;
+  if (!series || typeof series !== "object") return 72.78;
+  const years = Object.keys(series)
+    .filter((k) => /^\d{4}$/.test(k))
+    .map(Number)
+    .sort((a, b) => a - b);
+  if (!years.length) return 72.78;
+  const v = series[String(years[years.length - 1])];
+  if (typeof v !== "number" || Number.isNaN(v)) return 72.78;
+  return Math.round(v * 100) / 100;
+}
+
 function getMockProposedUpdates(fileName, rawText) {
+  if (rawTextTriggersMapLaborMock(rawText)) return [];
   const { scenario } = resolveMockScenario(fileName, rawText);
   if (!scenario) return [];
   return mockProposalsForScenario(scenario);
 }
 
 function getMockRoutingMeta(fileName, rawText) {
+  if (rawTextTriggersMapLaborMock(rawText)) {
+    return {
+      scenario: "labor_market_map",
+      routing: "rawText_map_keywords",
+      detail: "public/mock/dataIngestionMapResponse.json"
+    };
+  }
   return resolveMockScenario(fileName, rawText);
 }
 
@@ -446,6 +496,181 @@ function buildDashboardImpact(appliedRows) {
   };
 }
 
+const LABOR_MAP_PARSER_SYSTEM = `You are a government report parser for UNMAPPED, a workforce intelligence platform.
+
+A government officer has pasted raw text from a national labor force report. The text may be in Bahasa Indonesia, English, or any other language. It contains employment statistics for one or more provinces/regions.
+
+Your job:
+1. Identify every province or region mentioned in the text
+2. For each province, extract:
+   - Province name (standardized to official name)
+   - Total employed population
+   - Employment by sector (agriculture, manufacturing/industry, retail/trade, services, etc.) as both absolute numbers and percentages
+   - Unemployment rate if mentioned
+   - Average wages if mentioned
+   - Internet penetration if mentioned
+   - Any other labor market indicators mentioned
+3. For each province, calculate a preliminary automation displacement risk score using this formula:
+   - Take the employment share per sector (use decimal shares, e.g. 38.2% -> 0.382)
+   - Weight it by Frey-Osborne automation probability for that sector's dominant occupations:
+     - Agriculture: 0.07 (low automation)
+     - Manufacturing/Industry: 0.64 (medium-high)
+     - Retail/Trade: 0.92 (high)
+     - Services: 0.42 (medium)
+     - Transportation: 0.89 (high)
+   - Assign any residual employment share not covered by explicit sectors to "services" unless the text clearly indicates transportation.
+   - internet_factor = (internet penetration as decimal 0-1 if given for that province, else use the nationalInternetBaselinePct from the user JSON as a decimal, e.g. 72.78 -> 0.7278)
+   - weighted_risk = internet_factor * (share_agri*0.07 + share_mfg*0.64 + share_retail*0.92 + share_services*0.42 + share_transport*0.89) where missing sector shares are 0.
+4. Classify each province: "lower_risk" (<0.25), "medium" (0.25-0.40), "high" (0.40-0.55), "severe" (>0.55)
+
+Return ONLY valid JSON in this exact format:
+{
+  "reportType": "laborMarket",
+  "detectedCountry": "Indonesia",
+  "detectedLanguage": "id",
+  "reportTitle": "Keadaan Angkatan Kerja di Indonesia Agustus 2024",
+  "provincesFound": 3,
+  "provinces": [
+    {
+      "name": "Sulawesi Selatan",
+      "nameStandardized": "Sulawesi Selatan",
+      "totalEmployed": 4210000,
+      "sectors": {
+        "agriculture": { "count": 1608000, "pct": 38.2 },
+        "manufacturing": { "count": 375000, "pct": 8.9 },
+        "retail": { "count": 787000, "pct": 18.7 },
+        "services": { "count": null, "pct": null },
+        "transportation": { "count": null, "pct": null }
+      },
+      "unemploymentRate": 5.31,
+      "avgWageMonthly": 3200000,
+      "internetPenetration": null,
+      "riskScore": 0.31,
+      "riskLevel": "medium",
+      "riskCalculation": "agriculture(38.2%*0.07) + manufacturing(8.9%*0.64) + retail(18.7%*0.92) + remaining(34.2%*0.42) * internet(0.73 national avg)",
+      "evidence": [
+        "Sulawesi Selatan mencatat jumlah penduduk yang bekerja sebanyak 4,21 juta orang",
+        "pertanian sebesar 38,2 persen",
+        "perdagangan 18,7 persen",
+        "industri pengolahan 8,9 persen",
+        "TPT 5,31 persen",
+        "rata-rata upah buruh Rp 3,2 juta per bulan"
+      ],
+      "geoMatch": { "property": "NAME_1", "value": "Sulawesi Selatan" },
+      "displacement_by_year": { "2026": 0.09, "2027": 0.11, "2028": 0.13, "2029": 0.15, "2030": 0.18, "2031": 0.21 }
+    }
+  ],
+  "nationalBaseline": {
+    "source": "World Bank WDI",
+    "avgRiskScore": 0.34,
+    "internetPenetration": 72.78,
+    "note": "Provinces without internet data use this national baseline"
+  },
+  "mapReady": true,
+  "previewMode": true,
+  "approvalRequired": true,
+  "summary": "Short narrative summary of provinces and risk patterns."
+}
+
+Every province MUST include "geoMatch": { "property": "NAME_1", "value": "<official Indonesian province name>" } for GeoJSON join, and "displacement_by_year" with string keys "2026" through "2031" and numeric values (non-decreasing).`;
+
+function coerceLaborMapNumbers(obj) {
+  if (!obj || typeof obj !== "object") return;
+  const nb = obj.nationalBaseline;
+  if (nb && typeof nb === "object") {
+    if (typeof nb.internetPenetration === "string") {
+      nb.internetPenetration = parseFloat(nb.internetPenetration);
+    }
+    if (typeof nb.avgRiskScore === "string") {
+      nb.avgRiskScore = parseFloat(nb.avgRiskScore);
+    }
+  }
+  for (const p of obj.provinces || []) {
+    if (!p || typeof p !== "object") continue;
+    if (typeof p.riskScore === "string") p.riskScore = parseFloat(p.riskScore);
+    if (typeof p.unemploymentRate === "string") p.unemploymentRate = parseFloat(p.unemploymentRate);
+    if (p.displacement_by_year && typeof p.displacement_by_year === "object") {
+      for (const k of Object.keys(p.displacement_by_year)) {
+        const v = p.displacement_by_year[k];
+        if (typeof v === "string") p.displacement_by_year[k] = parseFloat(v);
+      }
+    }
+  }
+}
+
+function validateLaborMapResponse(obj) {
+  if (!obj || typeof obj !== "object") return false;
+  if (typeof obj.reportType !== "string") return false;
+  if (!Array.isArray(obj.provinces) || obj.provinces.length < 1) return false;
+  const levels = new Set(["lower_risk", "medium", "high", "severe"]);
+  const years = ["2026", "2027", "2028", "2029", "2030", "2031"];
+  for (const p of obj.provinces) {
+    if (!p || typeof p !== "object") return false;
+    if (typeof p.name !== "string" || typeof p.nameStandardized !== "string") return false;
+    if (typeof p.riskScore !== "number" || Number.isNaN(p.riskScore)) return false;
+    if (!levels.has(p.riskLevel)) return false;
+    if (!p.sectors || typeof p.sectors !== "object") return false;
+    if (!p.geoMatch || p.geoMatch.property !== "NAME_1" || typeof p.geoMatch.value !== "string") return false;
+    if (!p.displacement_by_year || typeof p.displacement_by_year !== "object") return false;
+    for (const y of years) {
+      const v = p.displacement_by_year[y];
+      if (typeof v !== "number" || Number.isNaN(v)) return false;
+    }
+  }
+  if (!obj.nationalBaseline || typeof obj.nationalBaseline !== "object") return false;
+  if (typeof obj.nationalBaseline.internetPenetration !== "number") return false;
+  return true;
+}
+
+function ensureDisplacementSeriesOnProvinces(obj) {
+  const years = ["2026", "2027", "2028", "2029", "2030", "2031"];
+  const list = obj?.provinces;
+  if (!Array.isArray(list)) return;
+  for (const p of list) {
+    if (!p.displacement_by_year || typeof p.displacement_by_year !== "object") {
+      p.displacement_by_year = {};
+    }
+    const rs = typeof p.riskScore === "number" && !Number.isNaN(p.riskScore) ? p.riskScore : 0.25;
+    let prev = rs * 0.25;
+    for (let i = 0; i < years.length; i++) {
+      const y = years[i];
+      if (typeof p.displacement_by_year[y] !== "number" || Number.isNaN(p.displacement_by_year[y])) {
+        const t = (i + 1) / years.length;
+        const v = rs * (0.25 + 0.65 * t);
+        p.displacement_by_year[y] = Math.round(Math.max(prev, v) * 1000) / 1000;
+      }
+      prev = Math.max(prev, p.displacement_by_year[y]);
+    }
+  }
+}
+
+function enrichLaborMapNationalBaseline(obj) {
+  if (!obj || typeof obj !== "object") return;
+  const pct = latestNationalInternetPct();
+  if (!obj.nationalBaseline || typeof obj.nationalBaseline !== "object") {
+    obj.nationalBaseline = { source: "World Bank WDI" };
+  }
+  obj.nationalBaseline.source = "World Bank WDI";
+  obj.nationalBaseline.internetPenetration = pct;
+  obj.nationalBaseline.note =
+    obj.nationalBaseline.note ||
+    "Provinces without internet data use this national baseline (IT.NET.USER.ZS, Indonesia, data/worldbank/IDN.json).";
+}
+
+async function callClaudeLaborMapParser(rawText, fileName, apiKey) {
+  const rt = typeof rawText === "string" ? rawText : "";
+  return callClaude({
+    apiKey,
+    system: LABOR_MAP_PARSER_SYSTEM,
+    user: {
+      rawText: rt.slice(0, 28000),
+      fileName: String(fileName || ""),
+      nationalInternetBaselinePct: latestNationalInternetPct()
+    },
+    max_tokens: 16384
+  });
+}
+
 const DATA_INTAKE_CLAUDE_SYSTEM = `You analyze unstructured or semi-structured country documents for the UNMAPPED policy dashboard.
 Return ONLY valid JSON (no markdown) with this shape:
 {"proposedUpdates":[{"updateId":"string","dataset":"laborMarket|digitalReadiness|interventionCatalog|countryConfig","operation":"replace|merge|append|patch","regionName":"string","field":"string","currentValue":null,"proposedValue":null,"unit":null,"year":null,"confidence":0.0,"evidence":"string"}]}
@@ -456,47 +681,6 @@ Rules:
 - confidence is a number from 0 to 1.
 - evidence must quote or paraphrase supporting text from the user payload.
 - Propose at least 1 and at most 6 updates unless the document truly has no usable signals.`;
-
-const DATA_INTAKE_OFFICER_SYSTEM = `You are a data extraction engine for UNMAPPED.
-
-A government officer has pasted raw text from a national report. Your job is to:
-1. Detect what type of data this contains (labor market, digital readiness, training programs, or country configuration)
-2. Extract structured data from the messy text
-3. Return proposed updates that a human can review before applying
-
-Allowed update targets: laborMarket, digitalReadiness, interventionCatalog, countryConfig
-
-The text may be in any language (Bahasa Indonesia, English, French, etc.). Extract regardless of language.
-
-Return ONLY valid JSON:
-{
-  "detectedType": "laborMarket",
-  "detectedCountry": "Indonesia",
-  "detectedLanguage": "id",
-  "confidence": "high",
-  "proposedUpdates": [
-    {
-      "updateId": "upd_001",
-      "dataset": "laborMarket",
-      "operation": "update",
-      "regionName": "Sulawesi Selatan",
-      "field": "employment_agriculture",
-      "currentValue": null,
-      "proposedValue": 1608000,
-      "unit": "persons",
-      "year": 2024,
-      "confidence": "high",
-      "evidence": "Sektor pertanian menyerap 1,61 juta (38,2%)"
-    }
-  ],
-  "summary": "Extracted 5 labor market indicators for Sulawesi Selatan from what appears to be a BPS Sakernas August 2024 report."
-}
-
-Per-item rules:
-- Each proposedUpdates[].dataset must be one of: laborMarket, digitalReadiness, interventionCatalog, countryConfig.
-- Each proposedUpdates[].confidence may be "high"|"medium"|"low" OR a number 0–1.
-- operation may be replace|merge|append|patch|update (update means replace a scalar field).
-- unit and year may be null if unknown.`;
 
 async function callClaudeDataIntakeAnalyzeCompact(fileName, rawText, textPreview, apiKey) {
   const rt = typeof rawText === "string" ? rawText : "";
@@ -513,19 +697,6 @@ async function callClaudeDataIntakeAnalyzeCompact(fileName, rawText, textPreview
   });
 }
 
-async function callClaudeIntakeOfficerRawText(rawText, fileName, apiKey) {
-  const rt = typeof rawText === "string" ? rawText : "";
-  return callClaude({
-    apiKey,
-    system: DATA_INTAKE_OFFICER_SYSTEM,
-    user: {
-      rawText: rt.slice(0, 24000),
-      fileName: String(fileName || "")
-    },
-    max_tokens: 8192
-  });
-}
-
 function registerDataIntakeRoutes(app) {
   app.post("/api/data-intake/analyze", async (req, res) => {
     res.type("application/json");
@@ -533,84 +704,172 @@ function registerDataIntakeRoutes(app) {
     const fileName = req.body?.fileName ?? req.body?.filename ?? "";
     const rawText = typeof req.body?.rawText === "string" ? req.body.rawText : "";
     const textPreview = req.body?.textPreview ?? req.body?.text ?? "";
+    const rawTrim = rawText.trim();
 
-    const mockRouting = getMockRoutingMeta(fileName, rawText);
-    const mockUpdates = getMockProposedUpdates(fileName, rawText);
-    let proposedUpdates = mockUpdates;
+    let mockRouting = getMockRoutingMeta(fileName, rawText);
+    let proposedUpdates = getMockProposedUpdates(fileName, rawText);
     let model = "mock";
-    let intakeMeta = {};
+    let mapPayload = null;
+    let message =
+      "Proposed updates require human approval before apply; dashboard is not mutated by analyze.";
 
+    const mapMockClone = getDataIngestionMapMockClone();
+    const mapKeywords = rawTextTriggersMapLaborMock(rawText);
     const key = anthropicKey();
-    if (!useMockApiFlag() && key) {
-      const hasRaw = rawText.trim().length > 0;
-      if (hasRaw) {
+    const analysisId = crypto.randomUUID();
+
+    try {
+      if (useMockApiFlag() && rawTrim && mapKeywords && mapMockClone) {
+        mapPayload = mapMockClone;
+        enrichLaborMapNationalBaseline(mapPayload);
+        proposedUpdates = [];
+        model = "mock";
+        message =
+          "Map-ready province labor report (mock: public/mock/dataIngestionMapResponse.json). Safe for dashboard preview.";
+      } else if (!useMockApiFlag() && key && rawTrim) {
         try {
-          const officer = await callClaudeIntakeOfficerRawText(rawText, String(fileName), key);
-          const cleaned = sanitizeProposedUpdates(officer?.proposedUpdates || []);
-          if (cleaned.length > 0) {
-            proposedUpdates = cleaned;
+          const parsed = await callClaudeLaborMapParser(rawText, String(fileName), key);
+          coerceLaborMapNumbers(parsed);
+          ensureDisplacementSeriesOnProvinces(parsed);
+          enrichLaborMapNationalBaseline(parsed);
+          if (validateLaborMapResponse(parsed)) {
+            mapPayload = parsed;
+            mapPayload.provincesFound =
+              typeof mapPayload.provincesFound === "number"
+                ? mapPayload.provincesFound
+                : mapPayload.provinces.length;
+            proposedUpdates = [];
             model = "claude";
-            intakeMeta = {
-              detectedType: officer.detectedType,
-              detectedCountry: officer.detectedCountry,
-              detectedLanguage: officer.detectedLanguage,
-              intakeConfidence: officer.confidence,
-              intakeSummary: officer.summary
+            mockRouting = {
+              scenario: "labor_market_map",
+              routing: "claude_labor_map_parser",
+              detail: "rawText"
             };
+            message =
+              "Map-ready labor report parsed by Claude. previewMode/approvalRequired apply until your product flow commits.";
           } else {
-            proposedUpdates = mockUpdates;
-            model = "mock_fallback";
+            throw new Error("labor_map_validation_failed");
           }
         } catch (e) {
-          console.error("[data-intake/analyze] officer Claude failed:", e.message || e);
-          proposedUpdates = mockUpdates;
-          model = "mock_fallback";
-        }
-      } else {
-        try {
-          const parsed = await callClaudeDataIntakeAnalyzeCompact(
-            String(fileName),
-            rawText,
-            String(textPreview),
-            key
-          );
-          const cleaned = sanitizeProposedUpdates(parsed?.proposedUpdates || []);
-          if (cleaned.length > 0) {
-            proposedUpdates = cleaned;
-            model = "claude";
-          } else {
-            proposedUpdates = mockUpdates;
-            model = "mock_fallback";
+          console.error("[data-intake/analyze] labor map Claude failed:", e.message || e);
+          if (mapMockClone) {
+            mapPayload = mapMockClone;
+            enrichLaborMapNationalBaseline(mapPayload);
           }
-        } catch (e) {
-          console.error("[data-intake/analyze] compact Claude failed:", e.message || e);
-          proposedUpdates = mockUpdates;
+          proposedUpdates = [];
           model = "mock_fallback";
+          mockRouting = {
+            scenario: "labor_market_map",
+            routing: "mock_fallback_after_claude",
+            detail: String(e.message || e).slice(0, 160)
+          };
+          message =
+            "Claude map parse failed or invalid JSON; returned safe map mock so the dashboard does not break.";
         }
       }
+
+      if (!mapPayload) {
+        if (useMockApiFlag()) {
+          proposedUpdates = getMockProposedUpdates(fileName, rawText);
+          mockRouting = getMockRoutingMeta(fileName, rawText);
+          model = "mock";
+          if (!proposedUpdates.length && !rawTrim) {
+            message =
+              "No mock proposals: add rawText (map keywords: Sulawesi, Jakarta, Nusa Tenggara/NTT) or use demo PDF / keyword rawText for dataset mocks.";
+          } else if (!proposedUpdates.length && rawTrim) {
+            message =
+              "No keyword match for map mock and no dataset keyword match; try internet / tenaga kerja / pelatihan or a demo PDF file name.";
+          }
+        } else if (key) {
+          if (!rawTrim) {
+            try {
+              const parsed = await callClaudeDataIntakeAnalyzeCompact(
+                String(fileName),
+                rawText,
+                String(textPreview),
+                key
+              );
+              const cleaned = sanitizeProposedUpdates(parsed?.proposedUpdates || []);
+              if (cleaned.length > 0) {
+                proposedUpdates = cleaned;
+                model = "claude";
+              } else {
+                proposedUpdates = getMockProposedUpdates(fileName, rawText);
+                mockRouting = getMockRoutingMeta(fileName, rawText);
+                model = "mock_fallback";
+              }
+            } catch (e) {
+              console.error("[data-intake/analyze] compact Claude failed:", e.message || e);
+              proposedUpdates = getMockProposedUpdates(fileName, rawText);
+              mockRouting = getMockRoutingMeta(fileName, rawText);
+              model = "mock_fallback";
+            }
+          } else if (!mapMockClone) {
+            try {
+              const parsed = await callClaudeDataIntakeAnalyzeCompact(
+                String(fileName),
+                rawText,
+                String(textPreview || rawText),
+                key
+              );
+              const cleaned = sanitizeProposedUpdates(parsed?.proposedUpdates || []);
+              proposedUpdates = cleaned.length ? cleaned : [];
+              model = cleaned.length ? "claude" : "mock_fallback";
+              if (!cleaned.length) {
+                proposedUpdates = getMockProposedUpdates(fileName, rawText);
+                mockRouting = getMockRoutingMeta(fileName, rawText);
+              }
+            } catch (e) {
+              console.error("[data-intake/analyze] compact fallback failed:", e.message || e);
+              proposedUpdates = getMockProposedUpdates(fileName, rawText);
+              mockRouting = getMockRoutingMeta(fileName, rawText);
+              model = "mock_fallback";
+            }
+            message =
+              proposedUpdates.length > 0
+                ? message
+                : "Live map mock missing on disk; no compact proposals returned.";
+          }
+        }
+      }
+    } catch (e) {
+      console.error("[data-intake/analyze] unexpected:", e.message || e);
+      if (mapMockClone) {
+        mapPayload = mapMockClone;
+        enrichLaborMapNationalBaseline(mapPayload);
+      }
+      proposedUpdates = [];
+      model = "mock_emergency";
+      mockRouting = {
+        scenario: "labor_market_map",
+        routing: "error_safe_fallback",
+        detail: "exception"
+      };
+      message = "Unexpected error; returned safe map mock (if available) with empty proposedUpdates.";
     }
 
-    const analysisId = crypto.randomUUID();
+    const body = {
+      analysisId,
+      fileName: String(fileName || ""),
+      rawTextReceived: Boolean(rawTrim),
+      mockRouting,
+      model,
+      proposedUpdates,
+      proposedCount: proposedUpdates.length,
+      message
+    };
+    if (mapPayload) {
+      Object.assign(body, mapPayload);
+    }
+
     analyses.set(analysisId, {
       fileName: String(fileName || ""),
       proposedUpdates,
+      mapLaborReport: mapPayload,
       appliedIds: new Set()
     });
 
-    res.json({
-      analysisId,
-      fileName: String(fileName || ""),
-      rawTextReceived: Boolean(rawText && rawText.length > 0),
-      mockRouting,
-      model,
-      ...intakeMeta,
-      proposedUpdates,
-      proposedCount: proposedUpdates.length,
-      message:
-        proposedUpdates.length === 0
-          ? "No mock proposals: use a demo PDF file name, or paste rawText with keywords (e.g. internet, tenaga kerja, pelatihan, Sulawesi). With USE_MOCK_API=false and ANTHROPIC_API_KEY, send rawText/textPreview for live extraction (falls back to file/keyword mocks if parsing fails)."
-          : "Proposed updates require human approval before apply; dashboard is not mutated by analyze."
-    });
+    res.json(body);
   });
 
   app.post("/api/data-intake/apply", (req, res) => {

@@ -317,6 +317,93 @@ Purpose: return committed Wittgenstein Centre WIC education projections (SSP2) d
 
 Response: see `data/projections/wittgenstein.json` (includes `countries.IDN`, `countries.GHA`, `countries.IND` with `projections` for `2025`, `2030`, `2035`).
 
+### `POST /api/data-intake/analyze`
+
+Purpose: operator document intake. In **mock** mode with `rawText` containing map keywords (`Sulawesi`, `Jakarta` / `DKI`, `Nusa Tenggara`, `NTT`), returns **map-ready** province labor data from `public/mock/dataIngestionMapResponse.json`. With **`USE_MOCK_API=false`** and a non-empty `rawText`, the server calls Claude with a multi-province labor-report parser; on parse/validation failure it falls back to the same static map mock (HTTP 200, never a hard error for the dashboard).
+
+Request shape (typical):
+
+```json
+{
+  "fileName": "optional.pdf",
+  "rawText": "pasted government report text",
+  "textPreview": "optional"
+}
+```
+
+**Map ingest response** (fields merged at the top level with `analysisId`, `model`, `mockRouting`, `proposedUpdates`, `proposedCount`, `message`):
+
+```json
+{
+  "analysisId": "uuid",
+  "fileName": "",
+  "rawTextReceived": true,
+  "mockRouting": {
+    "scenario": "labor_market_map",
+    "routing": "rawText_map_keywords | claude_labor_map_parser | mock_fallback_after_claude",
+    "detail": "string"
+  },
+  "model": "mock | claude | mock_fallback | mock_emergency",
+  "reportType": "laborMarket",
+  "detectedCountry": "Indonesia",
+  "detectedLanguage": "id",
+  "reportTitle": "string",
+  "provincesFound": 3,
+  "provinces": [
+    {
+      "name": "Sulawesi Selatan",
+      "nameStandardized": "Sulawesi Selatan",
+      "totalEmployed": 4210000,
+      "sectors": {
+        "agriculture": { "count": 1608000, "pct": 38.2 },
+        "manufacturing": { "count": 375000, "pct": 8.9 },
+        "retail": { "count": 787000, "pct": 18.7 },
+        "services": { "count": null, "pct": null },
+        "transportation": { "count": null, "pct": null }
+      },
+      "unemploymentRate": 5.31,
+      "avgWageMonthly": 3200000,
+      "internetPenetration": null,
+      "riskScore": 0.31,
+      "riskLevel": "lower_risk | medium | high | severe",
+      "riskCalculation": "human-readable formula string",
+      "displacement_by_year": {
+        "2026": 0.09,
+        "2027": 0.11,
+        "2028": 0.13,
+        "2029": 0.15,
+        "2030": 0.18,
+        "2031": 0.21
+      },
+      "evidence": ["verbatim or paraphrased snippets from the report"],
+      "geoMatch": { "property": "NAME_1", "value": "Sulawesi Selatan" }
+    }
+  ],
+  "nationalBaseline": {
+    "source": "World Bank WDI",
+    "avgRiskScore": 0.34,
+    "internetPenetration": 72.78,
+    "note": "Provinces without internet data use this national baseline"
+  },
+  "mapReady": true,
+  "previewMode": true,
+  "approvalRequired": true,
+  "summary": "string",
+  "proposedUpdates": [],
+  "proposedCount": 0,
+  "message": "string"
+}
+```
+
+Notes:
+
+- **`geoMatch`**: join key for admin GeoJSON; `property` is fixed to `NAME_1`, `value` is the official province label (e.g. `DKI Jakarta`, `Nusa Tenggara Timur`).
+- **`displacement_by_year`**: string keys `"2026"` … `"2031"` for time-slider UX; live Claude output is normalized if keys are missing.
+- **`nationalBaseline.internetPenetration`**: refreshed from committed `data/worldbank/IDN.json` (`IT.NET.USER.ZS` latest) when the server enriches the payload.
+- Non-map mock behavior (demo PDF filenames or keyword `rawText` for digital/labor/intervention **proposedUpdates**) is unchanged when map keywords are not present.
+
+Related: `POST /api/data-intake/apply`, `POST /api/data-intake/reset`.
+
 ## Mock source files
 
 - `public/mock/userProfile.json`
@@ -324,6 +411,7 @@ Response: see `data/projections/wittgenstein.json` (includes `countries.IDN`, `c
 - `public/mock/riskPathwayResponse.json`
 - `public/mock/provinceRiskResponse.json`
 - `public/mock/interventionResponse.json`
+- `public/mock/dataIngestionMapResponse.json`
 - `data/country-configs/indonesia.json`
 - `data/worldbank/IDN.json`
 - `data/automation/frey-osborne.json`

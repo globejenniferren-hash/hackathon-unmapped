@@ -13,7 +13,8 @@ function buildRiskScoringSystemPrompt(matchedBlock, wbBlock, internetLine) {
 Given a set of skills with their ISCO codes, real Frey-Osborne automation probabilities, and local economic context, produce a risk assessment.
 
 Rules:
-- DO NOT invent automation probabilities. Use only the Frey–Osborne scores provided in matched rows (frey_osborne.automation_probability). If a skill has no matched frey_osborne, omit frey_osborne_raw or set it from the only allowed source: null and explain in reason.
+- DO NOT invent automation probabilities. Use only the Frey–Osborne scores in each matched row (frey_osborne.automation_probability). If frey_osborne is null, set frey_osborne_raw to null and explain in reason.
+- When frey_match_meta.approximation_note is present (including "approximate_*" or "unresolved_*" methods), weave it into the one-sentence reason. For approximate_* rows, frey_osborne_raw MUST equal frey_osborne.automation_probability from that closest occupation; say explicitly that this is a lexical proxy, not the exact crosswalk SOC row.
 - Recalibrate based on local context: a high automation probability means less in a region with 18% internet penetration than one with 72%.
 - For each skill, provide:
   - risk level: "durable", "at_risk", or "declining" (use field name "level" in output JSON)
