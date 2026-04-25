@@ -7,6 +7,10 @@
     "start": "node server.js",
     "dev": "node server.js",
     "fetch:worldbank": "node scripts/fetch-worldbank-data.js",
+    "fetch:frey-osborne": "node scripts/fetch-frey-osborne.js",
+    "fetch:esco": "node scripts/fetch-esco-occupations.js",
+    "fetch:wittgenstein": "node scripts/fetch-wittgenstein.js",
+    "fetch:datasets": "npm run fetch:worldbank && npm run fetch:frey-osborne && npm run fetch:wittgenstein && npm run fetch:esco",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +26,7 @@
   },
   "homepage": "https://github.com/globejenniferren-hash/hackathon-unmapped#readme",
   "dependencies": {
+    "csv-parse": "^6.2.1",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
   }

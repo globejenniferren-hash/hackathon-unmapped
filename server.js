@@ -11,6 +11,25 @@ const indonesiaConfig = require("./data/country-configs/indonesia.json");
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+function listWorldbankIso3() {
+  const dir = path.join(__dirname, "data", "worldbank");
+  if (!fs.existsSync(dir)) {
+    return [];
+  }
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".json"))
+    .map((f) => f.replace(/\.json$/i, "").toUpperCase());
+}
+
+function readDataJson(...segments) {
+  const filePath = path.join(__dirname, ...segments);
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
 const USE_MOCK_API = (process.env.USE_MOCK_API || "true").toLowerCase() !== "false";
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
@@ -129,8 +148,73 @@ app.get("/api/data/worldbank/:countryCode", (req, res) => {
     return res.status(404).json({
       error: "World Bank extract not found for requested ISO3 code",
       country_code: iso3,
-      available: ["IDN", "GHA", "IND"]
+      available: listWorldbankIso3()
     });
+  }
+  res.type("application/json").send(fs.readFileSync(filePath, "utf8"));
+});
+
+app.get("/api/data/automation/all", (req, res) => {
+  const filePath = path.join(__dirname, "data", "automation", "frey-osborne.json");
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: "Automation dataset not found" });
+  }
+  res.type("application/json").send(fs.readFileSync(filePath, "utf8"));
+});
+
+app.get("/api/data/automation/crosswalk/soc-isco", (req, res) => {
+  const filePath = path.join(__dirname, "data", "automation", "soc-isco-crosswalk.json");
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: "SOC–ISCO crosswalk not found" });
+  }
+  res.type("application/json").send(fs.readFileSync(filePath, "utf8"));
+});
+
+app.get("/api/data/automation/:socCode", (req, res) => {
+  const raw = String(req.params.socCode || "").trim();
+  const soc = decodeURIComponent(raw).replace(/–/g, "-");
+  const data = readDataJson("data", "automation", "frey-osborne.json");
+  if (!data) {
+    return res.status(404).json({ error: "Automation dataset not found" });
+  }
+  const hit = data.occupations.find((o) => o.soc_code === soc);
+  if (!hit) {
+    return res.status(404).json({
+      error: "SOC code not found in Frey–Osborne extract",
+      soc_code: soc
+    });
+  }
+  res.json({
+    source: data.source,
+    soc_code: hit.soc_code,
+    occupation: hit.occupation,
+    automation_probability: hit.automation_probability,
+    avg_annual_wage: hit.avg_annual_wage,
+    education: hit.education,
+    employed: hit.employed
+  });
+});
+
+app.get("/api/data/taxonomy/esco-occupations", (req, res) => {
+  const filePath = path.join(__dirname, "data", "taxonomy", "esco-occupations.json");
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: "ESCO taxonomy file not found" });
+  }
+  res.type("application/json").send(fs.readFileSync(filePath, "utf8"));
+});
+
+app.get("/api/data/taxonomy/isco-08", (req, res) => {
+  const filePath = path.join(__dirname, "data", "taxonomy", "isco-08-codes.json");
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: "ISCO-08 lookup not found" });
+  }
+  res.type("application/json").send(fs.readFileSync(filePath, "utf8"));
+});
+
+app.get("/api/data/projections/wittgenstein", (req, res) => {
+  const filePath = path.join(__dirname, "data", "projections", "wittgenstein.json");
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: "Wittgenstein projections not found" });
   }
   res.type("application/json").send(fs.readFileSync(filePath, "utf8"));
 });

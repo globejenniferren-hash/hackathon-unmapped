@@ -27,11 +27,7 @@ const INDICATOR_MAP = {
   SL_ISV_IFRM_ZS: { wdi: "SL.ISV.IFRM.ZS", key: "informal_employment_pct" }
 };
 
-const COUNTRIES = [
-  { country_code: "IDN", country: "Indonesia" },
-  { country_code: "GHA", country: "Ghana" },
-  { country_code: "IND", country: "India" }
-];
+const COUNTRIES = [{ country_code: "IDN", country: "Indonesia" }];
 
 function wbUrl(countryIso3, indicatorCode) {
   return (

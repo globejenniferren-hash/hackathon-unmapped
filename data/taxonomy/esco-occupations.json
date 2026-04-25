@@ -1,0 +1,639 @@
+{
+  "source": "ESCO API v1",
+  "api_base": "https://ec.europa.eu/esco/api",
+  "fetched_at": "2026-04-25T22:21:42.417Z",
+  "occupations": [
+    {
+      "theme": "Video production / multimedia design",
+      "search_text_used": "multimedia designer",
+      "uri": "http://data.europa.eu/esco/occupation/d5a43cd3-230e-46d0-ba05-d67d61e5cfbb",
+      "title": "digital media designer",
+      "isco_code": "2166",
+      "description": "Digital media designers create and edit graphics, animations, sound, text and video to assist in the creation of integrated multimedia products. They may perform activities related to the web, social networks, augmented reality and virtual reality but exclude the production of music using physical instruments and complex software sound synthesis tools. Digital media designers may program and build websites, mobile applications and other multimedia products.",
+      "skills": [
+        {
+          "title": "tools for software configuration management",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "copyright legislation",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "design graphics",
+          "skill_type": "competence"
+        },
+        {
+          "title": "publishing strategy",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "provide multimedia content",
+          "skill_type": "competence"
+        },
+        {
+          "title": "perform image editing",
+          "skill_type": "competence"
+        },
+        {
+          "title": "graphics editor software",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "convert into animated object",
+          "skill_type": "competence"
+        },
+        {
+          "title": "style sheet languages",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "manage online content",
+          "skill_type": "competence"
+        },
+        {
+          "title": "use markup languages",
+          "skill_type": "competence"
+        },
+        {
+          "title": "create website wireframe",
+          "skill_type": "competence"
+        },
+        {
+          "title": "CoffeeScript",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "SAP R3",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "OpenEdge Advanced Business Language",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "PHP",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "Haskell",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "R",
+          "skill_type": "knowledge"
+        }
+      ]
+    },
+    {
+      "theme": "Ride-hailing / taxi driver",
+      "search_text_used": "taxi driver",
+      "uri": "http://data.europa.eu/esco/occupation/6f7c1e84-8162-4c20-a575-b57ff624eef5",
+      "title": "taxi driver",
+      "isco_code": "8322",
+      "description": "Taxi drivers operate a licensed private passenger transportation vehicle, looking after customers, taking fares and managing vehicle servicing.",
+      "skills": [
+        {
+          "title": "use communication devices",
+          "skill_type": "competence"
+        },
+        {
+          "title": "operate radio dispatch systems for taxis",
+          "skill_type": "competence"
+        },
+        {
+          "title": "ensure vehicle operability",
+          "skill_type": "competence"
+        },
+        {
+          "title": "effective perception of transport environment",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "operate GPS systems",
+          "skill_type": "competence"
+        },
+        {
+          "title": "maintain vehicle appearance",
+          "skill_type": "competence"
+        },
+        {
+          "title": "lift heavy weights",
+          "skill_type": "competence"
+        },
+        {
+          "title": "tolerate sitting for long periods",
+          "skill_type": "competence"
+        },
+        {
+          "title": "apply knowledge of human behaviour",
+          "skill_type": "competence"
+        },
+        {
+          "title": "provide customers with price information",
+          "skill_type": "competence"
+        },
+        {
+          "title": "mechanical components of vehicles",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "geographic areas",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "perform services in a flexible manner",
+          "skill_type": "competence"
+        },
+        {
+          "title": "provide private transport services",
+          "skill_type": "competence"
+        },
+        {
+          "title": "maintain privacy of service users",
+          "skill_type": "competence"
+        },
+        {
+          "title": "provide high-end driving services",
+          "skill_type": "competence"
+        },
+        {
+          "title": "adapt to changing situations",
+          "skill_type": "competence"
+        }
+      ]
+    },
+    {
+      "theme": "Mobile phone repair / electronics repair",
+      "search_text_used": "telecommunications equipment repairer",
+      "uri": "http://data.europa.eu/esco/occupation/056bef79-c125-47ab-b6b9-8eed05c9458c",
+      "title": "telecommunications technician",
+      "isco_code": "7422",
+      "description": "Telecommunications technicians install, test, maintain and troubleshoot telecommunications systems. They repair or replace defective devices and equipment and maintain a safe working environment and a complete inventory of supplies. They also provide user or customer assistance. \n ",
+      "skills": [
+        {
+          "title": "install electronic communication equipment",
+          "skill_type": "competence"
+        },
+        {
+          "title": "use session border controller",
+          "skill_type": "competence"
+        },
+        {
+          "title": "operate electronic measuring instruments",
+          "skill_type": "competence"
+        },
+        {
+          "title": "procurement of ICT network equipment",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "install cable TV services",
+          "skill_type": "competence"
+        },
+        {
+          "title": "operate digging construction equipment",
+          "skill_type": "competence"
+        },
+        {
+          "title": "operate aerial work platforms",
+          "skill_type": "competence"
+        },
+        {
+          "title": "operate private branch exchange",
+          "skill_type": "competence"
+        },
+        {
+          "title": "concepts of telecommunications",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "repair wiring",
+          "skill_type": "competence"
+        },
+        {
+          "title": "install low voltage wiring",
+          "skill_type": "competence"
+        },
+        {
+          "title": "seal wires",
+          "skill_type": "competence"
+        },
+        {
+          "title": "monitor communication channels' performance",
+          "skill_type": "competence"
+        },
+        {
+          "title": "assess telecommunication infrastructure issues",
+          "skill_type": "competence"
+        },
+        {
+          "title": "create solutions to problems",
+          "skill_type": "competence"
+        },
+        {
+          "title": "perform ICT troubleshooting",
+          "skill_type": "competence"
+        },
+        {
+          "title": "use computer telephony integration",
+          "skill_type": "competence"
+        },
+        {
+          "title": "assist customers",
+          "skill_type": "competence"
+        }
+      ]
+    },
+    {
+      "theme": "Retail sales",
+      "search_text_used": "shop salesperson",
+      "uri": "http://data.europa.eu/esco/occupation/71bac871-7594-4d86-a19f-592079bd8154",
+      "title": "building materials specialised seller",
+      "isco_code": "5223",
+      "description": "Building materials specialised sellers sell building materials in specialised shops.",
+      "skills": [
+        {
+          "title": "identify customer's needs",
+          "skill_type": "competence"
+        },
+        {
+          "title": "provide customised building materials",
+          "skill_type": "competence"
+        },
+        {
+          "title": "identify construction materials from blueprints",
+          "skill_type": "competence"
+        },
+        {
+          "title": "e-commerce systems",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "issue sales invoices",
+          "skill_type": "competence"
+        },
+        {
+          "title": "examine merchandise",
+          "skill_type": "competence"
+        },
+        {
+          "title": "provide customer guidance on product selection",
+          "skill_type": "competence"
+        },
+        {
+          "title": "carry out products preparation",
+          "skill_type": "competence"
+        },
+        {
+          "title": "ensure compliance with legal requirements",
+          "skill_type": "competence"
+        },
+        {
+          "title": "operate cash register",
+          "skill_type": "competence"
+        },
+        {
+          "title": "guarantee customer satisfaction",
+          "skill_type": "competence"
+        },
+        {
+          "title": "provide customer follow-up services",
+          "skill_type": "competence"
+        },
+        {
+          "title": "construction industry",
+          "skill_type": "knowledge"
+        }
+      ]
+    },
+    {
+      "theme": "Agricultural worker",
+      "search_text_used": "crop farm labourer",
+      "uri": "http://data.europa.eu/esco/occupation/1b5ccfe7-1cc3-4f02-974c-f852d3faf57e",
+      "title": "crop production manager",
+      "isco_code": "6114",
+      "description": "Crop production managers plan the production, manage the enterprise and participate in the production process of crop production facilities.  ",
+      "skills": [
+        {
+          "title": "store crops",
+          "skill_type": "competence"
+        },
+        {
+          "title": "crop production principles",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "leadership principles",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "plant species",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "technical equipment for crop production",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "manage production enterprise",
+          "skill_type": "competence"
+        },
+        {
+          "title": "fertilisation principles",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "monitor fields",
+          "skill_type": "competence"
+        },
+        {
+          "title": "supervise crop production",
+          "skill_type": "competence"
+        },
+        {
+          "title": "maintain storage facilities",
+          "skill_type": "competence"
+        },
+        {
+          "title": "plant harvest methods",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "operate agricultural machinery",
+          "skill_type": "competence"
+        },
+        {
+          "title": "present the farm facilities",
+          "skill_type": "competence"
+        },
+        {
+          "title": "prepare planting area",
+          "skill_type": "competence"
+        },
+        {
+          "title": "manage contracts",
+          "skill_type": "competence"
+        },
+        {
+          "title": "perform on-farm product processing",
+          "skill_type": "competence"
+        },
+        {
+          "title": "manage agri-tourism activites",
+          "skill_type": "competence"
+        },
+        {
+          "title": "irrigation systems",
+          "skill_type": "knowledge"
+        }
+      ]
+    },
+    {
+      "theme": "Textile weaver",
+      "search_text_used": "weaver textile",
+      "uri": "http://data.europa.eu/esco/occupation/b3cd0522-14a9-4e21-a7ee-c9a1f9c0de51",
+      "title": "carpet weaver",
+      "isco_code": "7318",
+      "description": "Carpet weavers operate machinery to create textile floor coverings. They create carpets and rugs from wool or synthetic textiles using specialised equipment. Carpet weavers can use diverse methods such as weaving, knotting or tufting to create carpets of different styles.",
+      "skills": [
+        {
+          "title": "types of textile fibres",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "manufacture textile floor coverings",
+          "skill_type": "competence"
+        },
+        {
+          "title": "furniture, carpet and lighting equipment products",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "textile techniques",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "textile technologies",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "textile industry machinery products",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "cut textiles",
+          "skill_type": "competence"
+        },
+        {
+          "title": "manufacture carpets",
+          "skill_type": "competence"
+        },
+        {
+          "title": "work in textile manufacturing teams",
+          "skill_type": "competence"
+        },
+        {
+          "title": "textile industry",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "textile materials",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "types of carpet",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "tend weaving machines",
+          "skill_type": "competence"
+        },
+        {
+          "title": "knitting machine technology",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "control textile process",
+          "skill_type": "competence"
+        },
+        {
+          "title": "create patterns for textile products",
+          "skill_type": "competence"
+        },
+        {
+          "title": "challenging issues in the textile industry",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "monitor textile manufacturing developments",
+          "skill_type": "competence"
+        }
+      ]
+    },
+    {
+      "theme": "Digital marketing",
+      "search_text_used": "digital marketing specialist",
+      "uri": "http://data.europa.eu/esco/occupation/4791e217-d607-40d5-9f84-df1d0a071cbc",
+      "title": "marketeer",
+      "isco_code": "2431",
+      "description": "Marketing consultants advise companies in the development of marketing strategies for specific purposes. They can advise and develop strategies for the entry of a brand in the market, for the re-launch of a product, for the introduction of a new product, or for the positioning of a commercial image. They perform previous studies of the position of the company and perception of customers in order to define the marketing approach.",
+      "skills": [
+        {
+          "title": "analyse external factors of companies",
+          "skill_type": "competence"
+        },
+        {
+          "title": "identify potential markets for companies",
+          "skill_type": "competence"
+        },
+        {
+          "title": "marketing principles",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "marketing mix",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "market pricing",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "use theoretical marketing models",
+          "skill_type": "competence"
+        },
+        {
+          "title": "plan marketing strategy",
+          "skill_type": "competence"
+        },
+        {
+          "title": "document project progress",
+          "skill_type": "competence"
+        },
+        {
+          "title": "respond to enquiries",
+          "skill_type": "competence"
+        },
+        {
+          "title": "project management",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "conduct research interview",
+          "skill_type": "competence"
+        },
+        {
+          "title": "pricing strategies",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "develop creative ideas",
+          "skill_type": "competence"
+        },
+        {
+          "title": "e-commerce systems",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "coordinate marketing plan actions",
+          "skill_type": "competence"
+        },
+        {
+          "title": "digital marketing techniques",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "customer service",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "make strategic business decisions",
+          "skill_type": "competence"
+        }
+      ]
+    },
+    {
+      "theme": "Solar panel installation",
+      "search_text_used": "solar photovoltaic installer",
+      "uri": "http://data.europa.eu/esco/occupation/75b63949-1b93-4bf2-a777-ccf978dc3e8a",
+      "title": "solar energy technician",
+      "isco_code": "7411",
+      "description": "Solar energy technicians install and maintain systems that collect solar energy. They prepare the necessary fixtures, often on roofs, install solar panels, and plug them into an electronic system including an inverter to connect the solar energy systems to the electricity lines.",
+      "skills": [
+        {
+          "title": "inspect electrical supplies",
+          "skill_type": "competence"
+        },
+        {
+          "title": "mechanics",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "work ergonomically",
+          "skill_type": "competence"
+        },
+        {
+          "title": "install electrical and electronic equipment",
+          "skill_type": "competence"
+        },
+        {
+          "title": "mount photovoltaic panels",
+          "skill_type": "competence"
+        },
+        {
+          "title": "interpret 2D plans",
+          "skill_type": "competence"
+        },
+        {
+          "title": "inspect construction supplies",
+          "skill_type": "competence"
+        },
+        {
+          "title": "check compatibility of materials",
+          "skill_type": "competence"
+        },
+        {
+          "title": "interpret 3D plans",
+          "skill_type": "competence"
+        },
+        {
+          "title": "test procedures in electricity transmission",
+          "skill_type": "competence"
+        },
+        {
+          "title": "follow health and safety procedures in construction",
+          "skill_type": "competence"
+        },
+        {
+          "title": "solar energy",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "maintain solar energy systems",
+          "skill_type": "competence"
+        },
+        {
+          "title": "install inverter",
+          "skill_type": "competence"
+        },
+        {
+          "title": "use safety equipment in construction",
+          "skill_type": "competence"
+        },
+        {
+          "title": "zero-energy building design",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "solar panel mounting systems",
+          "skill_type": "knowledge"
+        },
+        {
+          "title": "estimate profitability",
+          "skill_type": "competence"
+        }
+      ]
+    }
+  ]
+}

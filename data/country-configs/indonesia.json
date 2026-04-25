@@ -98,5 +98,25 @@
         ]
       }
     }
+  },
+  "supplementary_datasets": {
+    "note": "Committed extracts only; demo server does not call upstream APIs at request time.",
+    "automation": {
+      "frey_osborne_file": "data/automation/frey-osborne.json",
+      "soc_isco_crosswalk_file": "data/automation/soc-isco-crosswalk.json",
+      "api_all": "GET /api/data/automation/all",
+      "api_by_soc": "GET /api/data/automation/:socCode",
+      "api_crosswalk": "GET /api/data/automation/crosswalk/soc-isco"
+    },
+    "skills_taxonomy": {
+      "esco_occupations_file": "data/taxonomy/esco-occupations.json",
+      "isco08_lookup_file": "data/taxonomy/isco-08-codes.json",
+      "api_esco": "GET /api/data/taxonomy/esco-occupations",
+      "api_isco": "GET /api/data/taxonomy/isco-08"
+    },
+    "education_projections": {
+      "wittgenstein_file": "data/projections/wittgenstein.json",
+      "api_projections": "GET /api/data/projections/wittgenstein"
+    }
   }
 }
