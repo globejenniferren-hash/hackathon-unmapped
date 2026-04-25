@@ -1,0 +1,102 @@
+{
+  "countryCode": "ID",
+  "countryName": "Indonesia",
+  "currencyCode": "IDR",
+  "locale": "id-ID",
+  "defaultProvinceCode": "ID-JB",
+  "provinces": [
+    {
+      "code": "ID-JB",
+      "name": "West Java",
+      "regionGroup": "Java"
+    },
+    {
+      "code": "ID-JT",
+      "name": "Central Java",
+      "regionGroup": "Java"
+    },
+    {
+      "code": "ID-JI",
+      "name": "East Java",
+      "regionGroup": "Java"
+    },
+    {
+      "code": "ID-SN",
+      "name": "South Sulawesi",
+      "regionGroup": "Sulawesi"
+    }
+  ],
+  "riskThresholds": {
+    "lowMax": 0.4,
+    "mediumMax": 0.65,
+    "highMax": 1
+  },
+  "interventionDefaults": {
+    "maxRecommendations": 3,
+    "preferredTypes": [
+      "training",
+      "placement",
+      "cash-transfer"
+    ]
+  },
+  "worldbank_indicators": {
+    "worldbank_country_iso3": "IDN",
+    "committed_extract_file": "data/worldbank/IDN.json",
+    "fetched_at": "2026-04-25T21:58:45.693Z",
+    "source": "World Bank WDI API",
+    "identifiers_loaded": {
+      "employment_services_pct": "SL.SRV.EMPL.ZS",
+      "employment_agriculture_pct": "SL.AGR.EMPL.ZS",
+      "employment_industry_pct": "SL.IND.EMPL.ZS",
+      "unemployment_rate": "SL.UEM.TOTL.ZS",
+      "youth_unemployment_rate": "SL.UEM.1524.ZS",
+      "youth_neet_rate": "SL.UEM.NEET.ZS",
+      "gdp_per_capita_usd": "NY.GDP.PCAP.CD",
+      "internet_users_pct": "IT.NET.USER.ZS",
+      "mobile_cellular_subscriptions_per_100": "IT.CEL.SETS.P2",
+      "human_capital_index": "HD.HCI.OVRL",
+      "labor_force_participation_rate": "SL.TLF.CACT.ZS",
+      "informal_employment_pct": "SL.ISV.IFRM.ZS"
+    },
+    "latest_non_null_for_ui": {
+      "internet_penetration_pct": {
+        "wdi": "IT.NET.USER.ZS",
+        "year": "2024",
+        "value": 72.78075544
+      },
+      "gdp_per_capita_usd": {
+        "wdi": "NY.GDP.PCAP.CD",
+        "year": "2024",
+        "value": 4925.43048751861
+      }
+    },
+    "risk_scoring_baseline": {
+      "national_risk_index": {
+        "value": 0.33733097258333333,
+        "method": "Same definition as public/mock/provinceRiskResponse.json -> nationalBaseline.nationalRiskIndex",
+        "inputs": [
+          {
+            "wdi": "SL.UEM.TOTL.ZS",
+            "year": "2024",
+            "value": 3.301
+          },
+          {
+            "wdi": "SL.UEM.1524.ZS",
+            "year": "2024",
+            "value": 13.075
+          },
+          {
+            "wdi": "SL.UEM.NEET.ZS",
+            "year": "2023",
+            "value": 21.365
+          },
+          {
+            "wdi": "IT.NET.USER.ZS",
+            "year": "2024",
+            "value": 72.78075544
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "userId": "usr_10021",
+  "countryIso3": "IDN",
+  "overallRiskScore": 0.33733097258333333,
+  "riskLevel": "low",
+  "riskModel": {
+    "id": "national_wdi_baseline_v1",
+    "description": "Overall score matches the national WDI-only composite described in public/mock/provinceRiskResponse.json (nationalBaseline.nationalRiskIndex).",
+    "referenceMock": "public/mock/provinceRiskResponse.json"
+  },
+  "drivers": [
+    {
+      "factor": "skills_mismatch",
+      "weight": 0.36,
+      "status": "elevated",
+      "worldBankEvidence": [
+        {
+          "wdi": "SL.SRV.EMPL.ZS",
+          "description": "Employment in services (% of total employment), national",
+          "yearFrom": "2022",
+          "valueFrom": 48.8471685544592,
+          "yearTo": "2024",
+          "valueTo": 49.7537526677536,
+          "changePercentagePoints": 0.9065841132944001
+        },
+        {
+          "wdi": "SL.AGR.EMPL.ZS",
+          "description": "Employment in agriculture (% of total employment), national",
+          "yearFrom": "2022",
+          "valueFrom": 29.2848629874109,
+          "yearTo": "2024",
+          "valueTo": 27.9600749776458,
+          "changePercentagePoints": -1.3247880097650984
+        },
+        {
+          "wdi": "SL.IND.EMPL.ZS",
+          "description": "Employment in industry (% of total employment), national",
+          "yearFrom": "2022",
+          "valueFrom": 21.8679677163131,
+          "yearTo": "2024",
+          "valueTo": 22.2861723546005,
+          "changePercentagePoints": 0.4182046382873995
+        }
+      ]
+    },
+    {
+      "factor": "income_volatility",
+      "weight": 0.31,
+      "status": "elevated",
+      "worldBankEvidence": [
+        {
+          "wdi": "NY.GDP.PCAP.CD",
+          "description": "GDP per capita (current US$), national",
+          "yearFrom": "2022",
+          "valueFrom": 4730.83484836107,
+          "yearTo": "2024",
+          "valueTo": 4925.43048751861,
+          "percentChangeOverPeriod": 4.113346700846151
+        }
+      ]
+    },
+    {
+      "factor": "limited_formal_credentials",
+      "weight": 0.18,
+      "status": "moderate",
+      "worldBankEvidence": [
+        {
+          "wdi": "HD.HCI.OVRL",
+          "description": "Human Capital Index (HCI), national",
+          "latestYear": "2020",
+          "latestValue": 0.540038466453552
+        },
+        {
+          "wdi": "SL.TLF.CACT.ZS",
+          "description": "Labor force participation rate (% of population ages 15+), national",
+          "latestYear": "2024",
+          "latestValue": 67.927
+        }
+      ]
+    },
+    {
+      "factor": "transport_access",
+      "weight": 0.15,
+      "status": "moderate",
+      "worldBankEvidence": [
+        {
+          "wdi": "IT.NET.USER.ZS",
+          "description": "Internet users (% of population), national",
+          "latestYear": "2024",
+          "latestValue": 72.78075544
+        },
+        {
+          "wdi": "IT.CEL.SETS.P2",
+          "description": "Mobile cellular subscriptions (per 100 people), national",
+          "latestYear": "2024",
+          "latestValue": 122.514946500491
+        }
+      ]
+    }
+  ],
+  "laborMarketSignals": {
+    "youthUnemploymentTrend": {
+      "wdi": "SL.UEM.1524.ZS",
+      "yearFrom": "2022",
+      "valueFrom": 14.054,
+      "yearTo": "2024",
+      "valueTo": 13.075,
+      "changePercentagePoints": -0.979
+    },
+    "overallUnemploymentLatest": {
+      "wdi": "SL.UEM.TOTL.ZS",
+      "latestYear": "2024",
+      "latestValue": 3.301
+    },
+    "youthNeetLatest": {
+      "wdi": "SL.UEM.NEET.ZS",
+      "latestYear": "2023",
+      "latestValue": 21.365
+    }
+  },
+  "recommendedPathways": [
+    {
+      "pathwayId": "path_digital_sales_01",
+      "title": "Digital Sales Upskilling",
+      "priority": 1
+    },
+    {
+      "pathwayId": "path_microenterprise_02",
+      "title": "Microenterprise Starter Track",
+      "priority": 2
+    }
+  ]
+}

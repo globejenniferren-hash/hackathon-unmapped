@@ -1,0 +1,124 @@
+{
+  "countryCode": "IN",
+  "countryName": "India",
+  "currencyCode": "INR",
+  "locale": "en-IN",
+  "defaultProvinceCode": "IN-MH",
+  "provinces": [
+    {
+      "code": "IN-MH",
+      "name": "Maharashtra",
+      "regionGroup": "West"
+    },
+    {
+      "code": "IN-KA",
+      "name": "Karnataka",
+      "regionGroup": "South"
+    },
+    {
+      "code": "IN-UP",
+      "name": "Uttar Pradesh",
+      "regionGroup": "North"
+    },
+    {
+      "code": "IN-TN",
+      "name": "Tamil Nadu",
+      "regionGroup": "South"
+    }
+  ],
+  "riskThresholds": {
+    "lowMax": 0.4,
+    "mediumMax": 0.65,
+    "highMax": 1
+  },
+  "interventionDefaults": {
+    "maxRecommendations": 3,
+    "preferredTypes": [
+      "training",
+      "placement",
+      "cash-transfer"
+    ]
+  },
+  "worldbank_indicators": {
+    "worldbank_country_iso3": "IND",
+    "committed_extract_file": "data/worldbank/IND.json",
+    "fetched_at": "2026-04-25T21:58:45.693Z",
+    "source": "World Bank WDI API",
+    "identifiers_loaded": {
+      "employment_services_pct": "SL.SRV.EMPL.ZS",
+      "employment_agriculture_pct": "SL.AGR.EMPL.ZS",
+      "employment_industry_pct": "SL.IND.EMPL.ZS",
+      "unemployment_rate": "SL.UEM.TOTL.ZS",
+      "youth_unemployment_rate": "SL.UEM.1524.ZS",
+      "youth_neet_rate": "SL.UEM.NEET.ZS",
+      "gdp_per_capita_usd": "NY.GDP.PCAP.CD",
+      "internet_users_pct": "IT.NET.USER.ZS",
+      "mobile_cellular_subscriptions_per_100": "IT.CEL.SETS.P2",
+      "human_capital_index": "HD.HCI.OVRL",
+      "labor_force_participation_rate": "SL.TLF.CACT.ZS",
+      "informal_employment_pct": "SL.ISV.IFRM.ZS"
+    },
+    "latest_non_null_for_ui": {
+      "internet_penetration_pct": {
+        "wdi": "IT.NET.USER.ZS",
+        "year": "2024",
+        "value": 64.9434967
+      },
+      "gdp_per_capita_usd": {
+        "wdi": "NY.GDP.PCAP.CD",
+        "year": "2024",
+        "value": 2694.73780859961
+      }
+    },
+    "risk_scoring_baseline": {
+      "national_risk_index": {
+        "value": 0.41923192995535713,
+        "method": "Same capped normalization as Indonesia config, using India latest non-null values from data/worldbank/IND.json.",
+        "inputs": [
+          {
+            "wdi": "SL.UEM.TOTL.ZS",
+            "year": "2024",
+            "value": 4.173
+          },
+          {
+            "wdi": "SL.UEM.1524.ZS",
+            "year": "2024",
+            "value": 15.746
+          },
+          {
+            "wdi": "SL.UEM.NEET.ZS",
+            "year": "2024",
+            "value": 24.188
+          },
+          {
+            "wdi": "IT.NET.USER.ZS",
+            "year": "2024",
+            "value": 64.9434967
+          }
+        ],
+        "components": [
+          {
+            "name": "unemployment_pressure",
+            "wdi": "SL.UEM.TOTL.ZS",
+            "normalized": 0.34775
+          },
+          {
+            "name": "youth_unemployment_pressure",
+            "wdi": "SL.UEM.1524.ZS",
+            "normalized": 0.4498857142857143
+          },
+          {
+            "name": "youth_neet_pressure",
+            "wdi": "SL.UEM.NEET.ZS",
+            "normalized": 0.6910857142857143
+          },
+          {
+            "name": "digital_access_gap",
+            "wdi": "IT.NET.USER.ZS",
+            "normalized": 0.18820629125000005
+          }
+        ]
+      }
+    }
+  }
+}

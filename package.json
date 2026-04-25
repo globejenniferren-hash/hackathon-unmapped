@@ -1,0 +1,28 @@
+{
+  "name": "hackathon-unmapped",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "fetch:worldbank": "node scripts/fetch-worldbank-data.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/globejenniferren-hash/hackathon-unmapped.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/globejenniferren-hash/hackathon-unmapped/issues"
+  },
+  "homepage": "https://github.com/globejenniferren-hash/hackathon-unmapped#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}

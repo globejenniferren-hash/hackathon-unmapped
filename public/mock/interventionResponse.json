@@ -1,0 +1,42 @@
+{
+  "countryCode": "ID",
+  "provinceCode": "ID-JB",
+  "interventions": [
+    {
+      "id": "intv_001",
+      "title": "Job-Ready Digital Sales Bootcamp",
+      "type": "training",
+      "targetRiskFactors": [
+        "skills_mismatch",
+        "limited_formal_credentials"
+      ],
+      "expectedImpactScore": 0.74,
+      "estimatedCostUsd": 180,
+      "deliveryPartner": "Bandung Digital Talent Hub"
+    },
+    {
+      "id": "intv_002",
+      "title": "Conditional Mobility Stipend",
+      "type": "cash-transfer",
+      "targetRiskFactors": [
+        "transport_access",
+        "income_volatility"
+      ],
+      "expectedImpactScore": 0.59,
+      "estimatedCostUsd": 95,
+      "deliveryPartner": "Provincial Social Assistance Office"
+    },
+    {
+      "id": "intv_003",
+      "title": "Rapid Placement and Coaching",
+      "type": "placement",
+      "targetRiskFactors": [
+        "skills_mismatch",
+        "income_volatility"
+      ],
+      "expectedImpactScore": 0.68,
+      "estimatedCostUsd": 130,
+      "deliveryPartner": "Youth Employment Network Indonesia"
+    }
+  ]
+}

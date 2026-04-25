@@ -1,0 +1,171 @@
+{
+  "countryCode": "ID",
+  "countryIso3": "IDN",
+  "generatedAt": "2026-04-25T21:58:45.693Z",
+  "nationalBaseline": {
+    "scope": "national_only_world_bank_wdi",
+    "subnationalOverlay": "pending_government_upload",
+    "source": "World Bank WDI API",
+    "dataFile": "data/worldbank/IDN.json",
+    "series": {
+      "SL.UEM.TOTL.ZS": {
+        "label": "Unemployment rate",
+        "unit": "percent_of_labor_force",
+        "latestYear": "2024",
+        "latestValue": 3.301
+      },
+      "SL.UEM.1524.ZS": {
+        "label": "Youth unemployment rate",
+        "unit": "percent_of_labor_force_ages_15_24",
+        "latestYear": "2024",
+        "latestValue": 13.075
+      },
+      "SL.UEM.NEET.ZS": {
+        "label": "Youth NEET rate",
+        "unit": "percent_of_youth_population",
+        "latestYear": "2023",
+        "latestValue": 21.365
+      },
+      "IT.NET.USER.ZS": {
+        "label": "Internet users",
+        "unit": "percent_of_population",
+        "latestYear": "2024",
+        "latestValue": 72.78075544
+      },
+      "NY.GDP.PCAP.CD": {
+        "label": "GDP per capita",
+        "unit": "current_usd",
+        "latestYear": "2024",
+        "latestValue": 4925.43048751861
+      },
+      "SL.SRV.EMPL.ZS": {
+        "label": "Employment in services",
+        "unit": "percent_of_total_employment",
+        "latestYear": "2024",
+        "latestValue": 49.7537526677536
+      },
+      "SL.AGR.EMPL.ZS": {
+        "label": "Employment in agriculture",
+        "unit": "percent_of_total_employment",
+        "latestYear": "2024",
+        "latestValue": 27.9600749776458
+      },
+      "SL.IND.EMPL.ZS": {
+        "label": "Employment in industry",
+        "unit": "percent_of_total_employment",
+        "latestYear": "2024",
+        "latestValue": 22.2861723546005
+      },
+      "SL.TLF.CACT.ZS": {
+        "label": "Labor force participation rate",
+        "unit": "percent_of_population_ages_15_plus",
+        "latestYear": "2024",
+        "latestValue": 67.927
+      },
+      "IT.CEL.SETS.P2": {
+        "label": "Mobile cellular subscriptions",
+        "unit": "per_100_people",
+        "latestYear": "2024",
+        "latestValue": 122.514946500491
+      },
+      "HD.HCI.OVRL": {
+        "label": "Human Capital Index",
+        "unit": "index_0_to_1",
+        "latestYear": "2020",
+        "latestValue": 0.540038466453552
+      },
+      "SL.ISV.IFRM.ZS": {
+        "label": "Informal employment",
+        "unit": "percent_of_total_employment",
+        "latestYear": null,
+        "latestValue": null,
+        "note": "No non-null observations returned for Indonesia in 2015-2024 for this indicator in the fetched window."
+      }
+    },
+    "nationalRiskIndex": {
+      "value": 0.33733097258333333,
+      "method": "Equal-weight mean of four capped normalized series: unemployment (SL.UEM.TOTL.ZS), youth unemployment (SL.UEM.1524.ZS), youth NEET (SL.UEM.NEET.ZS), and a digital access gap derived from internet penetration (IT.NET.USER.ZS). Each component is min(raw/scaling_cap, 1); digital gap uses min((80 - internet_pct)/80, 1). All inputs are latest non-null values from the committed WDI extract.",
+      "components": [
+        {
+          "name": "unemployment_pressure",
+          "weight": 0.25,
+          "wdi": "SL.UEM.TOTL.ZS",
+          "year": "2024",
+          "raw_value": 3.301,
+          "scaling_cap": 12,
+          "normalized": 0.27508333333333335
+        },
+        {
+          "name": "youth_unemployment_pressure",
+          "weight": 0.25,
+          "wdi": "SL.UEM.1524.ZS",
+          "year": "2024",
+          "raw_value": 13.075,
+          "scaling_cap": 35,
+          "normalized": 0.37357142857142855
+        },
+        {
+          "name": "youth_neet_pressure",
+          "weight": 0.25,
+          "wdi": "SL.UEM.NEET.ZS",
+          "year": "2023",
+          "raw_value": 21.365,
+          "scaling_cap": 35,
+          "normalized": 0.6104285714285714
+        },
+        {
+          "name": "digital_access_gap",
+          "weight": 0.25,
+          "wdi": "IT.NET.USER.ZS",
+          "year": "2024",
+          "raw_value": 72.78075544,
+          "derived_gap": 7.219244559999993,
+          "normalized": 0.09024055700000008
+        }
+      ]
+    }
+  },
+  "provinceDataSource": "national_baseline_only",
+  "provinces": [
+    {
+      "provinceCode": "ID-JB",
+      "provinceName": "West Java",
+      "dataScope": "national_baseline_only",
+      "subnationalSource": null,
+      "riskScore": 0.33733097258333333,
+      "riskLevel": "low",
+      "populationAtRisk": null,
+      "populationAtRiskNote": "Omitted: World Bank WDI extract used here is national scope only. Province-level population at risk requires a government subnational upload (for example BPS Sakernas tabulations)."
+    },
+    {
+      "provinceCode": "ID-JT",
+      "provinceName": "Central Java",
+      "dataScope": "national_baseline_only",
+      "subnationalSource": null,
+      "riskScore": 0.33733097258333333,
+      "riskLevel": "low",
+      "populationAtRisk": null,
+      "populationAtRiskNote": "Omitted: World Bank WDI extract used here is national scope only. Province-level population at risk requires a government subnational upload (for example BPS Sakernas tabulations)."
+    },
+    {
+      "provinceCode": "ID-JI",
+      "provinceName": "East Java",
+      "dataScope": "national_baseline_only",
+      "subnationalSource": null,
+      "riskScore": 0.33733097258333333,
+      "riskLevel": "low",
+      "populationAtRisk": null,
+      "populationAtRiskNote": "Omitted: World Bank WDI extract used here is national scope only. Province-level population at risk requires a government subnational upload (for example BPS Sakernas tabulations)."
+    },
+    {
+      "provinceCode": "ID-SN",
+      "provinceName": "South Sulawesi",
+      "dataScope": "national_baseline_only",
+      "subnationalSource": null,
+      "riskScore": 0.33733097258333333,
+      "riskLevel": "low",
+      "populationAtRisk": null,
+      "populationAtRiskNote": "Omitted: World Bank WDI extract used here is national scope only. Province-level population at risk requires a government subnational upload (for example BPS Sakernas tabulations)."
+    }
+  ]
+}

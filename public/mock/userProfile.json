@@ -1,0 +1,18 @@
+{
+  "userId": "usr_10021",
+  "countryCode": "ID",
+  "provinceCode": "ID-JB",
+  "displayName": "Ayu Pratama",
+  "age": 23,
+  "educationLevel": "upper_secondary",
+  "employmentStatus": "underemployed",
+  "skills": [
+    "retail-sales",
+    "customer-service",
+    "basic-spreadsheets"
+  ],
+  "preferredSectors": [
+    "digital-services",
+    "retail"
+  ]
+}
