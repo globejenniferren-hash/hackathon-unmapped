@@ -35,7 +35,7 @@ export function computeNationalJobTotals(
 ): { created: number; protected: number } {
   let created = 0;
   let prot = 0;
-  for (const bucket of Object.values(data.byProvince)) {
+  for (const bucket of Object.values(data?.byProvince ?? {})) {
     const list = bucket?.interventions ?? [];
     const s = applyBudget(list, budgetPercent);
     created += s.totalC;
