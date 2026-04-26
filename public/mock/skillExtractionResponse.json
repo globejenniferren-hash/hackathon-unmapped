@@ -1,4 +1,39 @@
 {
-  "meta": { "mock": true, "note": "Skill extraction stub — wire in Lovable youth flow" },
-  "skills": []
+  "skills": [
+    {
+      "name": "Passenger transport driving",
+      "isco_code": "8322",
+      "isco_title": "Car, van and motorcycle drivers",
+      "evidence": "mock demo: driver Grab",
+      "confidence": "high",
+      "related_esco_skills": ["drive vehicles", "use geographic information systems"]
+    },
+    {
+      "name": "Video and multimedia editing",
+      "isco_code": "2166",
+      "isco_title": "Graphic and multimedia designers",
+      "evidence": "mock demo: edit video buat UMKM",
+      "confidence": "high",
+      "related_esco_skills": ["perform image editing", "provide multimedia content"]
+    },
+    {
+      "name": "ICT equipment service",
+      "isco_code": "7422",
+      "isco_title": "Information and communications technology installers and servicers",
+      "evidence": "mock demo: service HP",
+      "confidence": "medium",
+      "related_esco_skills": ["install software", "resolve ICT equipment incidents"]
+    }
+  ],
+  "follow_up_questions": [
+    "What software do you use for video editing?",
+    "How many customers do you serve per week for phone repair?"
+  ],
+  "detected_language": "id",
+  "extractedSkills": [
+    { "name": "Passenger transport driving", "confidence": 0.9 },
+    { "name": "Video and multimedia editing", "confidence": 0.9 },
+    { "name": "ICT equipment service", "confidence": 0.65 }
+  ],
+  "missingCriticalSkills": ["digital-marketing", "financial-literacy"]
 }

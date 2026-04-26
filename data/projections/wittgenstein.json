@@ -1,0 +1,107 @@
+{
+  "source": "Wittgenstein Centre Human Capital Data Explorer (WIC), SSP2 (numeric scenario = 2)",
+  "indicator": "pop-age-edattain",
+  "rds_batch_url": "https://wicshiny2023.iiasa.ac.at/wcde-data/wcde-v3-batch/2/pop-age-edattain.rds",
+  "scenario": "SSP2",
+  "scenario_numeric": 2,
+  "age_bands": ["15--19", "20--24", "25--29", "30--34"],
+  "age_scope_note": "Population shares are computed for ages 15–34 by summing WIC 5-year age groups 15--19, 20--24, 25--29, and 30--34 (WIC 'age' labels as stored in the batch file).",
+  "education_bucket_mapping": {
+    "no_education_pct": {
+      "wic_levels": [
+        "No Education"
+      ]
+    },
+    "primary_pct": {
+      "wic_levels": ["Incomplete Primary", "Primary"]
+    },
+    "secondary_pct": {
+      "wic_levels": ["Lower Secondary", "Upper Secondary"]
+    },
+    "post_secondary_pct": {
+      "wic_levels": ["Post Secondary", "Short Post Secondary", "Bachelor", "Master and higher"]
+    }
+  },
+  "formula": "For each country-year: bucket_pct = 100 * sum(pop where education in bucket) / sum(pop over all education rows in the four age bands, excluding 'Under 15').",
+  "countries": {
+    "IDN": {
+      "name": "Indonesia",
+      "projections": {
+        "2025": {
+          "no_education_pct": 0.9786,
+          "primary_pct": 16.0232,
+          "secondary_pct": 62.4411,
+          "post_secondary_pct": 20.5571,
+          "population_thousands": 98006.1
+        },
+        "2030": {
+          "no_education_pct": 0.7689,
+          "primary_pct": 13.3043,
+          "secondary_pct": 62.4309,
+          "post_secondary_pct": 23.4959,
+          "population_thousands": 102665.1
+        },
+        "2035": {
+          "no_education_pct": 0.6185,
+          "primary_pct": 11.0037,
+          "secondary_pct": 61.5059,
+          "post_secondary_pct": 26.8719,
+          "population_thousands": 105400.5
+        }
+      }
+    },
+    "GHA": {
+      "name": "Ghana",
+      "projections": {
+        "2025": {
+          "no_education_pct": 6.7838,
+          "primary_pct": 33.6233,
+          "secondary_pct": 54.8092,
+          "post_secondary_pct": 4.7838,
+          "population_thousands": 11980.1
+        },
+        "2030": {
+          "no_education_pct": 4.7615,
+          "primary_pct": 31.9519,
+          "secondary_pct": 57.8047,
+          "post_secondary_pct": 5.4819,
+          "population_thousands": 13382.3
+        },
+        "2035": {
+          "no_education_pct": 3.3897,
+          "primary_pct": 29.8681,
+          "secondary_pct": 60.4578,
+          "post_secondary_pct": 6.2844,
+          "population_thousands": 14827.2
+        }
+      }
+    },
+    "IND": {
+      "name": "India",
+      "projections": {
+        "2025": {
+          "no_education_pct": 9.3705,
+          "primary_pct": 13.9089,
+          "secondary_pct": 59.5561,
+          "post_secondary_pct": 17.1645,
+          "population_thousands": 495788.8
+        },
+        "2030": {
+          "no_education_pct": 6.6122,
+          "primary_pct": 11.1817,
+          "secondary_pct": 62.3736,
+          "post_secondary_pct": 19.8325,
+          "population_thousands": 497578.6
+        },
+        "2035": {
+          "no_education_pct": 4.6767,
+          "primary_pct": 8.831,
+          "secondary_pct": 64.0425,
+          "post_secondary_pct": 22.4499,
+          "population_thousands": 488671.5
+        }
+      }
+    }
+  },
+  "extracted_at": "2026-04-25T22:23:11Z"
+}

@@ -1,0 +1,62 @@
+{
+  "source": "UNMAPPED demo crosswalk (US SOC 2010 codes from Frey–Osborne extract → indicative ISCO-08 unit / minor groups)",
+  "methodology_note": "These are approximate correspondences for hackathon personas. SOC and ISCO are different national/international systems; production systems should use official concordance tables (e.g. U.S. BLS SOC structure at https://www.bls.gov/soc/ and ILO ISCO-08 at https://www.ilo.org/public/english/bureau/stat/isco/isco08/).",
+  "mappings": [
+    {
+      "persona": "retail_seller",
+      "soc_code": "41-2031",
+      "soc_title": "Retail Salespersons",
+      "isco08_code": "5223",
+      "isco08_title": "Shop salespersons",
+      "rationale": "Retail sales floor roles align most closely with ISCO-08 5223 (shop sales)."
+    },
+    {
+      "persona": "driver",
+      "soc_code": "53-3041",
+      "soc_title": "Taxi Drivers and Chauffeurs",
+      "isco08_code": "8322",
+      "isco08_title": "Car, van and motorcycle drivers",
+      "rationale": "Passenger road transport driving maps to ISCO-08 8322."
+    },
+    {
+      "persona": "video_editor",
+      "soc_code": "27-4032",
+      "soc_title": "Film and Video Editors",
+      "isco08_code": "2166",
+      "isco08_title": "Graphic and multimedia designers",
+      "rationale": "Digital audiovisual post-production is closest to multimedia design occupations (2166) under ISCO-08."
+    },
+    {
+      "persona": "phone_repairer",
+      "soc_code": "49-2022",
+      "soc_title": "Telecommunications Equipment Installers and Repairers, Except Line Installers",
+      "isco08_code": "7422",
+      "isco08_title": "Information and communications technology installers and servicers",
+      "rationale": "Hands-on repair of communications equipment aligns with ISCO-08 7422."
+    },
+    {
+      "persona": "farmer",
+      "soc_code": "45-2090",
+      "soc_title": "Miscellaneous Agricultural Workers",
+      "isco08_code": "9211",
+      "isco08_title": "Crop farm labourers",
+      "rationale": "Elementary field/crop labour is closest to ISCO-08 9211 within agricultural labourers."
+    },
+    {
+      "persona": "weaver",
+      "soc_code": "51-6064",
+      "soc_title": "Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",
+      "isco08_code": "8153",
+      "isco08_title": "Machine operators for textile products not elsewhere classified",
+      "rationale": "Machine-based textile production work maps to ISCO-08 8153."
+    },
+    {
+      "persona": "digital_marketer",
+      "soc_code": "11-2021",
+      "soc_title": "Marketing Managers",
+      "isco08_code": "2431",
+      "isco08_title": "Advertising and marketing professionals",
+      "rationale": "Strategic marketing management aligns with ISCO-08 2431."
+    }
+  ]
+}

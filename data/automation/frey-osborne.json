@@ -1,0 +1,5624 @@
+{
+  "source": "Frey & Osborne (2017), via Plotly datasets",
+  "csv_url": "https://raw.githubusercontent.com/plotly/datasets/master/job-automation-probability.csv",
+  "total_occupations": 702,
+  "fetched_at": "2026-04-25T22:16:17.128Z",
+  "occupations": [
+    {
+      "soc_code": "51-4033",
+      "occupation": "Grinding, Lapping, Polishing and Buffing Machine Tool Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 34920,
+      "education": "High school diploma or equivalent",
+      "employed": 74600
+    },
+    {
+      "soc_code": "51-9012",
+      "occupation": "Separating, Filtering, Clarifying, Precipitating and Still Machine Setters, Operators and Tenders",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 41450,
+      "education": "High school diploma or equivalent",
+      "employed": 47160
+    },
+    {
+      "soc_code": "41-4012",
+      "occupation": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+      "automation_probability": 0.85,
+      "avg_annual_wage": 68410,
+      "education": "High school diploma or equivalent",
+      "employed": 1404050
+    },
+    {
+      "soc_code": "53-1031",
+      "occupation": "First-Line Supervisors of Transportation and Material-Moving Machine and Vehicle Operators",
+      "automation_probability": 0.029,
+      "avg_annual_wage": 59800,
+      "education": "High school diploma or equivalent",
+      "employed": 202760
+    },
+    {
+      "soc_code": "51-4072",
+      "occupation": "Molding, Coremaking and Casting Machine Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 32660,
+      "education": "High school diploma or equivalent",
+      "employed": 145560
+    },
+    {
+      "soc_code": "51-6091",
+      "occupation": "Extruding and Forming Machine Setters, Operators and Tenders, Synthetic and Glass Fibers",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 35420,
+      "education": "High school diploma or equivalent",
+      "employed": 19340
+    },
+    {
+      "soc_code": "51-4031",
+      "occupation": "Cutting, Punching and Press Machine Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.78,
+      "avg_annual_wage": 34210,
+      "education": "High school diploma or equivalent",
+      "employed": 192800
+    },
+    {
+      "soc_code": "41-4011",
+      "occupation": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+      "automation_probability": 0.25,
+      "avg_annual_wage": 92910,
+      "education": "Bachelor's degree",
+      "employed": 328370
+    },
+    {
+      "soc_code": "51-4032",
+      "occupation": "Drilling and Boring Machine Tool Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 38880,
+      "education": "High school diploma or equivalent",
+      "employed": 12290
+    },
+    {
+      "soc_code": "51-9041",
+      "occupation": "Extruding, Forming, Pressing and Compacting Machine Setters, Operators and Tenders",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 34370,
+      "education": "High school diploma or equivalent",
+      "employed": 71260
+    },
+    {
+      "soc_code": "51-4034",
+      "occupation": "Lathe and Turning Machine Tool Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 39630,
+      "education": "High school diploma or equivalent",
+      "employed": 33850
+    },
+    {
+      "soc_code": "51-4021",
+      "occupation": "Extruding and Drawing Machine Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 35340,
+      "education": "High school diploma or equivalent",
+      "employed": 71960
+    },
+    {
+      "soc_code": "51-6064",
+      "occupation": "TextileWinding, Twisting and Drawing Out Machine Setters, Operators and Tenders",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 28110,
+      "education": "High school diploma or equivalent",
+      "employed": 30340
+    },
+    {
+      "soc_code": "37-1012",
+      "occupation": "First-Line Supervisors of Landscaping, Lawn Service and Groundskeeping Workers",
+      "automation_probability": 0.57,
+      "avg_annual_wage": 48790,
+      "education": "High school diploma or equivalent",
+      "employed": 103070
+    },
+    {
+      "soc_code": "43-6014",
+      "occupation": "Secretaries and Administrative Assistants, Except Legal, Medical and Executive",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 36140,
+      "education": "High school diploma or equivalent",
+      "employed": 2295510
+    },
+    {
+      "soc_code": "49-2093",
+      "occupation": "Electrical and Electronics Installers and Repairers, Transportation Equipment",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 59840,
+      "education": "Postsecondary nondegree award",
+      "employed": 13960
+    },
+    {
+      "soc_code": "15-1179",
+      "occupation": "Information Security Analysts, Web Developers and Computer Network Architects",
+      "automation_probability": 0.21,
+      "avg_annual_wage": 67770,
+      "education": "Associate's degree",
+      "employed": 188740
+    },
+    {
+      "soc_code": "51-4035",
+      "occupation": "Milling and Planing Machine Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 41180,
+      "education": "High school diploma or equivalent",
+      "employed": 17560
+    },
+    {
+      "soc_code": "51-4193",
+      "occupation": "Plating and Coating Machine Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 33690,
+      "education": "High school diploma or equivalent",
+      "employed": 35570
+    },
+    {
+      "soc_code": "49-2022",
+      "occupation": "Telecommunications Equipment Installers and Repairers, Except Line Installers",
+      "automation_probability": 0.36,
+      "avg_annual_wage": 54520,
+      "education": "Postsecondary nondegree award",
+      "employed": 228430
+    },
+    {
+      "soc_code": "51-4012",
+      "occupation": "Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic",
+      "automation_probability": 0.36,
+      "avg_annual_wage": 53560,
+      "education": "High school diploma or equivalent",
+      "employed": 25180
+    },
+    {
+      "soc_code": "51-3091",
+      "occupation": "Food and Tobacco Roasting, Baking and Drying Machine Operators and Tenders",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 30970,
+      "education": "No formal educational credential",
+      "employed": 20080
+    },
+    {
+      "soc_code": "17-2111",
+      "occupation": "Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",
+      "automation_probability": 0.028,
+      "avg_annual_wage": 90190,
+      "education": "Bachelor's degree",
+      "employed": 25410
+    },
+    {
+      "soc_code": "25-3011",
+      "occupation": "Adult Basic and Secondary Education and Literacy Teachers and Instructors",
+      "automation_probability": 0.19,
+      "avg_annual_wage": 55140,
+      "education": "Bachelor's degree",
+      "employed": 58810
+    },
+    {
+      "soc_code": "49-2094",
+      "occupation": "Electrical and Electronics Repairers, Commercial and Industrial Equipment",
+      "automation_probability": 0.41,
+      "avg_annual_wage": 56990,
+      "education": "Postsecondary nondegree award",
+      "employed": 67390
+    },
+    {
+      "soc_code": "51-4191",
+      "occupation": "Heat Treating Equipment Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 39010,
+      "education": "High school diploma or equivalent",
+      "employed": 19780
+    },
+    {
+      "soc_code": "47-3011",
+      "occupation": "Helpers–Brickmasons, Blockmasons, Stonemasons and Tile and Marble Setters",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 33610,
+      "education": "No formal educational credential",
+      "employed": 23950
+    },
+    {
+      "soc_code": "33-9092",
+      "occupation": "Lifeguards, Ski Patrol and Other Recreational Protective Service Workers",
+      "automation_probability": 0.67,
+      "avg_annual_wage": 22640,
+      "education": "No formal educational credential",
+      "employed": 145100
+    },
+    {
+      "soc_code": "43-5053",
+      "occupation": "Postal Service Mail Sorters, Processors and Processing Machine Operators",
+      "automation_probability": 0.79,
+      "avg_annual_wage": 49710,
+      "education": "High school diploma or equivalent",
+      "employed": 110770
+    },
+    {
+      "soc_code": "25-2031",
+      "occupation": "Secondary School Teachers, Except Special and Career/Technical Education",
+      "automation_probability": 0.0078,
+      "avg_annual_wage": 61420,
+      "education": "Bachelor's degree",
+      "employed": 1003250
+    },
+    {
+      "soc_code": "51-9021",
+      "occupation": "Crushing, Grinding and Polishing Machine Setters, Operators and Tenders",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 36050,
+      "education": "High school diploma or equivalent",
+      "employed": 29830
+    },
+    {
+      "soc_code": "41-9091",
+      "occupation": "Door-to-Door Sales Workers, News and Street Vendors and Related Workers",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 28630,
+      "education": "No formal educational credential",
+      "employed": 8040
+    },
+    {
+      "soc_code": "53-3011",
+      "occupation": "Ambulance Drivers and Attendants, Except Emergency Medical Technicians",
+      "automation_probability": 0.25,
+      "avg_annual_wage": 25600,
+      "education": "High school diploma or equivalent",
+      "employed": 17300
+    },
+    {
+      "soc_code": "49-2095",
+      "occupation": "Electrical and Electronics Repairers, Powerhouse, Substation and Relay",
+      "automation_probability": 0.38,
+      "avg_annual_wage": 74540,
+      "education": "Postsecondary nondegree award",
+      "employed": 23060
+    },
+    {
+      "soc_code": "51-4081",
+      "occupation": "MultipleMachine Tool Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 36190,
+      "education": "High school diploma or equivalent",
+      "employed": 117300
+    },
+    {
+      "soc_code": "51-9121",
+      "occupation": "Coating, Painting and Spraying Machine Setters, Operators and Tenders",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 34460,
+      "education": "High school diploma or equivalent",
+      "employed": 85760
+    },
+    {
+      "soc_code": "53-1021",
+      "occupation": "First-Line Supervisors of Helpers, Laborers and Material Movers, Hand",
+      "automation_probability": 0.42,
+      "avg_annual_wage": 50160,
+      "education": "High school diploma or equivalent",
+      "employed": 183620
+    },
+    {
+      "soc_code": "25-2022",
+      "occupation": "Middle School Teachers, Except Special and Career/Technical Education",
+      "automation_probability": 0.17,
+      "avg_annual_wage": 59800,
+      "education": "Bachelor's degree",
+      "employed": 626310
+    },
+    {
+      "soc_code": "51-4122",
+      "occupation": "Welding, Soldering and Brazing Machine Setters, Operators and Tenders",
+      "automation_probability": 0.61,
+      "avg_annual_wage": 38380,
+      "education": "High school diploma or equivalent",
+      "employed": 46920
+    },
+    {
+      "soc_code": "51-9192",
+      "occupation": "Cleaning, Washing and Metal Pickling Equipment Operators and Tenders",
+      "automation_probability": 0.81,
+      "avg_annual_wage": 30590,
+      "education": "No formal educational credential",
+      "employed": 17860
+    },
+    {
+      "soc_code": "47-1011",
+      "occupation": "First-Line Supervisors of Construction Trades and Extraction Workers",
+      "automation_probability": 0.17,
+      "avg_annual_wage": 68040,
+      "education": "High school diploma or equivalent",
+      "employed": 538220
+    },
+    {
+      "soc_code": "49-9021",
+      "occupation": "Heating, Air Conditioning and Refrigeration Mechanics and Installers",
+      "automation_probability": 0.65,
+      "avg_annual_wage": 48320,
+      "education": "Postsecondary nondegree award",
+      "employed": 294730
+    },
+    {
+      "soc_code": "13-1078",
+      "occupation": "Human Resources, Training and Labor Relations Specialists, All Other",
+      "automation_probability": 0.31,
+      "avg_annual_wage": 64250,
+      "education": "Bachelor's degree",
+      "employed": 79430
+    },
+    {
+      "soc_code": "43-1011",
+      "occupation": "First-Line Supervisors of Office and Administrative Support Workers",
+      "automation_probability": 0.014,
+      "avg_annual_wage": 57890,
+      "education": "High school diploma or equivalent",
+      "employed": 1443150
+    },
+    {
+      "soc_code": "51-6063",
+      "occupation": "Textile Knitting and Weaving Machine Setters, Operators and Tenders",
+      "automation_probability": 0.73,
+      "avg_annual_wage": 28380,
+      "education": "High school diploma or equivalent",
+      "employed": 21550
+    },
+    {
+      "soc_code": "35-3021",
+      "occupation": "Combined Food Preparation and Serving Workers, Including Fast Food",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 20460,
+      "education": "No formal educational credential",
+      "employed": 3426090
+    },
+    {
+      "soc_code": "49-9012",
+      "occupation": "Control and Valve Installers and Repairers, Except Mechanical Door",
+      "automation_probability": 0.63,
+      "avg_annual_wage": 56180,
+      "education": "High school diploma or equivalent",
+      "employed": 45740
+    },
+    {
+      "soc_code": "19-4091",
+      "occupation": "Environmental Science and Protection Technicians, Including Health",
+      "automation_probability": 0.77,
+      "avg_annual_wage": 47930,
+      "education": "Associate's degree",
+      "employed": 32950
+    },
+    {
+      "soc_code": "17-2151",
+      "occupation": "Mining and Geological Engineers, Including Mining Safety Engineers",
+      "automation_probability": 0.14,
+      "avg_annual_wage": 103010,
+      "education": "Bachelor's degree",
+      "employed": 6940
+    },
+    {
+      "soc_code": "51-4022",
+      "occupation": "Forging Machine Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 38710,
+      "education": "High school diploma or equivalent",
+      "employed": 19160
+    },
+    {
+      "soc_code": "51-4023",
+      "occupation": "Rolling Machine Setters, Operators and Tenders, Metal and Plastic",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 41900,
+      "education": "High school diploma or equivalent",
+      "employed": 29060
+    },
+    {
+      "soc_code": "51-7042",
+      "occupation": "Woodworking Machine Setters, Operators and Tenders, Except Sawing",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 29850,
+      "education": "High school diploma or equivalent",
+      "employed": 76130
+    },
+    {
+      "soc_code": "13-1011",
+      "occupation": "Agents and Business Managers of Artists, Performers and Athletes",
+      "automation_probability": 0.24,
+      "avg_annual_wage": 86560,
+      "education": "Bachelor's degree",
+      "employed": 13470
+    },
+    {
+      "soc_code": "11-9031",
+      "occupation": "Education Administrators, Preschool and Childcare Center/Program",
+      "automation_probability": 0.015,
+      "avg_annual_wage": 52150,
+      "education": "Bachelor's degree",
+      "employed": 48530
+    },
+    {
+      "soc_code": "49-2097",
+      "occupation": "Electronic Home Entertainment Equipment Installers and Repairers",
+      "automation_probability": 0.65,
+      "avg_annual_wage": 39340,
+      "education": "Postsecondary nondegree award",
+      "employed": 25550
+    },
+    {
+      "soc_code": "45-1011",
+      "occupation": "First-Line Supervisors of Farming, Fishing and Forestry Workers",
+      "automation_probability": 0.57,
+      "avg_annual_wage": 48820,
+      "education": "High school diploma or equivalent",
+      "employed": 19550
+    },
+    {
+      "soc_code": "39-4831",
+      "occupation": "Funeral Service Managers, Directors, Morticians and Undertakers",
+      "automation_probability": 0.2,
+      "avg_annual_wage": 54700,
+      "education": "Associate's degree",
+      "employed": 25850
+    },
+    {
+      "soc_code": "51-8093",
+      "occupation": "Petroleum Pump System Operators, Refinery Operators and Gaugers",
+      "automation_probability": 0.71,
+      "avg_annual_wage": 67870,
+      "education": "High school diploma or equivalent",
+      "employed": 41630
+    },
+    {
+      "soc_code": "35-3022",
+      "occupation": "Counter Attendants, Cafeteria, Food Concession and Coffee Shop",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 21380,
+      "education": "No formal educational credential",
+      "employed": 499550
+    },
+    {
+      "soc_code": "33-1021",
+      "occupation": "First-Line Supervisors of Fire Fighting and Prevention Workers",
+      "automation_probability": 0.0036,
+      "avg_annual_wage": 77050,
+      "education": "Postsecondary nondegree award",
+      "employed": 57170
+    },
+    {
+      "soc_code": "35-1012",
+      "occupation": "First-Line Supervisors of Food Preparation and Serving Workers",
+      "automation_probability": 0.63,
+      "avg_annual_wage": 34700,
+      "education": "High school diploma or equivalent",
+      "employed": 908550
+    },
+    {
+      "soc_code": "47-2073",
+      "occupation": "Operating Engineers and Other Construction Equipment Operators",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 50560,
+      "education": "High school diploma or equivalent",
+      "employed": 356750
+    },
+    {
+      "soc_code": "43-4181",
+      "occupation": "Reservation and Transportation Ticket Agents and Travel Clerks",
+      "automation_probability": 0.61,
+      "avg_annual_wage": 38050,
+      "education": "High school diploma or equivalent",
+      "employed": 146350
+    },
+    {
+      "soc_code": "51-4011",
+      "occupation": "Computer-Controlled Machine Tool Operators, Metal and Plastic",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 39590,
+      "education": "High school diploma or equivalent",
+      "employed": 146190
+    },
+    {
+      "soc_code": "49-2096",
+      "occupation": "Electronic Equipment Installers and Repairers, Motor Vehicles",
+      "automation_probability": 0.61,
+      "avg_annual_wage": 34200,
+      "education": "Postsecondary nondegree award",
+      "employed": 11750
+    },
+    {
+      "soc_code": "43-6011",
+      "occupation": "Executive Secretaries and Executive Administrative Assistants",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 57910,
+      "education": "High school diploma or equivalent",
+      "employed": 631610
+    },
+    {
+      "soc_code": "49-1011",
+      "occupation": "First-Line Supervisors of Mechanics, Installers and Repairers",
+      "automation_probability": 0.003,
+      "avg_annual_wage": 66730,
+      "education": "High school diploma or equivalent",
+      "employed": 453330
+    },
+    {
+      "soc_code": "37-2011",
+      "occupation": "Janitors and Cleaners, Except Maids and Housekeeping Cleaners",
+      "automation_probability": 0.66,
+      "avg_annual_wage": 27030,
+      "education": "No formal educational credential",
+      "employed": 2161740
+    },
+    {
+      "soc_code": "43-9051",
+      "occupation": "Mail Clerks and Mail Machine Operators, Except Postal Service",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 30580,
+      "education": "High school diploma or equivalent",
+      "employed": 91530
+    },
+    {
+      "soc_code": "51-9151",
+      "occupation": "Photographic Process Workers and Processing Machine Operators",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 31740,
+      "education": "High school diploma or equivalent",
+      "employed": 26430
+    },
+    {
+      "soc_code": "13-1023",
+      "occupation": "Purchasing Agents, Except Wholesale, Retail and Farm Products",
+      "automation_probability": 0.77,
+      "avg_annual_wage": 67420,
+      "education": "Bachelor's degree",
+      "employed": 297600
+    },
+    {
+      "soc_code": "23-1021",
+      "occupation": "Administrative Law Judges, Adjudicators and Hearing Officers",
+      "automation_probability": 0.64,
+      "avg_annual_wage": 95240,
+      "education": "Doctoral or professional degree",
+      "employed": 14540
+    },
+    {
+      "soc_code": "51-2011",
+      "occupation": "Aircraft Structure, Surfaces, Rigging and Systems Assemblers",
+      "automation_probability": 0.79,
+      "avg_annual_wage": 52530,
+      "education": "High school diploma or equivalent",
+      "employed": 42010
+    },
+    {
+      "soc_code": "27-1013",
+      "occupation": "Fine Artists, Including Painters, Sculptors and Illustrators",
+      "automation_probability": 0.042,
+      "avg_annual_wage": 57410,
+      "education": "Bachelor's degree",
+      "employed": 11520
+    },
+    {
+      "soc_code": "37-1011",
+      "occupation": "First-Line Supervisors of Housekeeping and JanitorialWorkers",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 41240,
+      "education": "High school diploma or equivalent",
+      "employed": 161140
+    },
+    {
+      "soc_code": "47-3014",
+      "occupation": "Helpers–Painters, Paperhangers, Plasterers and Stucco Masons",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 28760,
+      "education": "No formal educational credential",
+      "employed": 10780
+    },
+    {
+      "soc_code": "49-9091",
+      "occupation": "Coin, Vending and Amusement Machine Servicers and Repairers",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 34860,
+      "education": "High school diploma or equivalent",
+      "employed": 33600
+    },
+    {
+      "soc_code": "51-9051",
+      "occupation": "Furnace, Kiln, Oven, Drier and Kettle Operators and Tenders",
+      "automation_probability": 0.37,
+      "avg_annual_wage": 37600,
+      "education": "High school diploma or equivalent",
+      "employed": 19520
+    },
+    {
+      "soc_code": "41-3031",
+      "occupation": "Securities, Commodities and Financial Services Sales Agents",
+      "automation_probability": 0.016,
+      "avg_annual_wage": 102260,
+      "education": "Bachelor's degree",
+      "employed": 353780
+    },
+    {
+      "soc_code": "51-9032",
+      "occupation": "Cutting and Slicing Machine Setters, Operators and Tenders",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 34000,
+      "education": "High school diploma or equivalent",
+      "employed": 61330
+    },
+    {
+      "soc_code": "35-9011",
+      "occupation": "Dining Room and Cafeteria Attendants and Bartender Helpers",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 22340,
+      "education": "No formal educational credential",
+      "employed": 423080
+    },
+    {
+      "soc_code": "19-2041",
+      "occupation": "Environmental Scientists and Specialists, Including Health",
+      "automation_probability": 0.033,
+      "avg_annual_wage": 75360,
+      "education": "Bachelor's degree",
+      "employed": 84250
+    },
+    {
+      "soc_code": "51-1011",
+      "occupation": "First-Line Supervisors of Production and Operating Workers",
+      "automation_probability": 0.016,
+      "avg_annual_wage": 61450,
+      "education": "High school diploma or equivalent",
+      "employed": 610480
+    },
+    {
+      "soc_code": "47-3015",
+      "occupation": "Helpers–Pipelayers, Plumbers, Pipefitters and Steamfitters",
+      "automation_probability": 0.57,
+      "avg_annual_wage": 30640,
+      "education": "High school diploma or equivalent",
+      "employed": 54080
+    },
+    {
+      "soc_code": "43-4161",
+      "occupation": "Human Resources Assistants, Except Payroll and Timekeeping",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 40100,
+      "education": "Associate's degree",
+      "employed": 137150
+    },
+    {
+      "soc_code": "49-2021",
+      "occupation": "Radio, Cellular and Tower Equipment Installers and Repairs",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 53620,
+      "education": "Associate's degree",
+      "employed": 14120
+    },
+    {
+      "soc_code": "51-6061",
+      "occupation": "Textile Bleaching and Dyeing Machine Operators and Tenders",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 28480,
+      "education": "High school diploma or equivalent",
+      "employed": 10860
+    },
+    {
+      "soc_code": "11-9032",
+      "occupation": "Education Administrators, Elementary and Secondary School",
+      "automation_probability": 0.0046,
+      "avg_annual_wage": 95390,
+      "education": "Master's degree",
+      "employed": 242970
+    },
+    {
+      "soc_code": "47-5031",
+      "occupation": "ExplosivesWorkers, Ordnance Handling Experts and Blasters",
+      "automation_probability": 0.48,
+      "avg_annual_wage": 54580,
+      "education": "High school diploma or equivalent",
+      "employed": 6310
+    },
+    {
+      "soc_code": "29-9799",
+      "occupation": "Healthcare Practitioners and Technical Workers, All Other",
+      "automation_probability": 0.055,
+      "avg_annual_wage": 57960,
+      "education": "Postsecondary nondegree award",
+      "employed": 36000
+    },
+    {
+      "soc_code": "51-9023",
+      "occupation": "Mixing and BlendingMachine Setters, Operators and Tenders",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 37630,
+      "education": "High school diploma or equivalent",
+      "employed": 130480
+    },
+    {
+      "soc_code": "21-1092",
+      "occupation": "Probation Officers and Correctional Treatment Specialists",
+      "automation_probability": 0.25,
+      "avg_annual_wage": 55380,
+      "education": "Bachelor's degree",
+      "employed": 87500
+    },
+    {
+      "soc_code": "51-8031",
+      "occupation": "Water and Wastewater Treatment Plant and System Operators",
+      "automation_probability": 0.61,
+      "avg_annual_wage": 47930,
+      "education": "High school diploma or equivalent",
+      "employed": 115840
+    },
+    {
+      "soc_code": "43-5111",
+      "occupation": "Weighers, Measurers, Checkers and Samplers, Recordkeeping",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 31080,
+      "education": "High school diploma or equivalent",
+      "employed": 74460
+    },
+    {
+      "soc_code": "19-4099",
+      "occupation": "Life, Physical and Social Science Technicians, All Other",
+      "automation_probability": 0.61,
+      "avg_annual_wage": 49270,
+      "education": "Associate's degree",
+      "employed": 68540
+    },
+    {
+      "soc_code": "49-3053",
+      "occupation": "Outdoor Power Equipment and Other Small Engine Mechanics",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 35320,
+      "education": "High school diploma or equivalent",
+      "employed": 33020
+    },
+    {
+      "soc_code": "37-3012",
+      "occupation": "Pesticide Handlers, Sprayers and Applicators, Vegetation",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 35720,
+      "education": "High school diploma or equivalent",
+      "employed": 25230
+    },
+    {
+      "soc_code": "11-9141",
+      "occupation": "Property, Real Estate and Community Association Managers",
+      "automation_probability": 0.81,
+      "avg_annual_wage": 70290,
+      "education": "High school diploma or equivalent",
+      "employed": 180290
+    },
+    {
+      "soc_code": "49-2011",
+      "occupation": "Computer, Automated Teller and Office Machine Repairers",
+      "automation_probability": 0.74,
+      "avg_annual_wage": 39410,
+      "education": "Some college, no degree",
+      "employed": 102170
+    },
+    {
+      "soc_code": "21-1012",
+      "occupation": "Educational, Guidance, School and Vocational Counselors",
+      "automation_probability": 0.0085,
+      "avg_annual_wage": 57620,
+      "education": "Master's degree",
+      "employed": 260670
+    },
+    {
+      "soc_code": "29-1199",
+      "occupation": "Health Diagnosing and Treating Practitioners, All Other",
+      "automation_probability": 0.02,
+      "avg_annual_wage": 84800,
+      "education": "Master's degree",
+      "employed": 36280
+    },
+    {
+      "soc_code": "35-9031",
+      "occupation": "Hosts and Hostesses, Restaurant, Lounge and Coffee Shop",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 21410,
+      "education": "No formal educational credential",
+      "employed": 404360
+    },
+    {
+      "soc_code": "49-9799",
+      "occupation": "Installation, Maintenance and Repair Workers, All Other",
+      "automation_probability": 0.5,
+      "avg_annual_wage": 41810,
+      "education": "High school diploma or equivalent",
+      "employed": 146460
+    },
+    {
+      "soc_code": "27-4031",
+      "occupation": "Camera Operators, Television, Video and Motion Picture",
+      "automation_probability": 0.6,
+      "avg_annual_wage": 63200,
+      "education": "Bachelor's degree",
+      "employed": 21710
+    },
+    {
+      "soc_code": "51-9195",
+      "occupation": "Molders, Shapers and Casters, Except Metal and Plastic",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 32590,
+      "education": "High school diploma or equivalent",
+      "employed": 39450
+    },
+    {
+      "soc_code": "51-6062",
+      "occupation": "Textile Cutting Machine Setters, Operators and Tenders",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 27860,
+      "education": "High school diploma or equivalent",
+      "employed": 15040
+    },
+    {
+      "soc_code": "31-9096",
+      "occupation": "Veterinary Assistants and Laboratory Animal Caretakers",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 26810,
+      "education": "High school diploma or equivalent",
+      "employed": 79990
+    },
+    {
+      "soc_code": "49-3031",
+      "occupation": "Bus and Truck Mechanics and Diesel Engine Specialists",
+      "automation_probability": 0.73,
+      "avg_annual_wage": 46710,
+      "education": "High school diploma or equivalent",
+      "employed": 254280
+    },
+    {
+      "soc_code": "25-2032",
+      "occupation": "Career/Technical Education Teachers, Secondary School",
+      "automation_probability": 0.0088,
+      "avg_annual_wage": 59480,
+      "education": "Bachelor's degree",
+      "employed": 80100
+    },
+    {
+      "soc_code": "53-7032",
+      "occupation": "Excavating and Loading Machine and Dragline Operators",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 45230,
+      "education": "High school diploma or equivalent",
+      "employed": 48320
+    },
+    {
+      "soc_code": "33-9031",
+      "occupation": "Gaming Surveillance Officers and Gaming Investigators",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 35280,
+      "education": "High school diploma or equivalent",
+      "employed": 10460
+    },
+    {
+      "soc_code": "53-7062",
+      "occupation": "Laborers and Freight, Stock and Material Movers, Hand",
+      "automation_probability": 0.85,
+      "avg_annual_wage": 28720,
+      "education": "No formal educational credential",
+      "employed": 2587900
+    },
+    {
+      "soc_code": "47-4061",
+      "occupation": "Rail-Track Laying and Maintenance Equipment Operators",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 52810,
+      "education": "High school diploma or equivalent",
+      "employed": 14250
+    },
+    {
+      "soc_code": "51-9193",
+      "occupation": "Cooling and Freezing Equipment Operators and Tenders",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 32100,
+      "education": "High school diploma or equivalent",
+      "employed": 8170
+    },
+    {
+      "soc_code": "25-2021",
+      "occupation": "Elementary School Teachers, Except Special Education",
+      "automation_probability": 0.0044,
+      "avg_annual_wage": 59020,
+      "education": "Bachelor's degree",
+      "employed": 1392660
+    },
+    {
+      "soc_code": "49-9098",
+      "occupation": "Helpers–Installation, Maintenance and Repair Workers",
+      "automation_probability": 0.79,
+      "avg_annual_wage": 29370,
+      "education": "High school diploma or equivalent",
+      "employed": 118720
+    },
+    {
+      "soc_code": "25-9011",
+      "occupation": "Audio-Visual and Multimedia Collections Specialists",
+      "automation_probability": 0.39,
+      "avg_annual_wage": 50130,
+      "education": "Bachelor's degree",
+      "employed": 10300
+    },
+    {
+      "soc_code": "13-1141",
+      "occupation": "Compensation, Benefits and Job Analysis Specialists",
+      "automation_probability": 0.47,
+      "avg_annual_wage": 66490,
+      "education": "Bachelor's degree",
+      "employed": 79190
+    },
+    {
+      "soc_code": "17-3029",
+      "occupation": "Engineering Technicians, Except Drafters, All Other",
+      "automation_probability": 0.24,
+      "avg_annual_wage": 64050,
+      "education": "Associate's degree",
+      "employed": 74290
+    },
+    {
+      "soc_code": "51-9061",
+      "occupation": "Inspectors, Testers, Sorters, Samplers and Weighers",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 40340,
+      "education": "High school diploma or equivalent",
+      "employed": 518950
+    },
+    {
+      "soc_code": "51-9111",
+      "occupation": "Packaging and Filling Machine Operators and Tenders",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 30910,
+      "education": "High school diploma or equivalent",
+      "employed": 386520
+    },
+    {
+      "soc_code": "51-7041",
+      "occupation": "Sawing Machine Setters, Operators and Tenders, Wood",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 29960,
+      "education": "High school diploma or equivalent",
+      "employed": 50640
+    },
+    {
+      "soc_code": "53-6061",
+      "occupation": "Transportation Attendants, Except Flight Attendants",
+      "automation_probability": 0.75,
+      "avg_annual_wage": 31080,
+      "education": "High school diploma or equivalent",
+      "employed": 18410
+    },
+    {
+      "soc_code": "25-2023",
+      "occupation": "Career/Technical Education Teachers, Middle School",
+      "automation_probability": 0.26,
+      "avg_annual_wage": 60350,
+      "education": "Bachelor's degree",
+      "employed": 12730
+    },
+    {
+      "soc_code": "17-3023",
+      "occupation": "Electrical and Electronics Engineering Technicians",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 62950,
+      "education": "Associate's degree",
+      "employed": 134870
+    },
+    {
+      "soc_code": "41-1012",
+      "occupation": "First-Line Supervisors of Non-Retail Sales Workers",
+      "automation_probability": 0.075,
+      "avg_annual_wage": 85830,
+      "education": "High school diploma or equivalent",
+      "employed": 252670
+    },
+    {
+      "soc_code": "39-1021",
+      "occupation": "First-Line Supervisors of Personal Service Workers",
+      "automation_probability": 0.076,
+      "avg_annual_wage": 39830,
+      "education": "High school diploma or equivalent",
+      "employed": 190420
+    },
+    {
+      "soc_code": "19-2042",
+      "occupation": "Geoscientists, Except Hydrologists and Geographers",
+      "automation_probability": 0.63,
+      "avg_annual_wage": 106390,
+      "education": "Bachelor's degree",
+      "employed": 30420
+    },
+    {
+      "soc_code": "39-3093",
+      "occupation": "Locker Room, Coatroom and Dressing Room Attendants",
+      "automation_probability": 0.43,
+      "avg_annual_wage": 24390,
+      "education": "High school diploma or equivalent",
+      "employed": 18040
+    },
+    {
+      "soc_code": "13-1161",
+      "occupation": "Market Research Analysts and Marketing Specialists",
+      "automation_probability": 0.61,
+      "avg_annual_wage": 70620,
+      "education": "Bachelor's degree",
+      "employed": 558630
+    },
+    {
+      "soc_code": "29-2071",
+      "occupation": "Medical Records and Health Information Technicians",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 41460,
+      "education": "Postsecondary nondegree award",
+      "employed": 200140
+    },
+    {
+      "soc_code": "51-9196",
+      "occupation": "Paper Goods Machine Setters, Operators and Tenders",
+      "automation_probability": 0.67,
+      "avg_annual_wage": 38570,
+      "education": "High school diploma or equivalent",
+      "employed": 93100
+    },
+    {
+      "soc_code": "53-4013",
+      "occupation": "Rail Yard Engineers, Dinkey Operators and Hostlers",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 52320,
+      "education": "High school diploma or equivalent",
+      "employed": 4530
+    },
+    {
+      "soc_code": "49-9045",
+      "occupation": "Refractory Materials Repairers, Except Brickmasons",
+      "automation_probability": 0.82,
+      "avg_annual_wage": 47000,
+      "education": "High school diploma or equivalent",
+      "employed": 1540
+    },
+    {
+      "soc_code": "21-1011",
+      "occupation": "Substance Abuse and Behavioral Disorder Counselors",
+      "automation_probability": 0.033,
+      "avg_annual_wage": 44160,
+      "education": "Bachelor's degree",
+      "employed": 91040
+    },
+    {
+      "soc_code": "43-2011",
+      "occupation": "Switchboard Operators, Including Answering Service",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 29720,
+      "education": "High school diploma or equivalent",
+      "employed": 90910
+    },
+    {
+      "soc_code": "11-9013",
+      "occupation": "Farmers, Ranchers and Other Agricultural Managers",
+      "automation_probability": 0.047,
+      "avg_annual_wage": 75790,
+      "education": "High school diploma or equivalent",
+      "employed": 4560
+    },
+    {
+      "soc_code": "33-2022",
+      "occupation": "Forest Fire Inspectors and Prevention Specialists",
+      "automation_probability": 0.048,
+      "avg_annual_wage": 44300,
+      "education": "High school diploma or equivalent",
+      "employed": 1650
+    },
+    {
+      "soc_code": "29-2061",
+      "occupation": "Licensed Practical and Licensed Vocational Nurses",
+      "automation_probability": 0.058,
+      "avg_annual_wage": 44840,
+      "education": "Postsecondary nondegree award",
+      "employed": 702400
+    },
+    {
+      "soc_code": "47-2071",
+      "occupation": "Paving, Surfacing and Tamping Equipment Operators",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 43800,
+      "education": "High school diploma or equivalent",
+      "employed": 51880
+    },
+    {
+      "soc_code": "11-3071",
+      "occupation": "Transportation, Storage and Distribution Managers",
+      "automation_probability": 0.59,
+      "avg_annual_wage": 97630,
+      "education": "High school diploma or equivalent",
+      "employed": 113270
+    },
+    {
+      "soc_code": "13-1022",
+      "occupation": "Wholesale and Retail Buyers, Except Farm Products",
+      "automation_probability": 0.29,
+      "avg_annual_wage": 60040,
+      "education": "Bachelor's degree",
+      "employed": 109440
+    },
+    {
+      "soc_code": "17-3021",
+      "occupation": "Aerospace Engineering and Operations Technicians",
+      "automation_probability": 0.48,
+      "avg_annual_wage": 71070,
+      "education": "Associate's degree",
+      "employed": 11970
+    },
+    {
+      "soc_code": "49-2092",
+      "occupation": "Electric Motor, Power Tool and Related Repairers",
+      "automation_probability": 0.76,
+      "avg_annual_wage": 44720,
+      "education": "Postsecondary nondegree award",
+      "employed": 17050
+    },
+    {
+      "soc_code": "49-3041",
+      "occupation": "Farm Equipment Mechanics and Service Technicians",
+      "automation_probability": 0.75,
+      "avg_annual_wage": 39310,
+      "education": "High school diploma or equivalent",
+      "employed": 35110
+    },
+    {
+      "soc_code": "47-2042",
+      "occupation": "Floor Layers, Except Carpet, Wood and Hard Tiles",
+      "automation_probability": 0.79,
+      "avg_annual_wage": 42370,
+      "education": "No formal educational credential",
+      "employed": 10340
+    },
+    {
+      "soc_code": "53-7071",
+      "occupation": "Gas Compressor and Gas Pumping Station Operators",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 59620,
+      "education": "High school diploma or equivalent",
+      "employed": 3890
+    },
+    {
+      "soc_code": "49-9095",
+      "occupation": "Manufactured Building and Mobile Home Installers",
+      "automation_probability": 0.18,
+      "avg_annual_wage": 31030,
+      "education": "High school diploma or equivalent",
+      "employed": 3200
+    },
+    {
+      "soc_code": "21-1023",
+      "occupation": "Mental Health and Substance Abuse Social Workers",
+      "automation_probability": 0.0031,
+      "avg_annual_wage": 47880,
+      "education": "Bachelor's degree",
+      "employed": 114040
+    },
+    {
+      "soc_code": "49-3042",
+      "occupation": "Mobile Heavy Equipment Mechanics, Except Engines",
+      "automation_probability": 0.4,
+      "avg_annual_wage": 50810,
+      "education": "High school diploma or equivalent",
+      "employed": 123570
+    },
+    {
+      "soc_code": "51-6021",
+      "occupation": "Pressers, Textile, Garment and Related Materials",
+      "automation_probability": 0.81,
+      "avg_annual_wage": 22270,
+      "education": "No formal educational credential",
+      "employed": 45150
+    },
+    {
+      "soc_code": "19-3099",
+      "occupation": "Social Scientists and Related Workers, All Other",
+      "automation_probability": 0.04,
+      "avg_annual_wage": 80860,
+      "education": "Bachelor's degree",
+      "employed": 36380
+    },
+    {
+      "soc_code": "49-9052",
+      "occupation": "Telecommunications Line Installers and Repairers",
+      "automation_probability": 0.49,
+      "avg_annual_wage": 54700,
+      "education": "High school diploma or equivalent",
+      "employed": 100080
+    },
+    {
+      "soc_code": "33-1011",
+      "occupation": "First-Line Supervisors of Correctional Officers",
+      "automation_probability": 0.025,
+      "avg_annual_wage": 65100,
+      "education": "High school diploma or equivalent",
+      "employed": 43230
+    },
+    {
+      "soc_code": "33-1012",
+      "occupation": "First-Line Supervisors of Police and Detectives",
+      "automation_probability": 0.0044,
+      "avg_annual_wage": 88400,
+      "education": "High school diploma or equivalent",
+      "employed": 100200
+    },
+    {
+      "soc_code": "29-2799",
+      "occupation": "Health Technologists and Technicians, All Other",
+      "automation_probability": 0.4,
+      "avg_annual_wage": 46020,
+      "education": "High school diploma or equivalent",
+      "employed": 122170
+    },
+    {
+      "soc_code": "25-2012",
+      "occupation": "Kindergarten Teachers, Except Special Education",
+      "automation_probability": 0.15,
+      "avg_annual_wage": 55460,
+      "education": "Bachelor's degree",
+      "employed": 151290
+    },
+    {
+      "soc_code": "13-2081",
+      "occupation": "Tax Examiners and Collectors and Revenue Agents",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 57950,
+      "education": "Bachelor's degree",
+      "employed": 58450
+    },
+    {
+      "soc_code": "51-9191",
+      "occupation": "Adhesive Bonding Machine Operators and Tenders",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 34610,
+      "education": "High school diploma or equivalent",
+      "employed": 16940
+    },
+    {
+      "soc_code": "43-5032",
+      "occupation": "Dispatchers, Except Police, Fire and Ambulance",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 41190,
+      "education": "High school diploma or equivalent",
+      "employed": 197910
+    },
+    {
+      "soc_code": "51-2022",
+      "occupation": "Electrical and Electronic Equipment Assemblers",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 33700,
+      "education": "High school diploma or equivalent",
+      "employed": 218530
+    },
+    {
+      "soc_code": "49-9051",
+      "occupation": "Electrical Power-Line Installers and Repairers",
+      "automation_probability": 0.097,
+      "avg_annual_wage": 67160,
+      "education": "High school diploma or equivalent",
+      "employed": 117670
+    },
+    {
+      "soc_code": "41-1011",
+      "occupation": "First-Line Supervisors of Retail Sales Workers",
+      "automation_probability": 0.28,
+      "avg_annual_wage": 43910,
+      "education": "High school diploma or equivalent",
+      "employed": 1194220
+    },
+    {
+      "soc_code": "53-2011",
+      "occupation": "Airline Pilots, Copilots and Flight Engineers",
+      "automation_probability": 0.18,
+      "avg_annual_wage": 152770,
+      "education": "Bachelor's degree",
+      "employed": 81520
+    },
+    {
+      "soc_code": "13-1031",
+      "occupation": "Claims Adjusters, Examiners and Investigators",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 64990,
+      "education": "High school diploma or equivalent",
+      "employed": 274420
+    },
+    {
+      "soc_code": "19-3031",
+      "occupation": "Clinical, Counseling and School Psychologists",
+      "automation_probability": 0.0047,
+      "avg_annual_wage": 78690,
+      "education": "Doctoral or professional degree",
+      "employed": 107980
+    },
+    {
+      "soc_code": "21-2021",
+      "occupation": "Directors, Religious Activities and Education",
+      "automation_probability": 0.025,
+      "avg_annual_wage": 44840,
+      "education": "Bachelor's degree",
+      "employed": 20590
+    },
+    {
+      "soc_code": "43-4061",
+      "occupation": "Eligibility Interviewers, Government Programs",
+      "automation_probability": 0.7,
+      "avg_annual_wage": 43550,
+      "education": "High school diploma or equivalent",
+      "employed": 135940
+    },
+    {
+      "soc_code": "39-5012",
+      "occupation": "Hairdressers, Hairstylists and Cosmetologists",
+      "automation_probability": 0.11,
+      "avg_annual_wage": 29590,
+      "education": "Postsecondary nondegree award",
+      "employed": 352380
+    },
+    {
+      "soc_code": "43-9041",
+      "occupation": "Insurance Claims and Policy Processing Clerks",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 40780,
+      "education": "High school diploma or equivalent",
+      "employed": 274350
+    },
+    {
+      "soc_code": "51-9071",
+      "occupation": "Jewelers and Precious Stone and Metal Workers",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 42310,
+      "education": "High school diploma or equivalent",
+      "employed": 26480
+    },
+    {
+      "soc_code": "53-7033",
+      "occupation": "Loading Machine Operators, Underground Mining",
+      "automation_probability": 0.5,
+      "avg_annual_wage": 51260,
+      "education": "No formal educational credential",
+      "employed": 2550
+    },
+    {
+      "soc_code": "29-2011",
+      "occupation": "Medical and Clinical Laboratory Technologists",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 62440,
+      "education": "Bachelor's degree",
+      "employed": 166730
+    },
+    {
+      "soc_code": "47-5042",
+      "occupation": "Mine Cutting and Channeling Machine Operators",
+      "automation_probability": 0.59,
+      "avg_annual_wage": 50670,
+      "education": "High school diploma or equivalent",
+      "employed": 5930
+    },
+    {
+      "soc_code": "47-4071",
+      "occupation": "Septic Tank Servicers and Sewer Pipe Cleaners",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 38870,
+      "education": "No formal educational credential",
+      "employed": 26320
+    },
+    {
+      "soc_code": "53-6031",
+      "occupation": "Automotive and Watercraft Service Attendants",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 24280,
+      "education": "No formal educational credential",
+      "employed": 109790
+    },
+    {
+      "soc_code": "49-3023",
+      "occupation": "Automotive Service Technicians and Mechanics",
+      "automation_probability": 0.59,
+      "avg_annual_wage": 41400,
+      "education": "Postsecondary nondegree award",
+      "employed": 647380
+    },
+    {
+      "soc_code": "29-2031",
+      "occupation": "Cardiovascular Technologists and Technicians",
+      "automation_probability": 0.23,
+      "avg_annual_wage": 57100,
+      "education": "Associate's degree",
+      "employed": 53760
+    },
+    {
+      "soc_code": "15-1111",
+      "occupation": "Computer and Information Research Scientists",
+      "automation_probability": 0.015,
+      "avg_annual_wage": 116320,
+      "education": "Doctoral or professional degree",
+      "employed": 26580
+    },
+    {
+      "soc_code": "29-2041",
+      "occupation": "Emergency Medical Technicians and Paramedics",
+      "automation_probability": 0.049,
+      "avg_annual_wage": 36110,
+      "education": "Postsecondary nondegree award",
+      "employed": 244960
+    },
+    {
+      "soc_code": "51-4051",
+      "occupation": "Metal-Refining Furnace Operators and Tenders",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 41840,
+      "education": "High school diploma or equivalent",
+      "employed": 17730
+    },
+    {
+      "soc_code": "25-2011",
+      "occupation": "Preschool Teachers, Except Special Education",
+      "automation_probability": 0.0074,
+      "avg_annual_wage": 33300,
+      "education": "Associate's degree",
+      "employed": 385550
+    },
+    {
+      "soc_code": "25-2054",
+      "occupation": "Special Education Teachers, Secondary School",
+      "automation_probability": 0.0077,
+      "avg_annual_wage": 64020,
+      "education": "Bachelor's degree",
+      "employed": 132490
+    },
+    {
+      "soc_code": "27-2023",
+      "occupation": "Umpires, Referees and Other Sports Officials",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 35540,
+      "education": "High school diploma or equivalent",
+      "employed": 18660
+    },
+    {
+      "soc_code": "43-3031",
+      "occupation": "Bookkeeping, Accounting and Auditing Clerks",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 40220,
+      "education": "Some college, no degree",
+      "employed": 1566960
+    },
+    {
+      "soc_code": "13-1021",
+      "occupation": "Buyers and Purchasing Agents, Farm Products",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 63910,
+      "education": "Bachelor's degree",
+      "employed": 11490
+    },
+    {
+      "soc_code": "49-9061",
+      "occupation": "Camera and Photographic Equipment Repairers",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 43920,
+      "education": "Associate's degree",
+      "employed": 3760
+    },
+    {
+      "soc_code": "53-5021",
+      "occupation": "Captains, Mates and Pilots of Water Vessels",
+      "automation_probability": 0.27,
+      "avg_annual_wage": 81520,
+      "education": "Postsecondary nondegree award",
+      "employed": 36720
+    },
+    {
+      "soc_code": "47-4799",
+      "occupation": "Construction and Related Workers, All Other",
+      "automation_probability": 0.71,
+      "avg_annual_wage": 40480,
+      "education": "High school diploma or equivalent",
+      "employed": 35340
+    },
+    {
+      "soc_code": "47-2131",
+      "occupation": "Insulation Workers, Floor, Ceiling and Wall",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 39490,
+      "education": "No formal educational credential",
+      "employed": 29500
+    },
+    {
+      "soc_code": "51-3022",
+      "occupation": "Meat, Poultry and Fish Cutters and Trimmers",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 25510,
+      "education": "No formal educational credential",
+      "employed": 149800
+    },
+    {
+      "soc_code": "29-2012",
+      "occupation": "Medical and Clinical Laboratory Technicians",
+      "automation_probability": 0.47,
+      "avg_annual_wage": 41700,
+      "education": "Associate's degree",
+      "employed": 160190
+    },
+    {
+      "soc_code": "49-3051",
+      "occupation": "Motorboat Mechanics and Service Technicians",
+      "automation_probability": 0.66,
+      "avg_annual_wage": 40860,
+      "education": "High school diploma or equivalent",
+      "employed": 20260
+    },
+    {
+      "soc_code": "15-1142",
+      "occupation": "Network and Computer Systems Administrators",
+      "automation_probability": 0.03,
+      "avg_annual_wage": 84500,
+      "education": "Bachelor's degree",
+      "employed": 376820
+    },
+    {
+      "soc_code": "53-4021",
+      "occupation": "Railroad Brake, Signal and Switch Operators",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 55320,
+      "education": "High school diploma or equivalent",
+      "employed": 19860
+    },
+    {
+      "soc_code": "47-5013",
+      "occupation": "Service Unit Operators, Oil, Gas and Mining",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 53520,
+      "education": "No formal educational credential",
+      "employed": 42890
+    },
+    {
+      "soc_code": "49-3011",
+      "occupation": "Aircraft Mechanics and Service Technicians",
+      "automation_probability": 0.71,
+      "avg_annual_wage": 61190,
+      "education": "Postsecondary nondegree award",
+      "employed": 128570
+    },
+    {
+      "soc_code": "13-1199",
+      "occupation": "Business Operations Specialists, All Other",
+      "automation_probability": 0.23,
+      "avg_annual_wage": 74870,
+      "education": "Bachelor's degree",
+      "employed": 958670
+    },
+    {
+      "soc_code": "51-3093",
+      "occupation": "Food Cooking Machine Operators and Tenders",
+      "automation_probability": 0.61,
+      "avg_annual_wage": 30330,
+      "education": "High school diploma or equivalent",
+      "employed": 36520
+    },
+    {
+      "soc_code": "39-3012",
+      "occupation": "Gaming and Sports Book Writers and Runners",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 25710,
+      "education": "High school diploma or equivalent",
+      "employed": 11460
+    },
+    {
+      "soc_code": "45-2041",
+      "occupation": "Graders and Sorters, Agricultural Products",
+      "automation_probability": 0.41,
+      "avg_annual_wage": 24280,
+      "education": "No formal educational credential",
+      "employed": 38780
+    },
+    {
+      "soc_code": "39-5091",
+      "occupation": "Makeup Artists, Theatrical and Performance",
+      "automation_probability": 0.01,
+      "avg_annual_wage": 71590,
+      "education": "Postsecondary nondegree award",
+      "employed": 3600
+    },
+    {
+      "soc_code": "19-1042",
+      "occupation": "Medical Scientists, Except Epidemiologists",
+      "automation_probability": 0.0045,
+      "avg_annual_wage": 95000,
+      "education": "Doctoral or professional degree",
+      "employed": 108870
+    },
+    {
+      "soc_code": "27-1026",
+      "occupation": "Merchandise Displayers and Window Trimmers",
+      "automation_probability": 0.48,
+      "avg_annual_wage": 30090,
+      "education": "High school diploma or equivalent",
+      "employed": 114690
+    },
+    {
+      "soc_code": "29-9011",
+      "occupation": "Occupational Health and Safety Specialists",
+      "automation_probability": 0.17,
+      "avg_annual_wage": 72480,
+      "education": "Bachelor's degree",
+      "employed": 76630
+    },
+    {
+      "soc_code": "29-9012",
+      "occupation": "Occupational Health and Safety Technicians",
+      "automation_probability": 0.25,
+      "avg_annual_wage": 52520,
+      "education": "High school diploma or equivalent",
+      "employed": 16560
+    },
+    {
+      "soc_code": "43-5061",
+      "occupation": "Production, Planning and Expediting Clerks",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 49050,
+      "education": "High school diploma or equivalent",
+      "employed": 321780
+    },
+    {
+      "soc_code": "27-3012",
+      "occupation": "Public Address System and Other Announcers",
+      "automation_probability": 0.72,
+      "avg_annual_wage": 42740,
+      "education": "High school diploma or equivalent",
+      "employed": 8020
+    },
+    {
+      "soc_code": "49-2098",
+      "occupation": "Security and Fire Alarm Systems Installers",
+      "automation_probability": 0.82,
+      "avg_annual_wage": 45660,
+      "education": "High school diploma or equivalent",
+      "employed": 67700
+    },
+    {
+      "soc_code": "23-2093",
+      "occupation": "Title Examiners, Abstractors and Searchers",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 51490,
+      "education": "High school diploma or equivalent",
+      "employed": 54560
+    },
+    {
+      "soc_code": "39-3031",
+      "occupation": "Ushers, Lobby Attendants and Ticket Takers",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 21740,
+      "education": "No formal educational credential",
+      "employed": 117920
+    },
+    {
+      "soc_code": "19-4011",
+      "occupation": "Agricultural and Food Science Technicians",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 40470,
+      "education": "Associate's degree",
+      "employed": 20420
+    },
+    {
+      "soc_code": "49-3022",
+      "occupation": "Automotive Glass Installers and Repairers",
+      "automation_probability": 0.55,
+      "avg_annual_wage": 36140,
+      "education": "High school diploma or equivalent",
+      "employed": 18610
+    },
+    {
+      "soc_code": "11-3021",
+      "occupation": "Computer and Information Systems Managers",
+      "automation_probability": 0.035,
+      "avg_annual_wage": 145740,
+      "education": "Bachelor's degree",
+      "employed": 352510
+    },
+    {
+      "soc_code": "39-9031",
+      "occupation": "Fitness Trainers and Aerobics Instructors",
+      "automation_probability": 0.085,
+      "avg_annual_wage": 42780,
+      "education": "High school diploma or equivalent",
+      "employed": 257410
+    },
+    {
+      "soc_code": "43-4111",
+      "occupation": "Interviewers, Except Eligibility and Loan",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 33640,
+      "education": "High school diploma or equivalent",
+      "employed": 186030
+    },
+    {
+      "soc_code": "23-1023",
+      "occupation": "Judges",
+      "automation_probability": 0.4,
+      "avg_annual_wage": 115460,
+      "education": "Doctoral or professional degree",
+      "employed": 27210
+    },
+    {
+      "soc_code": "43-9071",
+      "occupation": "Office Machine Operators, Except Computer",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 32390,
+      "education": "High school diploma or equivalent",
+      "employed": 58160
+    },
+    {
+      "soc_code": "11-2031",
+      "occupation": "Public Relations and Fundraising Managers",
+      "automation_probability": 0.015,
+      "avg_annual_wage": 123360,
+      "education": "Bachelor's degree",
+      "employed": 63970
+    },
+    {
+      "soc_code": "53-7081",
+      "occupation": "Refuse and Recyclable Material Collectors",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 37690,
+      "education": "No formal educational credential",
+      "employed": 114680
+    },
+    {
+      "soc_code": "25-2053",
+      "occupation": "Special Education Teachers, Middle School",
+      "automation_probability": 0.016,
+      "avg_annual_wage": 61910,
+      "education": "Bachelor's degree",
+      "employed": 90250
+    },
+    {
+      "soc_code": "51-8021",
+      "occupation": "Stationary Engineers and Boiler Operators",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 61410,
+      "education": "High school diploma or equivalent",
+      "employed": 33720
+    },
+    {
+      "soc_code": "51-9011",
+      "occupation": "Chemical Equipment Operators and Tenders",
+      "automation_probability": 0.76,
+      "avg_annual_wage": 50300,
+      "education": "High school diploma or equivalent",
+      "employed": 73840
+    },
+    {
+      "soc_code": "41-2012",
+      "occupation": "Gaming Change Persons and Booth Cashiers",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 25940,
+      "education": "High school diploma or equivalent",
+      "employed": 23120
+    },
+    {
+      "soc_code": "53-3033",
+      "occupation": "Light Truck or Delivery Services Drivers",
+      "automation_probability": 0.69,
+      "avg_annual_wage": 34790,
+      "education": "High school diploma or equivalent",
+      "employed": 858710
+    },
+    {
+      "soc_code": "51-9123",
+      "occupation": "Painting, Coating and Decorating Workers",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 32040,
+      "education": "No formal educational credential",
+      "employed": 15450
+    },
+    {
+      "soc_code": "29-2037",
+      "occupation": "Ambulance Drivers and Attendants",
+      "automation_probability": 0.23,
+      "avg_annual_wage": 69240,
+      "education": "Associate's degree",
+      "employed": 35850
+    },
+    {
+      "soc_code": "49-3092",
+      "occupation": "Recreational Vehicle Service Technicians",
+      "automation_probability": 0.59,
+      "avg_annual_wage": 38040,
+      "education": "High school diploma or equivalent",
+      "employed": 13520
+    },
+    {
+      "soc_code": "51-2041",
+      "occupation": "Structural Metal Fabricators and Fitters",
+      "automation_probability": 0.41,
+      "avg_annual_wage": 40000,
+      "education": "High school diploma or equivalent",
+      "employed": 77270
+    },
+    {
+      "soc_code": "29-2056",
+      "occupation": "Veterinary Technologists and Technicians",
+      "automation_probability": 0.029,
+      "avg_annual_wage": 33870,
+      "education": "Associate's degree",
+      "employed": 99390
+    },
+    {
+      "soc_code": "13-2021",
+      "occupation": "Appraisers and Assessors of Real Estate",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 58030,
+      "education": "Bachelor's degree",
+      "employed": 60770
+    },
+    {
+      "soc_code": "23-1022",
+      "occupation": "Arbitrators, Mediators and Conciliators",
+      "automation_probability": 0.06,
+      "avg_annual_wage": 72730,
+      "education": "Bachelor's degree",
+      "employed": 6300
+    },
+    {
+      "soc_code": "21-1021",
+      "occupation": "Child, Family and School Social Workers",
+      "automation_probability": 0.028,
+      "avg_annual_wage": 47510,
+      "education": "Bachelor's degree",
+      "employed": 298840
+    },
+    {
+      "soc_code": "43-4041",
+      "occupation": "Credit Authorizers, Checkers and Clerks",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 39320,
+      "education": "High school diploma or equivalent",
+      "employed": 37680
+    },
+    {
+      "soc_code": "11-9033",
+      "occupation": "Education Administrators, Postsecondary",
+      "automation_probability": 0.01,
+      "avg_annual_wage": 105770,
+      "education": "Master's degree",
+      "employed": 138430
+    },
+    {
+      "soc_code": "53-3032",
+      "occupation": "Heavy and Tractor-Trailer Truck Drivers",
+      "automation_probability": 0.79,
+      "avg_annual_wage": 43590,
+      "education": "Postsecondary nondegree award",
+      "employed": 1704520
+    },
+    {
+      "soc_code": "19-3032",
+      "occupation": "Industrial-Organizational Psychologists",
+      "automation_probability": 0.012,
+      "avg_annual_wage": 104570,
+      "education": "Master's degree",
+      "employed": 1020
+    },
+    {
+      "soc_code": "49-9071",
+      "occupation": "Maintenance and Repair Workers, General",
+      "automation_probability": 0.64,
+      "avg_annual_wage": 39360,
+      "education": "High school diploma or equivalent",
+      "employed": 1332480
+    },
+    {
+      "soc_code": "49-9063",
+      "occupation": "Musical Instrument Repairers and Tuners",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 37690,
+      "education": "High school diploma or equivalent",
+      "employed": 7980
+    },
+    {
+      "soc_code": "53-7072",
+      "occupation": "Pump Operators, Except Wellhead Pumpers",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 46270,
+      "education": "High school diploma or equivalent",
+      "employed": 12030
+    },
+    {
+      "soc_code": "51-4121",
+      "occupation": "Welders, Cutters, Solderers and Brazers",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 42450,
+      "education": "High school diploma or equivalent",
+      "employed": 382730
+    },
+    {
+      "soc_code": "17-1011",
+      "occupation": "Architects, Except Landscape and Naval",
+      "automation_probability": 0.018,
+      "avg_annual_wage": 84470,
+      "education": "Bachelor's degree",
+      "employed": 99860
+    },
+    {
+      "soc_code": "11-9041",
+      "occupation": "Architectural and Engineering Managers",
+      "automation_probability": 0.017,
+      "avg_annual_wage": 143870,
+      "education": "Bachelor's degree",
+      "employed": 178390
+    },
+    {
+      "soc_code": "51-2023",
+      "occupation": "Electromechanical Equipment Assemblers",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 35410,
+      "education": "High school diploma or equivalent",
+      "employed": 45540
+    },
+    {
+      "soc_code": "17-2072",
+      "occupation": "Electronics Engineers, Except Computer",
+      "automation_probability": 0.025,
+      "avg_annual_wage": 103760,
+      "education": "Bachelor's degree",
+      "employed": 132100
+    },
+    {
+      "soc_code": "53-7051",
+      "occupation": "Industrial Truck and Tractor Operators",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 34260,
+      "education": "No formal educational credential",
+      "employed": 542750
+    },
+    {
+      "soc_code": "37-3011",
+      "occupation": "Landscaping and Groundskeeping Workers",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 28560,
+      "education": "No formal educational credential",
+      "employed": 906570
+    },
+    {
+      "soc_code": "13-1121",
+      "occupation": "Meeting, Convention and Event Planners",
+      "automation_probability": 0.037,
+      "avg_annual_wage": 52020,
+      "education": "Bachelor's degree",
+      "employed": 95850
+    },
+    {
+      "soc_code": "47-2141",
+      "occupation": "Painters, Construction and Maintenance",
+      "automation_probability": 0.75,
+      "avg_annual_wage": 41510,
+      "education": "No formal educational credential",
+      "employed": 217280
+    },
+    {
+      "soc_code": "47-2152",
+      "occupation": "Plumbers, Pipefitters and Steamfitters",
+      "automation_probability": 0.35,
+      "avg_annual_wage": 56030,
+      "education": "High school diploma or equivalent",
+      "employed": 411870
+    },
+    {
+      "soc_code": "43-5031",
+      "occupation": "Police, Fire and Ambulance Dispatchers",
+      "automation_probability": 0.49,
+      "avg_annual_wage": 41070,
+      "education": "High school diploma or equivalent",
+      "employed": 95170
+    },
+    {
+      "soc_code": "43-5071",
+      "occupation": "Shipping, Receiving and Traffic Clerks",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 33150,
+      "education": "High school diploma or equivalent",
+      "employed": 676990
+    },
+    {
+      "soc_code": "51-6041",
+      "occupation": "Shoe and Leather Workers and Repairers",
+      "automation_probability": 0.52,
+      "avg_annual_wage": 26040,
+      "education": "High school diploma or equivalent",
+      "employed": 7780
+    },
+    {
+      "soc_code": "51-6052",
+      "occupation": "Tailors, Dressmakers and Custom Sewers",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 30670,
+      "education": "No formal educational credential",
+      "employed": 21660
+    },
+    {
+      "soc_code": "51-2093",
+      "occupation": "Timing Device Assemblers and Adjusters",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 42470,
+      "education": "High school diploma or equivalent",
+      "employed": 790
+    },
+    {
+      "soc_code": "27-4011",
+      "occupation": "Audio and Video Equipment Technicians",
+      "automation_probability": 0.55,
+      "avg_annual_wage": 47450,
+      "education": "Postsecondary nondegree award",
+      "employed": 69670
+    },
+    {
+      "soc_code": "49-3021",
+      "occupation": "Automotive Body and Related Repairers",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 45180,
+      "education": "High school diploma or equivalent",
+      "employed": 143940
+    },
+    {
+      "soc_code": "53-3022",
+      "occupation": "Bus Drivers, School or Special Client",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 31110,
+      "education": "High school diploma or equivalent",
+      "employed": 515020
+    },
+    {
+      "soc_code": "33-3021",
+      "occupation": "Detectives and Criminal Investigators",
+      "automation_probability": 0.34,
+      "avg_annual_wage": 81490,
+      "education": "High school diploma or equivalent",
+      "employed": 104980
+    },
+    {
+      "soc_code": "17-3025",
+      "occupation": "Environmental Engineering Technicians",
+      "automation_probability": 0.25,
+      "avg_annual_wage": 52500,
+      "education": "Associate's degree",
+      "employed": 16550
+    },
+    {
+      "soc_code": "51-2091",
+      "occupation": "Fiberglass Laminators and Fabricators",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 33020,
+      "education": "High school diploma or equivalent",
+      "employed": 19400
+    },
+    {
+      "soc_code": "31-9799",
+      "occupation": "Healthcare Support Workers, All Other",
+      "automation_probability": 0.63,
+      "avg_annual_wage": 37720,
+      "education": "High school diploma or equivalent",
+      "employed": 93830
+    },
+    {
+      "soc_code": "17-2121",
+      "occupation": "Marine Engineers and Naval Architects",
+      "automation_probability": 0.01,
+      "avg_annual_wage": 99860,
+      "education": "Bachelor's degree",
+      "employed": 8120
+    },
+    {
+      "soc_code": "51-8099",
+      "occupation": "Plant and System Operators, All Other",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 55340,
+      "education": "High school diploma or equivalent",
+      "employed": 11970
+    },
+    {
+      "soc_code": "11-9151",
+      "occupation": "Social and Community Service Managers",
+      "automation_probability": 0.0067,
+      "avg_annual_wage": 70870,
+      "education": "Bachelor's degree",
+      "employed": 126230
+    },
+    {
+      "soc_code": "15-1133",
+      "occupation": "Software Developers, Systems Software",
+      "automation_probability": 0.13,
+      "avg_annual_wage": 110590,
+      "education": "Bachelor's degree",
+      "employed": 409820
+    },
+    {
+      "soc_code": "47-2051",
+      "occupation": "Cement Masons and Concrete Finishers",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 43720,
+      "education": "No formal educational credential",
+      "employed": 173920
+    },
+    {
+      "soc_code": "47-4011",
+      "occupation": "Construction and Building Inspectors",
+      "automation_probability": 0.63,
+      "avg_annual_wage": 61250,
+      "education": "High school diploma or equivalent",
+      "employed": 94960
+    },
+    {
+      "soc_code": "19-4041",
+      "occupation": "Geological and Petroleum Technicians",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 62240,
+      "education": "Associate's degree",
+      "employed": 15100
+    },
+    {
+      "soc_code": "51-9022",
+      "occupation": "Grinding and Polishing Workers, Hand",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 30860,
+      "education": "No formal educational credential",
+      "employed": 26670
+    },
+    {
+      "soc_code": "11-9111",
+      "occupation": "Medical and Health Services Managers",
+      "automation_probability": 0.0073,
+      "avg_annual_wage": 109370,
+      "education": "Bachelor's degree",
+      "employed": 332150
+    },
+    {
+      "soc_code": "33-3051",
+      "occupation": "Police and Sheriff’s Patrol Officers",
+      "automation_probability": 0.098,
+      "avg_annual_wage": 62760,
+      "education": "High school diploma or equivalent",
+      "employed": 657690
+    },
+    {
+      "soc_code": "11-9131",
+      "occupation": "Postmasters and Mail Superintendents",
+      "automation_probability": 0.75,
+      "avg_annual_wage": 71980,
+      "education": "High school diploma or equivalent",
+      "employed": 14720
+    },
+    {
+      "soc_code": "33-9021",
+      "occupation": "Private Detectives and Investigators",
+      "automation_probability": 0.31,
+      "avg_annual_wage": 53530,
+      "education": "High school diploma or equivalent",
+      "employed": 28490
+    },
+    {
+      "soc_code": "43-4171",
+      "occupation": "Receptionists and Information Clerks",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 29120,
+      "education": "High school diploma or equivalent",
+      "employed": 997770
+    },
+    {
+      "soc_code": "51-4194",
+      "occupation": "Tool Grinders, Filers and Sharpeners",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 38860,
+      "education": "High school diploma or equivalent",
+      "employed": 9550
+    },
+    {
+      "soc_code": "13-1151",
+      "occupation": "Training and Development Specialists",
+      "automation_probability": 0.014,
+      "avg_annual_wage": 63350,
+      "education": "Bachelor's degree",
+      "employed": 269710
+    },
+    {
+      "soc_code": "11-2011",
+      "occupation": "Advertising and Promotions Managers",
+      "automation_probability": 0.039,
+      "avg_annual_wage": 117810,
+      "education": "Bachelor's degree",
+      "employed": 28860
+    },
+    {
+      "soc_code": "53-1011",
+      "occupation": "Aircraft Cargo Handling Supervisors",
+      "automation_probability": 0.066,
+      "avg_annual_wage": 51900,
+      "education": "High school diploma or equivalent",
+      "employed": 7460
+    },
+    {
+      "soc_code": "39-3091",
+      "occupation": "Amusement and Recreation Attendants",
+      "automation_probability": 0.72,
+      "avg_annual_wage": 22000,
+      "education": "No formal educational credential",
+      "employed": 286740
+    },
+    {
+      "soc_code": "17-1021",
+      "occupation": "Cartographers and Photogrammetrists",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 66160,
+      "education": "Bachelor's degree",
+      "employed": 12100
+    },
+    {
+      "soc_code": "51-8091",
+      "occupation": "Chemical Plant and System Operators",
+      "automation_probability": 0.85,
+      "avg_annual_wage": 59430,
+      "education": "High school diploma or equivalent",
+      "employed": 33300
+    },
+    {
+      "soc_code": "27-1021",
+      "occupation": "Commercial and Industrial Designers",
+      "automation_probability": 0.037,
+      "avg_annual_wage": 70880,
+      "education": "Bachelor's degree",
+      "employed": 31860
+    },
+    {
+      "soc_code": "47-5041",
+      "occupation": "Continuous Mining Machine Operators",
+      "automation_probability": 0.54,
+      "avg_annual_wage": 52650,
+      "education": "No formal educational credential",
+      "employed": 12030
+    },
+    {
+      "soc_code": "43-4031",
+      "occupation": "Court, Municipal and License Clerks",
+      "automation_probability": 0.46,
+      "avg_annual_wage": 39160,
+      "education": "High school diploma or equivalent",
+      "employed": 128620
+    },
+    {
+      "soc_code": "41-9011",
+      "occupation": "Demonstrators and Product Promoters",
+      "automation_probability": 0.51,
+      "avg_annual_wage": 30570,
+      "education": "High school diploma or equivalent",
+      "employed": 86500
+    },
+    {
+      "soc_code": "47-2081",
+      "occupation": "Drywall and Ceiling Tile Installers",
+      "automation_probability": 0.79,
+      "avg_annual_wage": 47400,
+      "education": "No formal educational credential",
+      "employed": 93180
+    },
+    {
+      "soc_code": "17-3012",
+      "occupation": "Electrical and Electronics Drafters",
+      "automation_probability": 0.81,
+      "avg_annual_wage": 63390,
+      "education": "Associate's degree",
+      "employed": 26750
+    },
+    {
+      "soc_code": "51-2031",
+      "occupation": "Engine and Other Machine Assemblers",
+      "automation_probability": 0.82,
+      "avg_annual_wage": 43090,
+      "education": "High school diploma or equivalent",
+      "employed": 38150
+    },
+    {
+      "soc_code": "45-3011",
+      "occupation": "Fishers and Related Fishing Workers",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 30740,
+      "education": "No formal educational credential",
+      "employed": 520
+    },
+    {
+      "soc_code": "19-4093",
+      "occupation": "Forest and Conservation Technicians",
+      "automation_probability": 0.42,
+      "avg_annual_wage": 38630,
+      "education": "Associate's degree",
+      "employed": 30090
+    },
+    {
+      "soc_code": "47-4041",
+      "occupation": "Hazardous Materials Removal Workers",
+      "automation_probability": 0.53,
+      "avg_annual_wage": 45500,
+      "education": "High school diploma or equivalent",
+      "employed": 44280
+    },
+    {
+      "soc_code": "43-4081",
+      "occupation": "Hotel, Motel and Resort Desk Clerks",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 23530,
+      "education": "High school diploma or equivalent",
+      "employed": 248440
+    },
+    {
+      "soc_code": "25-4013",
+      "occupation": "Museum Technicians and Conservators",
+      "automation_probability": 0.59,
+      "avg_annual_wage": 44780,
+      "education": "Bachelor's degree",
+      "employed": 10970
+    },
+    {
+      "soc_code": "51-5113",
+      "occupation": "Print Binding and Finishing Workers",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 33270,
+      "education": "High school diploma or equivalent",
+      "employed": 52730
+    },
+    {
+      "soc_code": "53-4031",
+      "occupation": "Railroad Conductors and Yardmasters",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 58220,
+      "education": "High school diploma or equivalent",
+      "employed": 42880
+    },
+    {
+      "soc_code": "47-5012",
+      "occupation": "Rotary Drill Operators, Oil and Gas",
+      "automation_probability": 0.53,
+      "avg_annual_wage": 57140,
+      "education": "No formal educational credential",
+      "employed": 17400
+    },
+    {
+      "soc_code": "21-1093",
+      "occupation": "Social and Human Service Assistants",
+      "automation_probability": 0.13,
+      "avg_annual_wage": 34120,
+      "education": "High school diploma or equivalent",
+      "employed": 360650
+    },
+    {
+      "soc_code": "25-3999",
+      "occupation": "Teachers and Instructors, All Other",
+      "automation_probability": 0.0095,
+      "avg_annual_wage": 30900,
+      "education": "Bachelor's degree",
+      "employed": 609960
+    },
+    {
+      "soc_code": "53-3021",
+      "occupation": "Bus Drivers, Transit and Intercity",
+      "automation_probability": 0.67,
+      "avg_annual_wage": 41780,
+      "education": "High school diploma or equivalent",
+      "employed": 169680
+    },
+    {
+      "soc_code": "51-7011",
+      "occupation": "Cabinetmakers and Bench Carpenters",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 34800,
+      "education": "High school diploma or equivalent",
+      "employed": 97980
+    },
+    {
+      "soc_code": "53-7061",
+      "occupation": "Cleaners of Vehicles and Equipment",
+      "automation_probability": 0.37,
+      "avg_annual_wage": 24660,
+      "education": "No formal educational credential",
+      "employed": 348770
+    },
+    {
+      "soc_code": "51-2021",
+      "occupation": "Coil Winders, Tapers and Finishers",
+      "automation_probability": 0.73,
+      "avg_annual_wage": 35340,
+      "education": "High school diploma or equivalent",
+      "employed": 14090
+    },
+    {
+      "soc_code": "11-3111",
+      "occupation": "Compensation and Benefits Managers",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 126900,
+      "education": "Bachelor's degree",
+      "employed": 15230
+    },
+    {
+      "soc_code": "47-5021",
+      "occupation": "Earth Drillers, Except Oil and Gas",
+      "automation_probability": 0.85,
+      "avg_annual_wage": 51240,
+      "education": "High school diploma or equivalent",
+      "employed": 18500
+    },
+    {
+      "soc_code": "17-3026",
+      "occupation": "Industrial Engineering Technicians",
+      "automation_probability": 0.03,
+      "avg_annual_wage": 56920,
+      "education": "Associate's degree",
+      "employed": 63220
+    },
+    {
+      "soc_code": "17-3027",
+      "occupation": "Mechanical Engineering Technicians",
+      "automation_probability": 0.38,
+      "avg_annual_wage": 57180,
+      "education": "Associate's degree",
+      "employed": 45510
+    },
+    {
+      "soc_code": "45-2090",
+      "occupation": "Miscellaneous Agricultural Workers",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 24860,
+      "education": "No formal educational credential",
+      "employed": 342870
+    },
+    {
+      "soc_code": "51-9122",
+      "occupation": "Painters, Transportation Equipment",
+      "automation_probability": 0.69,
+      "avg_annual_wage": 46270,
+      "education": "High school diploma or equivalent",
+      "employed": 54860
+    },
+    {
+      "soc_code": "51-8012",
+      "occupation": "Power Distributors and Dispatchers",
+      "automation_probability": 0.64,
+      "avg_annual_wage": 81500,
+      "education": "High school diploma or equivalent",
+      "employed": 11380
+    },
+    {
+      "soc_code": "47-2171",
+      "occupation": "Reinforcing Iron and Rebar Workers",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 53600,
+      "education": "High school diploma or equivalent",
+      "employed": 20020
+    },
+    {
+      "soc_code": "25-3021",
+      "occupation": "Self-Enrichment Education Teachers",
+      "automation_probability": 0.13,
+      "avg_annual_wage": 43150,
+      "education": "High school diploma or equivalent",
+      "employed": 229840
+    },
+    {
+      "soc_code": "51-6042",
+      "occupation": "Shoe Machine Operators and Tenders",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 26530,
+      "education": "High school diploma or equivalent",
+      "employed": 3500
+    },
+    {
+      "soc_code": "19-4061",
+      "occupation": "Social Science Research Assistants",
+      "automation_probability": 0.65,
+      "avg_annual_wage": 46820,
+      "education": "Bachelor's degree",
+      "employed": 30030
+    },
+    {
+      "soc_code": "19-1023",
+      "occupation": "Zoologists and Wildlife Biologists",
+      "automation_probability": 0.3,
+      "avg_annual_wage": 64890,
+      "education": "Bachelor's degree",
+      "employed": 17720
+    },
+    {
+      "soc_code": "19-3091",
+      "occupation": "Anthropologists and Archeologists",
+      "automation_probability": 0.0077,
+      "avg_annual_wage": 66440,
+      "education": "Master's degree",
+      "employed": 6470
+    },
+    {
+      "soc_code": "33-3012",
+      "occupation": "Correctional Officers and Jailers",
+      "automation_probability": 0.6,
+      "avg_annual_wage": 46750,
+      "education": "High school diploma or equivalent",
+      "employed": 431600
+    },
+    {
+      "soc_code": "47-4021",
+      "occupation": "Elevator Installers and Repairers",
+      "automation_probability": 0.39,
+      "avg_annual_wage": 76860,
+      "education": "High school diploma or equivalent",
+      "employed": 22240
+    },
+    {
+      "soc_code": "25-9021",
+      "occupation": "Farm and Home Management Advisors",
+      "automation_probability": 0.0075,
+      "avg_annual_wage": 52150,
+      "education": "Master's degree",
+      "employed": 8620
+    },
+    {
+      "soc_code": "33-2021",
+      "occupation": "Fire Inspectors and Investigators",
+      "automation_probability": 0.48,
+      "avg_annual_wage": 61660,
+      "education": "Postsecondary nondegree award",
+      "employed": 11910
+    },
+    {
+      "soc_code": "19-1012",
+      "occupation": "Food Scientists and Technologists",
+      "automation_probability": 0.077,
+      "avg_annual_wage": 71270,
+      "education": "Bachelor's degree",
+      "employed": 14200
+    },
+    {
+      "soc_code": "13-1032",
+      "occupation": "Insurance Appraisers, Auto Damage",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 65930,
+      "education": "Postsecondary nondegree award",
+      "employed": 15130
+    },
+    {
+      "soc_code": "51-4192",
+      "occupation": "Layout Workers, Metal and Plastic",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 47720,
+      "education": "High school diploma or equivalent",
+      "employed": 9070
+    },
+    {
+      "soc_code": "51-9083",
+      "occupation": "Ophthalmic Laboratory Technicians",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 34220,
+      "education": "High school diploma or equivalent",
+      "employed": 28570
+    },
+    {
+      "soc_code": "49-9097",
+      "occupation": "Signal and Track Switch Repairers",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 62710,
+      "education": "High school diploma or equivalent",
+      "employed": 8680
+    },
+    {
+      "soc_code": "15-1132",
+      "occupation": "Software Developers, Applications",
+      "automation_probability": 0.042,
+      "avg_annual_wage": 104300,
+      "education": "Bachelor's degree",
+      "employed": 794000
+    },
+    {
+      "soc_code": "47-2221",
+      "occupation": "Structural Iron and Steel Workers",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 56040,
+      "education": "High school diploma or equivalent",
+      "employed": 69440
+    },
+    {
+      "soc_code": "17-3031",
+      "occupation": "Surveying and Mapping Technicians",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 45490,
+      "education": "High school diploma or equivalent",
+      "employed": 53920
+    },
+    {
+      "soc_code": "11-3131",
+      "occupation": "Training and Development Managers",
+      "automation_probability": 0.0063,
+      "avg_annual_wage": 115180,
+      "education": "Bachelor's degree",
+      "employed": 32880
+    },
+    {
+      "soc_code": "11-3011",
+      "occupation": "Administrative Services Managers",
+      "automation_probability": 0.73,
+      "avg_annual_wage": 98930,
+      "education": "Bachelor's degree",
+      "employed": 266280
+    },
+    {
+      "soc_code": "17-3011",
+      "occupation": "Architectural and Civil Drafters",
+      "automation_probability": 0.52,
+      "avg_annual_wage": 54290,
+      "education": "Associate's degree",
+      "employed": 96810
+    },
+    {
+      "soc_code": "19-2021",
+      "occupation": "Atmospheric and Space Scientists",
+      "automation_probability": 0.67,
+      "avg_annual_wage": 94840,
+      "education": "Bachelor's degree",
+      "employed": 9800
+    },
+    {
+      "soc_code": "19-1029",
+      "occupation": "Biological Scientists, All Other",
+      "automation_probability": 0.015,
+      "avg_annual_wage": 77830,
+      "education": "Bachelor's degree",
+      "employed": 35110
+    },
+    {
+      "soc_code": "35-2012",
+      "occupation": "Cooks, Institution and Cafeteria",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 26370,
+      "education": "No formal educational credential",
+      "employed": 409850
+    },
+    {
+      "soc_code": "43-4051",
+      "occupation": "Customer Service Representatives",
+      "automation_probability": 0.55,
+      "avg_annual_wage": 35170,
+      "education": "High school diploma or equivalent",
+      "employed": 2707040
+    },
+    {
+      "soc_code": "51-6092",
+      "occupation": "Fabric and Apparel Patternmakers",
+      "automation_probability": 0.0049,
+      "avg_annual_wage": 48460,
+      "education": "High school diploma or equivalent",
+      "employed": 5310
+    },
+    {
+      "soc_code": "13-2099",
+      "occupation": "Financial Specialists, All Other",
+      "automation_probability": 0.33,
+      "avg_annual_wage": 76230,
+      "education": "Bachelor's degree",
+      "employed": 123270
+    },
+    {
+      "soc_code": "51-6011",
+      "occupation": "Laundry and Dry-Cleaning Workers",
+      "automation_probability": 0.71,
+      "avg_annual_wage": 23210,
+      "education": "No formal educational credential",
+      "employed": 207710
+    },
+    {
+      "soc_code": "27-1014",
+      "occupation": "Multimedia Artists and Animators",
+      "automation_probability": 0.015,
+      "avg_annual_wage": 72200,
+      "education": "Bachelor's degree",
+      "employed": 29810
+    },
+    {
+      "soc_code": "51-4062",
+      "occupation": "Patternmakers, Metal and Plastic",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 44490,
+      "education": "High school diploma or equivalent",
+      "employed": 3420
+    },
+    {
+      "soc_code": "51-5111",
+      "occupation": "Prepress Technicians and Workers",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 40640,
+      "education": "Postsecondary nondegree award",
+      "employed": 33340
+    },
+    {
+      "soc_code": "53-7121",
+      "occupation": "Tank Car, Truck and Ship Loaders",
+      "automation_probability": 0.72,
+      "avg_annual_wage": 39590,
+      "education": "No formal educational credential",
+      "employed": 10920
+    },
+    {
+      "soc_code": "53-2022",
+      "occupation": "Airfield Operations Specialists",
+      "automation_probability": 0.71,
+      "avg_annual_wage": 52380,
+      "education": "High school diploma or equivalent",
+      "employed": 8760
+    },
+    {
+      "soc_code": "27-2021",
+      "occupation": "Athletes and Sports Competitors",
+      "automation_probability": 0.28,
+      "avg_annual_wage": 83730,
+      "education": "No formal educational credential",
+      "employed": 10260
+    },
+    {
+      "soc_code": "15-1799",
+      "occupation": "Computer Occupations, All Other",
+      "automation_probability": 0.22,
+      "avg_annual_wage": 88880,
+      "education": "Bachelor's degree",
+      "employed": 261210
+    },
+    {
+      "soc_code": "29-2032",
+      "occupation": "Diagnostic Medical Sonographers",
+      "automation_probability": 0.35,
+      "avg_annual_wage": 71750,
+      "education": "Associate's degree",
+      "employed": 65790
+    },
+    {
+      "soc_code": "45-4011",
+      "occupation": "Forest and Conservation Workers",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 31200,
+      "education": "High school diploma or equivalent",
+      "employed": 7170
+    },
+    {
+      "soc_code": "11-1021",
+      "occupation": "General and Operations Managers",
+      "automation_probability": 0.16,
+      "avg_annual_wage": 122090,
+      "education": "Bachelor's degree",
+      "employed": 2188870
+    },
+    {
+      "soc_code": "37-2012",
+      "occupation": "Maids and Housekeeping Cleaners",
+      "automation_probability": 0.69,
+      "avg_annual_wage": 23830,
+      "education": "No formal educational credential",
+      "employed": 924640
+    },
+    {
+      "soc_code": "51-4061",
+      "occupation": "Model Makers, Metal and Plastic",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 50360,
+      "education": "High school diploma or equivalent",
+      "employed": 6250
+    },
+    {
+      "soc_code": "51-8011",
+      "occupation": "Nuclear Power Reactor Operators",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 91370,
+      "education": "High school diploma or equivalent",
+      "employed": 7170
+    },
+    {
+      "soc_code": "31-2011",
+      "occupation": "Occupational Therapy Assistants",
+      "automation_probability": 0.028,
+      "avg_annual_wage": 59530,
+      "education": "Associate's degree",
+      "employed": 38170
+    },
+    {
+      "soc_code": "29-1022",
+      "occupation": "Oral and Maxillofacial Surgeons",
+      "automation_probability": 0.0036,
+      "avg_annual_wage": 232870,
+      "education": "Doctoral or professional degree",
+      "employed": 5380
+    },
+    {
+      "soc_code": "23-2011",
+      "occupation": "Paralegals and Legal Assistants",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 53180,
+      "education": "Associate's degree",
+      "employed": 277310
+    },
+    {
+      "soc_code": "27-3011",
+      "occupation": "Radio and Television Announcers",
+      "automation_probability": 0.1,
+      "avg_annual_wage": 48170,
+      "education": "Bachelor's degree",
+      "employed": 29210
+    },
+    {
+      "soc_code": "29-2054",
+      "occupation": "Respiratory Therapy Technicians",
+      "automation_probability": 0.1,
+      "avg_annual_wage": 50520,
+      "education": "Associate's degree",
+      "employed": 10600
+    },
+    {
+      "soc_code": "53-7011",
+      "occupation": "Conveyor Operators and Tenders",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 33870,
+      "education": "No formal educational credential",
+      "employed": 28590
+    },
+    {
+      "soc_code": "47-5011",
+      "occupation": "Derrick Operators, Oil and Gas",
+      "automation_probability": 0.8,
+      "avg_annual_wage": 51140,
+      "education": "No formal educational credential",
+      "employed": 11580
+    },
+    {
+      "soc_code": "17-3024",
+      "occupation": "Electro-Mechanical Technicians",
+      "automation_probability": 0.81,
+      "avg_annual_wage": 57860,
+      "education": "Associate's degree",
+      "employed": 13710
+    },
+    {
+      "soc_code": "11-9161",
+      "occupation": "Emergency Management Directors",
+      "automation_probability": 0.003,
+      "avg_annual_wage": 78060,
+      "education": "Bachelor's degree",
+      "employed": 9570
+    },
+    {
+      "soc_code": "49-9093",
+      "occupation": "Fabric Menders, Except Garment",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 27670,
+      "education": "No formal educational credential",
+      "employed": 550
+    },
+    {
+      "soc_code": "49-9041",
+      "occupation": "Industrial Machinery Mechanics",
+      "automation_probability": 0.67,
+      "avg_annual_wage": 51890,
+      "education": "High school diploma or equivalent",
+      "employed": 334490
+    },
+    {
+      "soc_code": "11-3051",
+      "occupation": "Industrial Production Managers",
+      "automation_probability": 0.03,
+      "avg_annual_wage": 107060,
+      "education": "Bachelor's degree",
+      "employed": 168400
+    },
+    {
+      "soc_code": "47-2132",
+      "occupation": "Insulation Workers, Mechanical",
+      "automation_probability": 0.64,
+      "avg_annual_wage": 51100,
+      "education": "High school diploma or equivalent",
+      "employed": 27270
+    },
+    {
+      "soc_code": "53-7063",
+      "occupation": "Machine Feeders and Offbearers",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 30490,
+      "education": "No formal educational credential",
+      "employed": 88070
+    },
+    {
+      "soc_code": "49-9043",
+      "occupation": "Maintenance Workers, Machinery",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 46000,
+      "education": "High school diploma or equivalent",
+      "employed": 89630
+    },
+    {
+      "soc_code": "21-1013",
+      "occupation": "Marriage and Family Therapists",
+      "automation_probability": 0.014,
+      "avg_annual_wage": 54090,
+      "education": "Master's degree",
+      "employed": 36960
+    },
+    {
+      "soc_code": "29-2033",
+      "occupation": "Nuclear Medicine Technologists",
+      "automation_probability": 0.13,
+      "avg_annual_wage": 75960,
+      "education": "Associate's degree",
+      "employed": 19650
+    },
+    {
+      "soc_code": "43-3051",
+      "occupation": "Payroll and Timekeeping Clerks",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 43580,
+      "education": "High school diploma or equivalent",
+      "employed": 159650
+    },
+    {
+      "soc_code": "19-2099",
+      "occupation": "Physical Scientists, All Other",
+      "automation_probability": 0.43,
+      "avg_annual_wage": 98460,
+      "education": "Bachelor's degree",
+      "employed": 18960
+    },
+    {
+      "soc_code": "43-5081",
+      "occupation": "Stock Clerks and Order Fillers",
+      "automation_probability": 0.64,
+      "avg_annual_wage": 26670,
+      "education": "No formal educational credential",
+      "employed": 2016340
+    },
+    {
+      "soc_code": "53-4041",
+      "occupation": "Subway and Streetcar Operators",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 62380,
+      "education": "High school diploma or equivalent",
+      "employed": 12350
+    },
+    {
+      "soc_code": "47-2053",
+      "occupation": "Terrazzo Workers and Finishers",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 45990,
+      "education": "High school diploma or equivalent",
+      "employed": 3420
+    },
+    {
+      "soc_code": "19-1021",
+      "occupation": "Biochemists and Biophysicists",
+      "automation_probability": 0.027,
+      "avg_annual_wage": 94340,
+      "education": "Doctoral or professional degree",
+      "employed": 29200
+    },
+    {
+      "soc_code": "17-3022",
+      "occupation": "Civil Engineering Technicians",
+      "automation_probability": 0.75,
+      "avg_annual_wage": 52120,
+      "education": "Associate's degree",
+      "employed": 72150
+    },
+    {
+      "soc_code": "51-9081",
+      "occupation": "Dental Laboratory Technicians",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 40760,
+      "education": "High school diploma or equivalent",
+      "employed": 37110
+    },
+    {
+      "soc_code": "49-9094",
+      "occupation": "Locksmiths and Safe Repairers",
+      "automation_probability": 0.77,
+      "avg_annual_wage": 42180,
+      "education": "High school diploma or equivalent",
+      "employed": 18640
+    },
+    {
+      "soc_code": "51-9082",
+      "occupation": "Medical Appliance Technicians",
+      "automation_probability": 0.45,
+      "avg_annual_wage": 39880,
+      "education": "High school diploma or equivalent",
+      "employed": 14570
+    },
+    {
+      "soc_code": "39-3021",
+      "occupation": "Motion Picture Projectionists",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 24750,
+      "education": "No formal educational credential",
+      "employed": 5480
+    },
+    {
+      "soc_code": "27-2041",
+      "occupation": "Music Directors and Composers",
+      "automation_probability": 0.015,
+      "avg_annual_wage": 60630,
+      "education": "Bachelor's degree",
+      "employed": 18380
+    },
+    {
+      "soc_code": "31-2021",
+      "occupation": "Physical Therapist Assistants",
+      "automation_probability": 0.018,
+      "avg_annual_wage": 56850,
+      "education": "Associate's degree",
+      "employed": 85580
+    },
+    {
+      "soc_code": "51-9399",
+      "occupation": "Production Workers, All Other",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 32380,
+      "education": "High school diploma or equivalent",
+      "employed": 251670
+    },
+    {
+      "soc_code": "43-9081",
+      "occupation": "Proofreaders and Copy Markers",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 39640,
+      "education": "Bachelor's degree",
+      "employed": 11430
+    },
+    {
+      "soc_code": "51-3023",
+      "occupation": "Slaughterers and Meat Packers",
+      "automation_probability": 0.6,
+      "avg_annual_wage": 27040,
+      "education": "No formal educational credential",
+      "employed": 80780
+    },
+    {
+      "soc_code": "27-4014",
+      "occupation": "Sound Engineering Technicians",
+      "automation_probability": 0.13,
+      "avg_annual_wage": 65240,
+      "education": "Postsecondary nondegree award",
+      "employed": 15210
+    },
+    {
+      "soc_code": "39-6011",
+      "occupation": "Baggage Porters and Bellhops",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 24910,
+      "education": "High school diploma or equivalent",
+      "employed": 44750
+    },
+    {
+      "soc_code": "15-1150",
+      "occupation": "Computer Support Specialists",
+      "automation_probability": 0.65,
+      "avg_annual_wage": 56600,
+      "education": "Bachelor's degree",
+      "employed": 791580
+    },
+    {
+      "soc_code": "29-1031",
+      "occupation": "Dietitians and Nutritionists",
+      "automation_probability": 0.0039,
+      "avg_annual_wage": 59670,
+      "education": "Bachelor's degree",
+      "employed": 61430
+    },
+    {
+      "soc_code": "19-4092",
+      "occupation": "Forensic Science Technicians",
+      "automation_probability": 0.0095,
+      "avg_annual_wage": 60690,
+      "education": "Bachelor's degree",
+      "employed": 14800
+    },
+    {
+      "soc_code": "27-3091",
+      "occupation": "Interpreters and Translators",
+      "automation_probability": 0.38,
+      "avg_annual_wage": 51260,
+      "education": "Bachelor's degree",
+      "employed": 51350
+    },
+    {
+      "soc_code": "43-4121",
+      "occupation": "Library Assistants, Clerical",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 27450,
+      "education": "High school diploma or equivalent",
+      "employed": 98560
+    },
+    {
+      "soc_code": "43-4131",
+      "occupation": "Loan Interviewers and Clerks",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 40300,
+      "education": "High school diploma or equivalent",
+      "employed": 224340
+    },
+    {
+      "soc_code": "15-2031",
+      "occupation": "Operations Research Analysts",
+      "automation_probability": 0.035,
+      "avg_annual_wage": 84340,
+      "education": "Bachelor's degree",
+      "employed": 109150
+    },
+    {
+      "soc_code": "47-2161",
+      "occupation": "Plasterers and Stucco Masons",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 44070,
+      "education": "No formal educational credential",
+      "employed": 22810
+    },
+    {
+      "soc_code": "43-5052",
+      "occupation": "Postal Service Mail Carriers",
+      "automation_probability": 0.68,
+      "avg_annual_wage": 50610,
+      "education": "High school diploma or equivalent",
+      "employed": 328950
+    },
+    {
+      "soc_code": "27-3031",
+      "occupation": "Public Relations Specialists",
+      "automation_probability": 0.18,
+      "avg_annual_wage": 66540,
+      "education": "Bachelor's degree",
+      "employed": 226940
+    },
+    {
+      "soc_code": "27-3022",
+      "occupation": "Reporters and Correspondents",
+      "automation_probability": 0.11,
+      "avg_annual_wage": 49770,
+      "education": "Bachelor's degree",
+      "employed": 40090
+    },
+    {
+      "soc_code": "29-1127",
+      "occupation": "Speech-Language Pathologists",
+      "automation_probability": 0.0064,
+      "avg_annual_wage": 78210,
+      "education": "Master's degree",
+      "employed": 135980
+    },
+    {
+      "soc_code": "43-3011",
+      "occupation": "Bill and Account Collectors",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 37620,
+      "education": "High school diploma or equivalent",
+      "employed": 298960
+    },
+    {
+      "soc_code": "47-2021",
+      "occupation": "Brickmasons and Blockmasons",
+      "automation_probability": 0.82,
+      "avg_annual_wage": 53440,
+      "education": "High school diploma or equivalent",
+      "employed": 64370
+    },
+    {
+      "soc_code": "17-2061",
+      "occupation": "Computer Hardware Engineers",
+      "automation_probability": 0.22,
+      "avg_annual_wage": 118700,
+      "education": "Bachelor's degree",
+      "employed": 72950
+    },
+    {
+      "soc_code": "47-2043",
+      "occupation": "Floor Sanders and Finishers",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 38890,
+      "education": "No formal educational credential",
+      "employed": 4590
+    },
+    {
+      "soc_code": "35-3041",
+      "occupation": "Food Servers, Nonrestaurant",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 23490,
+      "education": "No formal educational credential",
+      "employed": 261520
+    },
+    {
+      "soc_code": "51-4071",
+      "occupation": "Foundry Mold and Coremakers",
+      "automation_probability": 0.67,
+      "avg_annual_wage": 36030,
+      "education": "High school diploma or equivalent",
+      "employed": 12810
+    },
+    {
+      "soc_code": "47-4051",
+      "occupation": "Highway Maintenance Workers",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 39540,
+      "education": "High school diploma or equivalent",
+      "employed": 143320
+    },
+    {
+      "soc_code": "45-4022",
+      "occupation": "Logging Equipment Operators",
+      "automation_probability": 0.79,
+      "avg_annual_wage": 38880,
+      "education": "High school diploma or equivalent",
+      "employed": 27250
+    },
+    {
+      "soc_code": "39-5092",
+      "occupation": "Manicurists and Pedicurists",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 24330,
+      "education": "Postsecondary nondegree award",
+      "employed": 90630
+    },
+    {
+      "soc_code": "31-9093",
+      "occupation": "Medical Equipment Preparers",
+      "automation_probability": 0.78,
+      "avg_annual_wage": 35960,
+      "education": "High school diploma or equivalent",
+      "employed": 52500
+    },
+    {
+      "soc_code": "49-9062",
+      "occupation": "Medical Equipment Repairers",
+      "automation_probability": 0.27,
+      "avg_annual_wage": 50910,
+      "education": "Associate's degree",
+      "employed": 43370
+    },
+    {
+      "soc_code": "29-2091",
+      "occupation": "Orthotists and Prosthetists",
+      "automation_probability": 0.0035,
+      "avg_annual_wage": 69920,
+      "education": "Master's degree",
+      "employed": 7500
+    },
+    {
+      "soc_code": "53-7064",
+      "occupation": "Packers and Packagers, Hand",
+      "automation_probability": 0.38,
+      "avg_annual_wage": 24430,
+      "education": "No formal educational credential",
+      "employed": 705660
+    },
+    {
+      "soc_code": "33-3041",
+      "occupation": "Parking Enforcement Workers",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 39650,
+      "education": "High school diploma or equivalent",
+      "employed": 8920
+    },
+    {
+      "soc_code": "13-2052",
+      "occupation": "Personal Financial Advisors",
+      "automation_probability": 0.58,
+      "avg_annual_wage": 123100,
+      "education": "Bachelor's degree",
+      "employed": 201850
+    },
+    {
+      "soc_code": "53-3041",
+      "occupation": "Taxi Drivers and Chauffeurs",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 26790,
+      "education": "No formal educational credential",
+      "employed": 188860
+    },
+    {
+      "soc_code": "49-3093",
+      "occupation": "Tire Repairers and Changers",
+      "automation_probability": 0.7,
+      "avg_annual_wage": 27150,
+      "education": "High school diploma or equivalent",
+      "employed": 109350
+    },
+    {
+      "soc_code": "33-3052",
+      "occupation": "Transit and Railroad Police",
+      "automation_probability": 0.57,
+      "avg_annual_wage": 67850,
+      "education": "High school diploma or equivalent",
+      "employed": 4810
+    },
+    {
+      "soc_code": "19-3051",
+      "occupation": "Urban and Regional Planners",
+      "automation_probability": 0.13,
+      "avg_annual_wage": 73060,
+      "education": "Master's degree",
+      "employed": 34810
+    },
+    {
+      "soc_code": "43-9022",
+      "occupation": "Word Processors and Typists",
+      "automation_probability": 0.81,
+      "avg_annual_wage": 39970,
+      "education": "High school diploma or equivalent",
+      "employed": 67230
+    },
+    {
+      "soc_code": "43-3021",
+      "occupation": "Billing and Posting Clerks",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 37570,
+      "education": "High school diploma or equivalent",
+      "employed": 485220
+    },
+    {
+      "soc_code": "51-9031",
+      "occupation": "Cutters and Trimmers, Hand",
+      "automation_probability": 0.64,
+      "avg_annual_wage": 29580,
+      "education": "No formal educational credential",
+      "employed": 14250
+    },
+    {
+      "soc_code": "47-5081",
+      "occupation": "Helpers–Extraction Workers",
+      "automation_probability": 0.37,
+      "avg_annual_wage": 37160,
+      "education": "High school diploma or equivalent",
+      "employed": 17660
+    },
+    {
+      "soc_code": "51-9198",
+      "occupation": "Helpers–Production Workers",
+      "automation_probability": 0.66,
+      "avg_annual_wage": 26930,
+      "education": "No formal educational credential",
+      "employed": 429890
+    },
+    {
+      "soc_code": "25-9031",
+      "occupation": "Instructional Coordinators",
+      "automation_probability": 0.0042,
+      "avg_annual_wage": 65500,
+      "education": "Master's degree",
+      "employed": 147330
+    },
+    {
+      "soc_code": "53-7111",
+      "occupation": "Mine Shuttle Car Operators",
+      "automation_probability": 0.37,
+      "avg_annual_wage": 56370,
+      "education": "No formal educational credential",
+      "employed": 1590
+    },
+    {
+      "soc_code": "31-2012",
+      "occupation": "Occupational Therapy Aides",
+      "automation_probability": 0.27,
+      "avg_annual_wage": 31840,
+      "education": "High school diploma or equivalent",
+      "employed": 7210
+    },
+    {
+      "soc_code": "51-4052",
+      "occupation": "Pourers and Casters, Metal",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 37300,
+      "education": "High school diploma or equivalent",
+      "employed": 8560
+    },
+    {
+      "soc_code": "51-3021",
+      "occupation": "Butchers and Meat Cutters",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 31740,
+      "education": "No formal educational credential",
+      "employed": 133880
+    },
+    {
+      "soc_code": "15-1121",
+      "occupation": "Computer Systems Analysts",
+      "automation_probability": 0.0065,
+      "avg_annual_wage": 91620,
+      "education": "Bachelor's degree",
+      "employed": 568960
+    },
+    {
+      "soc_code": "41-2021",
+      "occupation": "Counter and Rental Clerks",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 29390,
+      "education": "No formal educational credential",
+      "employed": 450330
+    },
+    {
+      "soc_code": "53-7021",
+      "occupation": "Crane and Tower Operators",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 55280,
+      "education": "High school diploma or equivalent",
+      "employed": 45020
+    },
+    {
+      "soc_code": "21-1022",
+      "occupation": "Healthcare Social Workers",
+      "automation_probability": 0.0035,
+      "avg_annual_wage": 55510,
+      "education": "Master's degree",
+      "employed": 159310
+    },
+    {
+      "soc_code": "53-7041",
+      "occupation": "Hoist and Winch Operators",
+      "automation_probability": 0.65,
+      "avg_annual_wage": 50020,
+      "education": "No formal educational credential",
+      "employed": 2960
+    },
+    {
+      "soc_code": "49-9011",
+      "occupation": "Mechanical Door Repairers",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 40420,
+      "education": "High school diploma or equivalent",
+      "employed": 19840
+    },
+    {
+      "soc_code": "31-9094",
+      "occupation": "Medical Transcriptionists",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 37150,
+      "education": "Postsecondary nondegree award",
+      "employed": 54070
+    },
+    {
+      "soc_code": "11-9121",
+      "occupation": "Natural Sciences Managers",
+      "automation_probability": 0.018,
+      "avg_annual_wage": 136150,
+      "education": "Bachelor's degree",
+      "employed": 54780
+    },
+    {
+      "soc_code": "39-2021",
+      "occupation": "Nonfarm Animal Caretakers",
+      "automation_probability": 0.82,
+      "avg_annual_wage": 24420,
+      "education": "High school diploma or equivalent",
+      "employed": 187360
+    },
+    {
+      "soc_code": "21-1015",
+      "occupation": "Rehabilitation Counselors",
+      "automation_probability": 0.0094,
+      "avg_annual_wage": 38740,
+      "education": "Master's degree",
+      "employed": 103030
+    },
+    {
+      "soc_code": "53-5011",
+      "occupation": "Sailors and Marine Oilers",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 46170,
+      "education": "No formal educational credential",
+      "employed": 32530
+    },
+    {
+      "soc_code": "27-1027",
+      "occupation": "Set and Exhibit Designers",
+      "automation_probability": 0.0055,
+      "avg_annual_wage": 57600,
+      "education": "Bachelor's degree",
+      "employed": 12060
+    },
+    {
+      "soc_code": "19-1013",
+      "occupation": "Soil and Plant Scientists",
+      "automation_probability": 0.021,
+      "avg_annual_wage": 69290,
+      "education": "Bachelor's degree",
+      "employed": 14690
+    },
+    {
+      "soc_code": "53-6051",
+      "occupation": "Transportation Inspectors",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 72650,
+      "education": "High school diploma or equivalent",
+      "employed": 27430
+    },
+    {
+      "soc_code": "37-3013",
+      "occupation": "Tree Trimmers and Pruners",
+      "automation_probability": 0.77,
+      "avg_annual_wage": 37310,
+      "education": "High school diploma or equivalent",
+      "employed": 40680
+    },
+    {
+      "soc_code": "13-2011",
+      "occupation": "Accountants and Auditors",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 76730,
+      "education": "Bachelor's degree",
+      "employed": 1246540
+    },
+    {
+      "soc_code": "41-3011",
+      "occupation": "Advertising Sales Agents",
+      "automation_probability": 0.54,
+      "avg_annual_wage": 63660,
+      "education": "High school diploma or equivalent",
+      "employed": 141100
+    },
+    {
+      "soc_code": "43-5011",
+      "occupation": "Cargo and Freight Agents",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 44250,
+      "education": "High school diploma or equivalent",
+      "employed": 88920
+    },
+    {
+      "soc_code": "35-2013",
+      "occupation": "Cooks, Private Household",
+      "automation_probability": 0.3,
+      "avg_annual_wage": 42220,
+      "education": "Postsecondary nondegree award",
+      "employed": 370
+    },
+    {
+      "soc_code": "35-2021",
+      "occupation": "Food Preparation Workers",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 22920,
+      "education": "No formal educational credential",
+      "employed": 850670
+    },
+    {
+      "soc_code": "49-9031",
+      "occupation": "Home Appliance Repairers",
+      "automation_probability": 0.72,
+      "avg_annual_wage": 40390,
+      "education": "High school diploma or equivalent",
+      "employed": 33480
+    },
+    {
+      "soc_code": "11-3121",
+      "occupation": "Human Resources Managers",
+      "automation_probability": 0.0055,
+      "avg_annual_wage": 120210,
+      "education": "Bachelor's degree",
+      "employed": 129810
+    },
+    {
+      "soc_code": "15-2091",
+      "occupation": "Mathematical Technicians",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 58490,
+      "education": "Bachelor's degree",
+      "employed": 510
+    },
+    {
+      "soc_code": "21-1014",
+      "occupation": "Mental Health Counselors",
+      "automation_probability": 0.0048,
+      "avg_annual_wage": 46050,
+      "education": "Master's degree",
+      "employed": 139820
+    },
+    {
+      "soc_code": "43-5041",
+      "occupation": "Meter Readers, Utilities",
+      "automation_probability": 0.85,
+      "avg_annual_wage": 41890,
+      "education": "High school diploma or equivalent",
+      "employed": 34070
+    },
+    {
+      "soc_code": "31-2022",
+      "occupation": "Physical Therapist Aides",
+      "automation_probability": 0.61,
+      "avg_annual_wage": 27890,
+      "education": "High school diploma or equivalent",
+      "employed": 50030
+    },
+    {
+      "soc_code": "51-5112",
+      "occupation": "Printing Press Operators",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 37460,
+      "education": "High school diploma or equivalent",
+      "employed": 169910
+    },
+    {
+      "soc_code": "19-3039",
+      "occupation": "Psychologists, All Other",
+      "automation_probability": 0.0043,
+      "avg_annual_wage": 94650,
+      "education": "Master's degree",
+      "employed": 13310
+    },
+    {
+      "soc_code": "41-9022",
+      "occupation": "Real Estate Sales Agents",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 59360,
+      "education": "High school diploma or equivalent",
+      "employed": 151840
+    },
+    {
+      "soc_code": "47-5071",
+      "occupation": "Roustabouts, Oil and Gas",
+      "automation_probability": 0.68,
+      "avg_annual_wage": 40480,
+      "education": "No formal educational credential",
+      "employed": 51290
+    },
+    {
+      "soc_code": "51-9141",
+      "occupation": "Semiconductor Processors",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 37890,
+      "education": "Associate's degree",
+      "employed": 24430
+    },
+    {
+      "soc_code": "51-6031",
+      "occupation": "Sewing Machine Operators",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 25830,
+      "education": "No formal educational credential",
+      "employed": 139500
+    },
+    {
+      "soc_code": "45-2011",
+      "occupation": "Agricultural Inspectors",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 44260,
+      "education": "Bachelor's degree",
+      "employed": 14710
+    },
+    {
+      "soc_code": "53-2021",
+      "occupation": "Air Traffic Controllers",
+      "automation_probability": 0.11,
+      "avg_annual_wage": 118200,
+      "education": "Associate's degree",
+      "employed": 23240
+    },
+    {
+      "soc_code": "53-6011",
+      "occupation": "Bridge and Lock Tenders",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 46680,
+      "education": "High school diploma or equivalent",
+      "employed": 3510
+    },
+    {
+      "soc_code": "27-3021",
+      "occupation": "Broadcast News Analysts",
+      "automation_probability": 0.067,
+      "avg_annual_wage": 78200,
+      "education": "Bachelor's degree",
+      "employed": 5070
+    },
+    {
+      "soc_code": "19-1031",
+      "occupation": "Conservation Scientists",
+      "automation_probability": 0.016,
+      "avg_annual_wage": 65130,
+      "education": "Bachelor's degree",
+      "employed": 20470
+    },
+    {
+      "soc_code": "43-5021",
+      "occupation": "Couriers and Messengers",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 29920,
+      "education": "High school diploma or equivalent",
+      "employed": 74120
+    },
+    {
+      "soc_code": "15-1141",
+      "occupation": "Database Administrators",
+      "automation_probability": 0.03,
+      "avg_annual_wage": 87130,
+      "education": "Bachelor's degree",
+      "employed": 113730
+    },
+    {
+      "soc_code": "17-2081",
+      "occupation": "Environmental Engineers",
+      "automation_probability": 0.018,
+      "avg_annual_wage": 88530,
+      "education": "Bachelor's degree",
+      "employed": 52280
+    },
+    {
+      "soc_code": "45-4023",
+      "occupation": "Log Graders and Scalers",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 38150,
+      "education": "High school diploma or equivalent",
+      "employed": 3020
+    },
+    {
+      "soc_code": "29-1122",
+      "occupation": "Occupational Therapists",
+      "automation_probability": 0.0035,
+      "avg_annual_wage": 83730,
+      "education": "Master's degree",
+      "employed": 118070
+    },
+    {
+      "soc_code": "29-1060",
+      "occupation": "Physicians and Surgeons",
+      "automation_probability": 0.0042,
+      "avg_annual_wage": 210170,
+      "education": "Doctoral or professional degree",
+      "employed": 649850
+    },
+    {
+      "soc_code": "27-2012",
+      "occupation": "Producers and Directors",
+      "automation_probability": 0.022,
+      "avg_annual_wage": 93840,
+      "education": "Bachelor's degree",
+      "employed": 114510
+    },
+    {
+      "soc_code": "29-2053",
+      "occupation": "Psychiatric Technicians",
+      "automation_probability": 0.043,
+      "avg_annual_wage": 35870,
+      "education": "Postsecondary nondegree award",
+      "employed": 61720
+    },
+    {
+      "soc_code": "29-1125",
+      "occupation": "Recreational Therapists",
+      "automation_probability": 0.0028,
+      "avg_annual_wage": 48190,
+      "education": "Bachelor's degree",
+      "employed": 18100
+    },
+    {
+      "soc_code": "47-2044",
+      "occupation": "Tile and Marble Setters",
+      "automation_probability": 0.75,
+      "avg_annual_wage": 44770,
+      "education": "No formal educational credential",
+      "employed": 36830
+    },
+    {
+      "soc_code": "39-7011",
+      "occupation": "Tour Guides and Escorts",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 28100,
+      "education": "High school diploma or equivalent",
+      "employed": 38660
+    },
+    {
+      "soc_code": "17-2021",
+      "occupation": "Agricultural Engineers",
+      "automation_probability": 0.49,
+      "avg_annual_wage": 77330,
+      "education": "Bachelor's degree",
+      "employed": 1980
+    },
+    {
+      "soc_code": "33-9011",
+      "occupation": "Animal Control Workers",
+      "automation_probability": 0.21,
+      "avg_annual_wage": 36600,
+      "education": "High school diploma or equivalent",
+      "employed": 12970
+    },
+    {
+      "soc_code": "19-4021",
+      "occupation": "Biological Technicians",
+      "automation_probability": 0.3,
+      "avg_annual_wage": 46130,
+      "education": "Bachelor's degree",
+      "employed": 74720
+    },
+    {
+      "soc_code": "13-1074",
+      "occupation": "Farm Labor Contractors",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 47290,
+      "education": "No formal educational credential",
+      "employed": 810
+    },
+    {
+      "soc_code": "27-4032",
+      "occupation": "Film and Video Editors",
+      "automation_probability": 0.31,
+      "avg_annual_wage": 82190,
+      "education": "Bachelor's degree",
+      "employed": 29880
+    },
+    {
+      "soc_code": "41-3021",
+      "occupation": "Insurance Sales Agents",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 67760,
+      "education": "High school diploma or equivalent",
+      "employed": 385700
+    },
+    {
+      "soc_code": "13-2053",
+      "occupation": "Insurance Underwriters",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 75480,
+      "education": "Bachelor's degree",
+      "employed": 91650
+    },
+    {
+      "soc_code": "43-9061",
+      "occupation": "Office Clerks, General",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 33010,
+      "education": "High school diploma or equivalent",
+      "employed": 2955550
+    },
+    {
+      "soc_code": "53-6021",
+      "occupation": "Parking Lot Attendants",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 23250,
+      "education": "No formal educational credential",
+      "employed": 146350
+    },
+    {
+      "soc_code": "25-1000",
+      "occupation": "Postsecondary Teachers",
+      "automation_probability": 0.032,
+      "avg_annual_wage": 81880,
+      "education": "High school diploma or equivalent",
+      "employed": 1530010
+    },
+    {
+      "soc_code": "29-1126",
+      "occupation": "Respiratory Therapists",
+      "automation_probability": 0.066,
+      "avg_annual_wage": 60640,
+      "education": "Associate's degree",
+      "employed": 126770
+    },
+    {
+      "soc_code": "47-5051",
+      "occupation": "Rock Splitters, Quarry",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 34860,
+      "education": "No formal educational credential",
+      "employed": 3770
+    },
+    {
+      "soc_code": "43-9111",
+      "occupation": "Statistical Assistants",
+      "automation_probability": 0.66,
+      "avg_annual_wage": 48300,
+      "education": "Bachelor's degree",
+      "employed": 10900
+    },
+    {
+      "soc_code": "29-2055",
+      "occupation": "Surgical Technologists",
+      "automation_probability": 0.34,
+      "avg_annual_wage": 46800,
+      "education": "Postsecondary nondegree award",
+      "employed": 105720
+    },
+    {
+      "soc_code": "35-3031",
+      "occupation": "Waiters and Waitresses",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 24410,
+      "education": "No formal educational credential",
+      "employed": 2564610
+    },
+    {
+      "soc_code": "27-4012",
+      "occupation": "Broadcast Technicians",
+      "automation_probability": 0.74,
+      "avg_annual_wage": 45430,
+      "education": "Associate's degree",
+      "employed": 30330
+    },
+    {
+      "soc_code": "47-2061",
+      "occupation": "Construction Laborers",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 37890,
+      "education": "No formal educational credential",
+      "employed": 912100
+    },
+    {
+      "soc_code": "11-9021",
+      "occupation": "Construction Managers",
+      "automation_probability": 0.071,
+      "avg_annual_wage": 99510,
+      "education": "Bachelor's degree",
+      "employed": 249650
+    },
+    {
+      "soc_code": "43-4021",
+      "occupation": "Correspondence Clerks",
+      "automation_probability": 0.86,
+      "avg_annual_wage": 37660,
+      "education": "High school diploma or equivalent",
+      "employed": 6780
+    },
+    {
+      "soc_code": "51-9194",
+      "occupation": "Etchers and Engravers",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 34390,
+      "education": "High school diploma or equivalent",
+      "employed": 9520
+    },
+    {
+      "soc_code": "33-3031",
+      "occupation": "Fish and Game Wardens",
+      "automation_probability": 0.08,
+      "avg_annual_wage": 54760,
+      "education": "Bachelor's degree",
+      "employed": 6610
+    },
+    {
+      "soc_code": "11-9051",
+      "occupation": "Food Service Managers",
+      "automation_probability": 0.083,
+      "avg_annual_wage": 56010,
+      "education": "High school diploma or equivalent",
+      "employed": 201470
+    },
+    {
+      "soc_code": "27-2042",
+      "occupation": "Musicians and Singers",
+      "automation_probability": 0.074,
+      "avg_annual_wage": 61862,
+      "education": "No formal educational credential",
+      "employed": 40110
+    },
+    {
+      "soc_code": "29-2081",
+      "occupation": "Opticians, Dispensing",
+      "automation_probability": 0.71,
+      "avg_annual_wage": 37860,
+      "education": "High school diploma or equivalent",
+      "employed": 75270
+    },
+    {
+      "soc_code": "47-2072",
+      "occupation": "Pile-Driver Operators",
+      "automation_probability": 0.82,
+      "avg_annual_wage": 61740,
+      "education": "High school diploma or equivalent",
+      "employed": 3570
+    },
+    {
+      "soc_code": "43-5051",
+      "occupation": "Postal Service Clerks",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 48360,
+      "education": "High school diploma or equivalent",
+      "employed": 82030
+    },
+    {
+      "soc_code": "51-8013",
+      "occupation": "Power Plant Operators",
+      "automation_probability": 0.85,
+      "avg_annual_wage": 73800,
+      "education": "High school diploma or equivalent",
+      "employed": 35010
+    },
+    {
+      "soc_code": "49-2091",
+      "occupation": "Avionics Technicians",
+      "automation_probability": 0.7,
+      "avg_annual_wage": 61390,
+      "education": "Associate's degree",
+      "employed": 17330
+    },
+    {
+      "soc_code": "17-2031",
+      "occupation": "Biomedical Engineers",
+      "automation_probability": 0.037,
+      "avg_annual_wage": 89970,
+      "education": "Bachelor's degree",
+      "employed": 20590
+    },
+    {
+      "soc_code": "35-1011",
+      "occupation": "Chefs and Head Cooks",
+      "automation_probability": 0.1,
+      "avg_annual_wage": 47390,
+      "education": "High school diploma or equivalent",
+      "employed": 134190
+    },
+    {
+      "soc_code": "19-4031",
+      "occupation": "Chemical Technicians",
+      "automation_probability": 0.57,
+      "avg_annual_wage": 49770,
+      "education": "Associate's degree",
+      "employed": 65510
+    },
+    {
+      "soc_code": "15-1131",
+      "occupation": "Computer Programmers",
+      "automation_probability": 0.48,
+      "avg_annual_wage": 85180,
+      "education": "Bachelor's degree",
+      "employed": 271200
+    },
+    {
+      "soc_code": "29-2051",
+      "occupation": "Dietetic Technicians",
+      "automation_probability": 0.13,
+      "avg_annual_wage": 29360,
+      "education": "Associate's degree",
+      "employed": 32240
+    },
+    {
+      "soc_code": "53-3031",
+      "occupation": "Driver/Sales Workers",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 28440,
+      "education": "High school diploma or equivalent",
+      "employed": 426310
+    },
+    {
+      "soc_code": "17-2071",
+      "occupation": "Electrical Engineers",
+      "automation_probability": 0.1,
+      "avg_annual_wage": 98620,
+      "education": "Bachelor's degree",
+      "employed": 183770
+    },
+    {
+      "soc_code": "17-2199",
+      "occupation": "Engineers, All Other",
+      "automation_probability": 0.014,
+      "avg_annual_wage": 99250,
+      "education": "Bachelor's degree",
+      "employed": 123390
+    },
+    {
+      "soc_code": "47-3013",
+      "occupation": "Helpers–Electricians",
+      "automation_probability": 0.74,
+      "avg_annual_wage": 30980,
+      "education": "High school diploma or equivalent",
+      "employed": 71890
+    },
+    {
+      "soc_code": "45-3021",
+      "occupation": "Hunters and Trappers",
+      "automation_probability": 0.77,
+      "avg_annual_wage": 30740,
+      "education": "No formal educational credential",
+      "employed": 520
+    },
+    {
+      "soc_code": "17-2112",
+      "occupation": "Industrial Engineers",
+      "automation_probability": 0.029,
+      "avg_annual_wage": 88530,
+      "education": "Bachelor's degree",
+      "employed": 256550
+    },
+    {
+      "soc_code": "17-1012",
+      "occupation": "Landscape Architects",
+      "automation_probability": 0.045,
+      "avg_annual_wage": 68820,
+      "education": "Bachelor's degree",
+      "employed": 19420
+    },
+    {
+      "soc_code": "53-4011",
+      "occupation": "Locomotive Engineers",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 61020,
+      "education": "High school diploma or equivalent",
+      "employed": 39900
+    },
+    {
+      "soc_code": "19-2032",
+      "occupation": "Materials Scientists",
+      "automation_probability": 0.021,
+      "avg_annual_wage": 101570,
+      "education": "Bachelor's degree",
+      "employed": 7750
+    },
+    {
+      "soc_code": "17-2141",
+      "occupation": "Mechanical Engineers",
+      "automation_probability": 0.011,
+      "avg_annual_wage": 89800,
+      "education": "Bachelor's degree",
+      "employed": 285790
+    },
+    {
+      "soc_code": "49-3052",
+      "occupation": "Motorcycle Mechanics",
+      "automation_probability": 0.79,
+      "avg_annual_wage": 37040,
+      "education": "Postsecondary nondegree award",
+      "employed": 16000
+    },
+    {
+      "soc_code": "37-2021",
+      "occupation": "Pest Control Workers",
+      "automation_probability": 0.66,
+      "avg_annual_wage": 35020,
+      "education": "High school diploma or equivalent",
+      "employed": 72830
+    },
+    {
+      "soc_code": "29-2052",
+      "occupation": "Pharmacy Technicians",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 32170,
+      "education": "High school diploma or equivalent",
+      "employed": 398390
+    },
+    {
+      "soc_code": "29-1071",
+      "occupation": "Physician Assistants",
+      "automation_probability": 0.14,
+      "avg_annual_wage": 102090,
+      "education": "Master's degree",
+      "employed": 104050
+    },
+    {
+      "soc_code": "19-3094",
+      "occupation": "Political Scientists",
+      "automation_probability": 0.039,
+      "avg_annual_wage": 112250,
+      "education": "Master's degree",
+      "employed": 6350
+    },
+    {
+      "soc_code": "29-1124",
+      "occupation": "Radiation Therapists",
+      "automation_probability": 0.34,
+      "avg_annual_wage": 84980,
+      "education": "Associate's degree",
+      "employed": 17450
+    },
+    {
+      "soc_code": "39-9041",
+      "occupation": "Residential Advisors",
+      "automation_probability": 0.064,
+      "avg_annual_wage": 27690,
+      "education": "High school diploma or equivalent",
+      "employed": 110330
+    },
+    {
+      "soc_code": "47-5061",
+      "occupation": "Roof Bolters, Mining",
+      "automation_probability": 0.49,
+      "avg_annual_wage": 58110,
+      "education": "High school diploma or equivalent",
+      "employed": 3930
+    },
+    {
+      "soc_code": "39-5094",
+      "occupation": "Skincare Specialists",
+      "automation_probability": 0.29,
+      "avg_annual_wage": 35160,
+      "education": "Postsecondary nondegree award",
+      "employed": 43980
+    },
+    {
+      "soc_code": "17-2011",
+      "occupation": "Aerospace Engineers",
+      "automation_probability": 0.017,
+      "avg_annual_wage": 112010,
+      "education": "Bachelor's degree",
+      "employed": 68510
+    },
+    {
+      "soc_code": "13-1041",
+      "occupation": "Compliance Officers",
+      "automation_probability": 0.08,
+      "avg_annual_wage": 70250,
+      "education": "Bachelor's degree",
+      "employed": 273910
+    },
+    {
+      "soc_code": "13-2061",
+      "occupation": "Financial Examiners",
+      "automation_probability": 0.17,
+      "avg_annual_wage": 88940,
+      "education": "Bachelor's degree",
+      "employed": 49750
+    },
+    {
+      "soc_code": "51-7021",
+      "occupation": "Furniture Finishers",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 32330,
+      "education": "High school diploma or equivalent",
+      "employed": 17370
+    },
+    {
+      "soc_code": "43-3041",
+      "occupation": "Gaming Cage Workers",
+      "automation_probability": 0.39,
+      "avg_annual_wage": 28120,
+      "education": "High school diploma or equivalent",
+      "employed": 18810
+    },
+    {
+      "soc_code": "51-8092",
+      "occupation": "Gas Plant Operators",
+      "automation_probability": 0.78,
+      "avg_annual_wage": 67980,
+      "education": "High school diploma or equivalent",
+      "employed": 17350
+    },
+    {
+      "soc_code": "23-1012",
+      "occupation": "Judicial Law Clerks",
+      "automation_probability": 0.41,
+      "avg_annual_wage": 59840,
+      "education": "Doctoral or professional degree",
+      "employed": 13410
+    },
+    {
+      "soc_code": "25-4031",
+      "occupation": "Library Technicians",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 34780,
+      "education": "Postsecondary nondegree award",
+      "employed": 93410
+    },
+    {
+      "soc_code": "13-1111",
+      "occupation": "Management Analysts",
+      "automation_probability": 0.13,
+      "avg_annual_wage": 91910,
+      "education": "Bachelor's degree",
+      "employed": 637690
+    },
+    {
+      "soc_code": "11-9199",
+      "occupation": "Managers, All Other",
+      "automation_probability": 0.25,
+      "avg_annual_wage": 112150,
+      "education": "Bachelor's degree",
+      "employed": 403670
+    },
+    {
+      "soc_code": "17-2131",
+      "occupation": "Materials Engineers",
+      "automation_probability": 0.021,
+      "avg_annual_wage": 97050,
+      "education": "Bachelor's degree",
+      "employed": 26800
+    },
+    {
+      "soc_code": "17-3013",
+      "occupation": "Mechanical Drafters",
+      "automation_probability": 0.68,
+      "avg_annual_wage": 57480,
+      "education": "Associate's degree",
+      "employed": 63630
+    },
+    {
+      "soc_code": "43-6013",
+      "occupation": "Medical Secretaries",
+      "automation_probability": 0.81,
+      "avg_annual_wage": 35060,
+      "education": "High school diploma or equivalent",
+      "employed": 556820
+    },
+    {
+      "soc_code": "53-5022",
+      "occupation": "Motorboat Operators",
+      "automation_probability": 0.62,
+      "avg_annual_wage": 43340,
+      "education": "Postsecondary nondegree award",
+      "employed": 3290
+    },
+    {
+      "soc_code": "43-4141",
+      "occupation": "New Accounts Clerks",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 36480,
+      "education": "High school diploma or equivalent",
+      "employed": 41630
+    },
+    {
+      "soc_code": "19-4051",
+      "occupation": "Nuclear Technicians",
+      "automation_probability": 0.85,
+      "avg_annual_wage": 77820,
+      "education": "Associate's degree",
+      "employed": 6840
+    },
+    {
+      "soc_code": "51-7032",
+      "occupation": "Patternmakers, Wood",
+      "automation_probability": 0.91,
+      "avg_annual_wage": 47850,
+      "education": "High school diploma or equivalent",
+      "employed": 970
+    },
+    {
+      "soc_code": "39-9021",
+      "occupation": "Personal Care Aides",
+      "automation_probability": 0.74,
+      "avg_annual_wage": 22710,
+      "education": "No formal educational credential",
+      "employed": 1492250
+    },
+    {
+      "soc_code": "17-2171",
+      "occupation": "Petroleum Engineers",
+      "automation_probability": 0.16,
+      "avg_annual_wage": 147030,
+      "education": "Bachelor's degree",
+      "employed": 32780
+    },
+    {
+      "soc_code": "29-1123",
+      "occupation": "Physical Therapists",
+      "automation_probability": 0.021,
+      "avg_annual_wage": 87220,
+      "education": "Doctoral or professional degree",
+      "employed": 216920
+    },
+    {
+      "soc_code": "11-3061",
+      "occupation": "Purchasing Managers",
+      "automation_probability": 0.03,
+      "avg_annual_wage": 117720,
+      "education": "Bachelor's degree",
+      "employed": 71750
+    },
+    {
+      "soc_code": "41-9021",
+      "occupation": "Real Estate Brokers",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 79340,
+      "education": "High school diploma or equivalent",
+      "employed": 40850
+    },
+    {
+      "soc_code": "41-2031",
+      "occupation": "Retail Salespersons",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 27180,
+      "education": "No formal educational credential",
+      "employed": 4528550
+    },
+    {
+      "soc_code": "47-2211",
+      "occupation": "Sheet Metal Workers",
+      "automation_probability": 0.82,
+      "avg_annual_wage": 51080,
+      "education": "High school diploma or equivalent",
+      "employed": 134450
+    },
+    {
+      "soc_code": "43-2021",
+      "occupation": "Telephone Operators",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 43030,
+      "education": "High school diploma or equivalent",
+      "employed": 8860
+    },
+    {
+      "soc_code": "51-4111",
+      "occupation": "Tool and Die Makers",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 51610,
+      "education": "High school diploma or equivalent",
+      "employed": 72210
+    },
+    {
+      "soc_code": "53-6041",
+      "occupation": "Traffic Technicians",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 48650,
+      "education": "High school diploma or equivalent",
+      "employed": 6410
+    },
+    {
+      "soc_code": "27-3043",
+      "occupation": "Writers and Authors",
+      "automation_probability": 0.038,
+      "avg_annual_wage": 71920,
+      "education": "Bachelor's degree",
+      "employed": 44690
+    },
+    {
+      "soc_code": "17-2041",
+      "occupation": "Chemical Engineers",
+      "automation_probability": 0.017,
+      "avg_annual_wage": 105420,
+      "education": "Bachelor's degree",
+      "employed": 31990
+    },
+    {
+      "soc_code": "27-2022",
+      "occupation": "Coaches and Scouts",
+      "automation_probability": 0.013,
+      "avg_annual_wage": 41000,
+      "education": "Bachelor's degree",
+      "employed": 230930
+    },
+    {
+      "soc_code": "43-9011",
+      "occupation": "Computer Operators",
+      "automation_probability": 0.78,
+      "avg_annual_wage": 43880,
+      "education": "High school diploma or equivalent",
+      "employed": 46810
+    },
+    {
+      "soc_code": "35-2015",
+      "occupation": "Cooks, Short Order",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 23130,
+      "education": "No formal educational credential",
+      "employed": 183990
+    },
+    {
+      "soc_code": "39-3092",
+      "occupation": "Costume Attendants",
+      "automation_probability": 0.61,
+      "avg_annual_wage": 50470,
+      "education": "High school diploma or equivalent",
+      "employed": 6640
+    },
+    {
+      "soc_code": "43-9031",
+      "occupation": "Desktop Publishers",
+      "automation_probability": 0.16,
+      "avg_annual_wage": 44380,
+      "education": "Associate's degree",
+      "employed": 13090
+    },
+    {
+      "soc_code": "13-2051",
+      "occupation": "Financial Analysts",
+      "automation_probability": 0.23,
+      "avg_annual_wage": 97640,
+      "education": "Bachelor's degree",
+      "employed": 281610
+    },
+    {
+      "soc_code": "11-3031",
+      "occupation": "Financial Managers",
+      "automation_probability": 0.069,
+      "avg_annual_wage": 139720,
+      "education": "Bachelor's degree",
+      "employed": 543300
+    },
+    {
+      "soc_code": "39-4021",
+      "occupation": "Funeral Attendants",
+      "automation_probability": 0.37,
+      "avg_annual_wage": 27110,
+      "education": "High school diploma or equivalent",
+      "employed": 35770
+    },
+    {
+      "soc_code": "39-1011",
+      "occupation": "Gaming Supervisors",
+      "automation_probability": 0.28,
+      "avg_annual_wage": 50810,
+      "education": "High school diploma or equivalent",
+      "employed": 22130
+    },
+    {
+      "soc_code": "47-3012",
+      "occupation": "Helpers–Carpenters",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 30200,
+      "education": "No formal educational credential",
+      "employed": 35890
+    },
+    {
+      "soc_code": "27-1025",
+      "occupation": "Interior Designers",
+      "automation_probability": 0.022,
+      "avg_annual_wage": 56220,
+      "education": "Bachelor's degree",
+      "employed": 53160
+    },
+    {
+      "soc_code": "11-2021",
+      "occupation": "Marketing Managers",
+      "automation_probability": 0.014,
+      "avg_annual_wage": 144140,
+      "education": "Bachelor's degree",
+      "employed": 205900
+    },
+    {
+      "soc_code": "31-9011",
+      "occupation": "Massage Therapists",
+      "automation_probability": 0.54,
+      "avg_annual_wage": 44480,
+      "education": "Postsecondary nondegree award",
+      "employed": 95830
+    },
+    {
+      "soc_code": "31-9092",
+      "occupation": "Medical Assistants",
+      "automation_probability": 0.3,
+      "avg_annual_wage": 32850,
+      "education": "Postsecondary nondegree award",
+      "employed": 623560
+    },
+    {
+      "soc_code": "51-7031",
+      "occupation": "Model Makers, Wood",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 47480,
+      "education": "High school diploma or equivalent",
+      "employed": 1040
+    },
+    {
+      "soc_code": "41-2022",
+      "occupation": "Parts Salespersons",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 33220,
+      "education": "No formal educational credential",
+      "employed": 248740
+    },
+    {
+      "soc_code": "43-3061",
+      "occupation": "Procurement Clerks",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 41980,
+      "education": "High school diploma or equivalent",
+      "employed": 72120
+    },
+    {
+      "soc_code": "49-3043",
+      "occupation": "Rail Car Repairers",
+      "automation_probability": 0.88,
+      "avg_annual_wage": 53590,
+      "education": "High school diploma or equivalent",
+      "employed": 22090
+    },
+    {
+      "soc_code": "39-9032",
+      "occupation": "Recreation Workers",
+      "automation_probability": 0.0061,
+      "avg_annual_wage": 27230,
+      "education": "High school diploma or equivalent",
+      "employed": 336880
+    },
+    {
+      "soc_code": "19-3022",
+      "occupation": "Survey Researchers",
+      "automation_probability": 0.23,
+      "avg_annual_wage": 59950,
+      "education": "Master's degree",
+      "employed": 11930
+    },
+    {
+      "soc_code": "25-9041",
+      "occupation": "Teacher Assistants",
+      "automation_probability": 0.56,
+      "avg_annual_wage": 27120,
+      "education": "Some college, no degree",
+      "employed": 1263820
+    },
+    {
+      "soc_code": "19-1011",
+      "occupation": "Animal Scientists",
+      "automation_probability": 0.061,
+      "avg_annual_wage": 72890,
+      "education": "Bachelor's degree",
+      "employed": 2470
+    },
+    {
+      "soc_code": "29-9091",
+      "occupation": "Athletic Trainers",
+      "automation_probability": 0.0071,
+      "avg_annual_wage": 47880,
+      "education": "Bachelor's degree",
+      "employed": 24130
+    },
+    {
+      "soc_code": "49-3091",
+      "occupation": "Bicycle Repairers",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 28520,
+      "education": "High school diploma or equivalent",
+      "employed": 12560
+    },
+    {
+      "soc_code": "47-2041",
+      "occupation": "Carpet Installers",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 44310,
+      "education": "No formal educational credential",
+      "employed": 25660
+    },
+    {
+      "soc_code": "39-9011",
+      "occupation": "Childcare Workers",
+      "automation_probability": 0.084,
+      "avg_annual_wage": 22930,
+      "education": "High school diploma or equivalent",
+      "employed": 569370
+    },
+    {
+      "soc_code": "49-9092",
+      "occupation": "Commercial Divers",
+      "automation_probability": 0.18,
+      "avg_annual_wage": 53990,
+      "education": "Postsecondary nondegree award",
+      "employed": 3370
+    },
+    {
+      "soc_code": "53-2012",
+      "occupation": "Commercial Pilots",
+      "automation_probability": 0.55,
+      "avg_annual_wage": 86260,
+      "education": "High school diploma or equivalent",
+      "employed": 38980
+    },
+    {
+      "soc_code": "35-2014",
+      "occupation": "Cooks, Restaurant",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 25430,
+      "education": "No formal educational credential",
+      "employed": 1217370
+    },
+    {
+      "soc_code": "13-2071",
+      "occupation": "Credit Counselors",
+      "automation_probability": 0.04,
+      "avg_annual_wage": 49480,
+      "education": "Bachelor's degree",
+      "employed": 34110
+    },
+    {
+      "soc_code": "43-9021",
+      "occupation": "Data Entry Keyers",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 31640,
+      "education": "High school diploma or equivalent",
+      "employed": 194810
+    },
+    {
+      "soc_code": "31-9091",
+      "occupation": "Dental Assistants",
+      "automation_probability": 0.51,
+      "avg_annual_wage": 37890,
+      "education": "Postsecondary nondegree award",
+      "employed": 327290
+    },
+    {
+      "soc_code": "29-2021",
+      "occupation": "Dental Hygienists",
+      "automation_probability": 0.68,
+      "avg_annual_wage": 73440,
+      "education": "Associate's degree",
+      "employed": 204990
+    },
+    {
+      "soc_code": "29-1021",
+      "occupation": "Dentists, General",
+      "automation_probability": 0.0044,
+      "avg_annual_wage": 173860,
+      "education": "Doctoral or professional degree",
+      "employed": 105620
+    },
+    {
+      "soc_code": "27-1022",
+      "occupation": "Fashion Designers",
+      "automation_probability": 0.021,
+      "avg_annual_wage": 76480,
+      "education": "Bachelor's degree",
+      "employed": 19230
+    },
+    {
+      "soc_code": "53-2031",
+      "occupation": "Flight Attendants",
+      "automation_probability": 0.35,
+      "avg_annual_wage": 51620,
+      "education": "High school diploma or equivalent",
+      "employed": 113390
+    },
+    {
+      "soc_code": "27-1024",
+      "occupation": "Graphic Designers",
+      "automation_probability": 0.082,
+      "avg_annual_wage": 52290,
+      "education": "Bachelor's degree",
+      "employed": 210710
+    },
+    {
+      "soc_code": "31-1011",
+      "occupation": "Home Health Aides",
+      "automation_probability": 0.39,
+      "avg_annual_wage": 23600,
+      "education": "No formal educational credential",
+      "employed": 814300
+    },
+    {
+      "soc_code": "43-6012",
+      "occupation": "Legal Secretaries",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 47900,
+      "education": "High school diploma or equivalent",
+      "employed": 191200
+    },
+    {
+      "soc_code": "53-4012",
+      "occupation": "Locomotive Firers",
+      "automation_probability": 0.93,
+      "avg_annual_wage": 63750,
+      "education": "High school diploma or equivalent",
+      "employed": 1210
+    },
+    {
+      "soc_code": "17-2161",
+      "occupation": "Nuclear Engineers",
+      "automation_probability": 0.07,
+      "avg_annual_wage": 105950,
+      "education": "Bachelor's degree",
+      "employed": 17680
+    },
+    {
+      "soc_code": "31-1013",
+      "occupation": "Psychiatric Aides",
+      "automation_probability": 0.47,
+      "avg_annual_wage": 28770,
+      "education": "High school diploma or equivalent",
+      "employed": 67410
+    },
+    {
+      "soc_code": "29-1111",
+      "occupation": "Registered Nurses",
+      "automation_probability": 0.009,
+      "avg_annual_wage": 144110,
+      "education": "Doctoral or professional degree",
+      "employed": 9800
+    },
+    {
+      "soc_code": "27-3042",
+      "occupation": "Technical Writers",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 73160,
+      "education": "Bachelor's degree",
+      "employed": 49780
+    },
+    {
+      "soc_code": "43-4011",
+      "occupation": "Brokerage Clerks",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 52380,
+      "education": "High school diploma or equivalent",
+      "employed": 59820
+    },
+    {
+      "soc_code": "11-1011",
+      "occupation": "Chief Executives",
+      "automation_probability": 0.015,
+      "avg_annual_wage": 194350,
+      "education": "Bachelor's degree",
+      "employed": 223260
+    },
+    {
+      "soc_code": "35-2011",
+      "occupation": "Cooks, Fast Food",
+      "automation_probability": 0.81,
+      "avg_annual_wage": 20570,
+      "education": "No formal educational credential",
+      "employed": 513200
+    },
+    {
+      "soc_code": "53-7031",
+      "occupation": "Dredge Operators",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 46530,
+      "education": "High school diploma or equivalent",
+      "employed": 1760
+    },
+    {
+      "soc_code": "27-1023",
+      "occupation": "Floral Designers",
+      "automation_probability": 0.047,
+      "avg_annual_wage": 27610,
+      "education": "High school diploma or equivalent",
+      "employed": 43990
+    },
+    {
+      "soc_code": "51-3092",
+      "occupation": "Food Batchmakers",
+      "automation_probability": 0.7,
+      "avg_annual_wage": 30130,
+      "education": "High school diploma or equivalent",
+      "employed": 148540
+    },
+    {
+      "soc_code": "21-1091",
+      "occupation": "Health Educators",
+      "automation_probability": 0.045,
+      "avg_annual_wage": 57900,
+      "education": "Bachelor's degree",
+      "employed": 57570
+    },
+    {
+      "soc_code": "11-9081",
+      "occupation": "Lodging Managers",
+      "automation_probability": 0.0039,
+      "avg_annual_wage": 59410,
+      "education": "High school diploma or equivalent",
+      "employed": 35410
+    },
+    {
+      "soc_code": "47-4091",
+      "occupation": "Segmental Pavers",
+      "automation_probability": 0.83,
+      "avg_annual_wage": 34160,
+      "education": "High school diploma or equivalent",
+      "employed": 1720
+    },
+    {
+      "soc_code": "39-1012",
+      "occupation": "Slot Supervisors",
+      "automation_probability": 0.54,
+      "avg_annual_wage": 38300,
+      "education": "High school diploma or equivalent",
+      "employed": 7640
+    },
+    {
+      "soc_code": "53-7073",
+      "occupation": "Wellhead Pumpers",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 50730,
+      "education": "High school diploma or equivalent",
+      "employed": 11610
+    },
+    {
+      "soc_code": "45-2021",
+      "occupation": "Animal Breeders",
+      "automation_probability": 0.95,
+      "avg_annual_wage": 42340,
+      "education": "High school diploma or equivalent",
+      "employed": 1270
+    },
+    {
+      "soc_code": "39-2011",
+      "occupation": "Animal Trainers",
+      "automation_probability": 0.1,
+      "avg_annual_wage": 34580,
+      "education": "High school diploma or equivalent",
+      "employed": 13590
+    },
+    {
+      "soc_code": "13-2031",
+      "occupation": "Budget Analysts",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 77170,
+      "education": "Bachelor's degree",
+      "employed": 54700
+    },
+    {
+      "soc_code": "17-2051",
+      "occupation": "Civil Engineers",
+      "automation_probability": 0.019,
+      "avg_annual_wage": 89730,
+      "education": "Bachelor's degree",
+      "employed": 287800
+    },
+    {
+      "soc_code": "13-1051",
+      "occupation": "Cost Estimators",
+      "automation_probability": 0.57,
+      "avg_annual_wage": 66620,
+      "education": "Bachelor's degree",
+      "employed": 214610
+    },
+    {
+      "soc_code": "23-2091",
+      "occupation": "Court Reporters",
+      "automation_probability": 0.5,
+      "avg_annual_wage": 56940,
+      "education": "Postsecondary nondegree award",
+      "employed": 17700
+    },
+    {
+      "soc_code": "13-2041",
+      "occupation": "Credit Analysts",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 81160,
+      "education": "Bachelor's degree",
+      "employed": 72930
+    },
+    {
+      "soc_code": "33-9091",
+      "occupation": "Crossing Guards",
+      "automation_probability": 0.49,
+      "avg_annual_wage": 29190,
+      "education": "No formal educational credential",
+      "employed": 72900
+    },
+    {
+      "soc_code": "19-1041",
+      "occupation": "Epidemiologists",
+      "automation_probability": 0.2,
+      "avg_annual_wage": 77720,
+      "education": "Master's degree",
+      "employed": 5690
+    },
+    {
+      "soc_code": "11-9071",
+      "occupation": "Gaming Managers",
+      "automation_probability": 0.091,
+      "avg_annual_wage": 79690,
+      "education": "High school diploma or equivalent",
+      "employed": 4280
+    },
+    {
+      "soc_code": "47-3016",
+      "occupation": "Helpers–Roofers",
+      "automation_probability": 0.72,
+      "avg_annual_wage": 28890,
+      "education": "No formal educational credential",
+      "employed": 10190
+    },
+    {
+      "soc_code": "19-1022",
+      "occupation": "Microbiologists",
+      "automation_probability": 0.012,
+      "avg_annual_wage": 76850,
+      "education": "Bachelor's degree",
+      "employed": 21670
+    },
+    {
+      "soc_code": "29-1024",
+      "occupation": "Prosthodontists",
+      "automation_probability": 0.055,
+      "avg_annual_wage": 168140,
+      "education": "Doctoral or professional degree",
+      "employed": 750
+    },
+    {
+      "soc_code": "27-4013",
+      "occupation": "Radio Operators",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 46780,
+      "education": "High school diploma or equivalent",
+      "employed": 870
+    },
+    {
+      "soc_code": "41-9031",
+      "occupation": "Sales Engineers",
+      "automation_probability": 0.0041,
+      "avg_annual_wage": 108880,
+      "education": "Bachelor's degree",
+      "employed": 74330
+    },
+    {
+      "soc_code": "33-9032",
+      "occupation": "Security Guards",
+      "automation_probability": 0.84,
+      "avg_annual_wage": 29730,
+      "education": "High school diploma or equivalent",
+      "employed": 1103120
+    },
+    {
+      "soc_code": "51-2092",
+      "occupation": "Team Assemblers",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 32550,
+      "education": "High school diploma or equivalent",
+      "employed": 1112780
+    },
+    {
+      "soc_code": "49-9064",
+      "occupation": "Watch Repairers",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 39720,
+      "education": "High school diploma or equivalent",
+      "employed": 1620
+    },
+    {
+      "soc_code": "27-2032",
+      "occupation": "Choreographers",
+      "automation_probability": 0.004,
+      "avg_annual_wage": 53610,
+      "education": "High school diploma or equivalent",
+      "employed": 5160
+    },
+    {
+      "soc_code": "47-4031",
+      "occupation": "Fence Erectors",
+      "automation_probability": 0.92,
+      "avg_annual_wage": 36380,
+      "education": "No formal educational credential",
+      "employed": 21500
+    },
+    {
+      "soc_code": "39-3011",
+      "occupation": "Gaming Dealers",
+      "automation_probability": 0.96,
+      "avg_annual_wage": 21990,
+      "education": "High school diploma or equivalent",
+      "employed": 94570
+    },
+    {
+      "soc_code": "15-2021",
+      "occupation": "Mathematicians",
+      "automation_probability": 0.047,
+      "avg_annual_wage": 105600,
+      "education": "Master's degree",
+      "employed": 2730
+    },
+    {
+      "soc_code": "31-9095",
+      "occupation": "Pharmacy Aides",
+      "automation_probability": 0.72,
+      "avg_annual_wage": 28420,
+      "education": "High school diploma or equivalent",
+      "employed": 36660
+    },
+    {
+      "soc_code": "11-2022",
+      "occupation": "Sales Managers",
+      "automation_probability": 0.013,
+      "avg_annual_wage": 135090,
+      "education": "Bachelor's degree",
+      "employed": 365230
+    },
+    {
+      "soc_code": "53-5031",
+      "occupation": "Ship Engineers",
+      "automation_probability": 0.041,
+      "avg_annual_wage": 74120,
+      "education": "Postsecondary nondegree award",
+      "employed": 9750
+    },
+    {
+      "soc_code": "27-1011",
+      "occupation": "Art Directors",
+      "automation_probability": 0.023,
+      "avg_annual_wage": 101170,
+      "education": "Bachelor's degree",
+      "employed": 36210
+    },
+    {
+      "soc_code": "29-1011",
+      "occupation": "Chiropractors",
+      "automation_probability": 0.027,
+      "avg_annual_wage": 81210,
+      "education": "Doctoral or professional degree",
+      "employed": 32960
+    },
+    {
+      "soc_code": "27-1012",
+      "occupation": "Craft Artists",
+      "automation_probability": 0.035,
+      "avg_annual_wage": 38900,
+      "education": "No formal educational credential",
+      "employed": 5070
+    },
+    {
+      "soc_code": "13-2072",
+      "occupation": "Loan Officers",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 76260,
+      "education": "Bachelor's degree",
+      "employed": 305700
+    },
+    {
+      "soc_code": "29-1023",
+      "occupation": "Orthodontists",
+      "automation_probability": 0.023,
+      "avg_annual_wage": 228780,
+      "education": "Doctoral or professional degree",
+      "employed": 5200
+    },
+    {
+      "soc_code": "27-4021",
+      "occupation": "Photographers",
+      "automation_probability": 0.021,
+      "avg_annual_wage": 42640,
+      "education": "High school diploma or equivalent",
+      "employed": 48660
+    },
+    {
+      "soc_code": "15-2041",
+      "occupation": "Statisticians",
+      "automation_probability": 0.22,
+      "avg_annual_wage": 85160,
+      "education": "Master's degree",
+      "employed": 33440
+    },
+    {
+      "soc_code": "13-2082",
+      "occupation": "Tax Preparers",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 45340,
+      "education": "High school diploma or equivalent",
+      "employed": 70030
+    },
+    {
+      "soc_code": "41-9041",
+      "occupation": "Telemarketers",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 27170,
+      "education": "No formal educational credential",
+      "employed": 215290
+    },
+    {
+      "soc_code": "51-9197",
+      "occupation": "Tire Builders",
+      "automation_probability": 0.94,
+      "avg_annual_wage": 42230,
+      "education": "High school diploma or equivalent",
+      "employed": 22280
+    },
+    {
+      "soc_code": "41-3041",
+      "occupation": "Travel Agents",
+      "automation_probability": 0.099,
+      "avg_annual_wage": 39900,
+      "education": "High school diploma or equivalent",
+      "employed": 68680
+    },
+    {
+      "soc_code": "39-7012",
+      "occupation": "Travel Guides",
+      "automation_probability": 0.057,
+      "avg_annual_wage": 35930,
+      "education": "High school diploma or equivalent",
+      "employed": 3030
+    },
+    {
+      "soc_code": "29-1131",
+      "occupation": "Veterinarians",
+      "automation_probability": 0.038,
+      "avg_annual_wage": 100560,
+      "education": "Doctoral or professional degree",
+      "employed": 67650
+    },
+    {
+      "soc_code": "29-1181",
+      "occupation": "Audiologists",
+      "automation_probability": 0.0033,
+      "avg_annual_wage": 79290,
+      "education": "Doctoral or professional degree",
+      "employed": 12310
+    },
+    {
+      "soc_code": "47-2011",
+      "occupation": "Boilermakers",
+      "automation_probability": 0.68,
+      "avg_annual_wage": 62200,
+      "education": "High school diploma or equivalent",
+      "employed": 16660
+    },
+    {
+      "soc_code": "47-2111",
+      "occupation": "Electricians",
+      "automation_probability": 0.15,
+      "avg_annual_wage": 56650,
+      "education": "High school diploma or equivalent",
+      "employed": 607120
+    },
+    {
+      "soc_code": "33-2011",
+      "occupation": "Firefighters",
+      "automation_probability": 0.17,
+      "avg_annual_wage": 50520,
+      "education": "Postsecondary nondegree award",
+      "employed": 315910
+    },
+    {
+      "soc_code": "19-2043",
+      "occupation": "Hydrologists",
+      "automation_probability": 0.014,
+      "avg_annual_wage": 83740,
+      "education": "Bachelor's degree",
+      "employed": 6300
+    },
+    {
+      "soc_code": "13-1081",
+      "occupation": "Logisticians",
+      "automation_probability": 0.012,
+      "avg_annual_wage": 77810,
+      "education": "Bachelor's degree",
+      "employed": 146060
+    },
+    {
+      "soc_code": "29-1041",
+      "occupation": "Optometrists",
+      "automation_probability": 0.14,
+      "avg_annual_wage": 117580,
+      "education": "Doctoral or professional degree",
+      "employed": 36430
+    },
+    {
+      "soc_code": "43-4151",
+      "occupation": "Order Clerks",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 35160,
+      "education": "High school diploma or equivalent",
+      "employed": 176850
+    },
+    {
+      "soc_code": "47-2142",
+      "occupation": "Paperhangers",
+      "automation_probability": 0.87,
+      "avg_annual_wage": 36470,
+      "education": "No formal educational credential",
+      "employed": 3190
+    },
+    {
+      "soc_code": "51-6051",
+      "occupation": "Sewers, Hand",
+      "automation_probability": 0.99,
+      "avg_annual_wage": 25630,
+      "education": "No formal educational credential",
+      "employed": 6540
+    },
+    {
+      "soc_code": "19-3041",
+      "occupation": "Sociologists",
+      "automation_probability": 0.059,
+      "avg_annual_wage": 86840,
+      "education": "Master's degree",
+      "employed": 2870
+    },
+    {
+      "soc_code": "51-6093",
+      "occupation": "Upholsterers",
+      "automation_probability": 0.39,
+      "avg_annual_wage": 34640,
+      "education": "High school diploma or equivalent",
+      "employed": 32520
+    },
+    {
+      "soc_code": "19-2011",
+      "occupation": "Astronomers",
+      "automation_probability": 0.041,
+      "avg_annual_wage": 110380,
+      "education": "Doctoral or professional degree",
+      "employed": 1830
+    },
+    {
+      "soc_code": "35-9021",
+      "occupation": "Dishwashers",
+      "automation_probability": 0.77,
+      "avg_annual_wage": 21260,
+      "education": "No formal educational credential",
+      "employed": 506450
+    },
+    {
+      "soc_code": "43-4071",
+      "occupation": "File Clerks",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 31260,
+      "education": "High school diploma or equivalent",
+      "employed": 130950
+    },
+    {
+      "soc_code": "19-3092",
+      "occupation": "Geographers",
+      "automation_probability": 0.25,
+      "avg_annual_wage": 74090,
+      "education": "Bachelor's degree",
+      "employed": 1370
+    },
+    {
+      "soc_code": "49-9044",
+      "occupation": "Millwrights",
+      "automation_probability": 0.59,
+      "avg_annual_wage": 53950,
+      "education": "High school diploma or equivalent",
+      "employed": 39670
+    },
+    {
+      "soc_code": "29-1051",
+      "occupation": "Pharmacists",
+      "automation_probability": 0.012,
+      "avg_annual_wage": 120270,
+      "education": "Doctoral or professional degree",
+      "employed": 305510
+    },
+    {
+      "soc_code": "29-1081",
+      "occupation": "Hosts and Hostesses",
+      "automation_probability": 0.0046,
+      "avg_annual_wage": 144110,
+      "education": "Doctoral or professional degree",
+      "employed": 9800
+    },
+    {
+      "soc_code": "47-2022",
+      "occupation": "Stonemasons",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 43650,
+      "education": "High school diploma or equivalent",
+      "employed": 13190
+    },
+    {
+      "soc_code": "25-4011",
+      "occupation": "Archivists",
+      "automation_probability": 0.76,
+      "avg_annual_wage": 54570,
+      "education": "Master's degree",
+      "employed": 5760
+    },
+    {
+      "soc_code": "35-3011",
+      "occupation": "Bartenders",
+      "automation_probability": 0.77,
+      "avg_annual_wage": 25580,
+      "education": "No formal educational credential",
+      "employed": 603320
+    },
+    {
+      "soc_code": "47-2031",
+      "occupation": "Carpenters",
+      "automation_probability": 0.72,
+      "avg_annual_wage": 48340,
+      "education": "High school diploma or equivalent",
+      "employed": 676980
+    },
+    {
+      "soc_code": "39-6012",
+      "occupation": "Concierges",
+      "automation_probability": 0.21,
+      "avg_annual_wage": 31440,
+      "education": "High school diploma or equivalent",
+      "employed": 32020
+    },
+    {
+      "soc_code": "19-3011",
+      "occupation": "Economists",
+      "automation_probability": 0.43,
+      "avg_annual_wage": 112860,
+      "education": "Master's degree",
+      "employed": 19380
+    },
+    {
+      "soc_code": "19-3093",
+      "occupation": "Historians",
+      "automation_probability": 0.44,
+      "avg_annual_wage": 60990,
+      "education": "Master's degree",
+      "employed": 2950
+    },
+    {
+      "soc_code": "25-4021",
+      "occupation": "Librarians",
+      "automation_probability": 0.65,
+      "avg_annual_wage": 59870,
+      "education": "Master's degree",
+      "employed": 129350
+    },
+    {
+      "soc_code": "51-4041",
+      "occupation": "Machinists",
+      "automation_probability": 0.65,
+      "avg_annual_wage": 43220,
+      "education": "High school diploma or equivalent",
+      "employed": 391120
+    },
+    {
+      "soc_code": "19-2012",
+      "occupation": "Physicists",
+      "automation_probability": 0.1,
+      "avg_annual_wage": 121770,
+      "education": "Doctoral or professional degree",
+      "employed": 16680
+    },
+    {
+      "soc_code": "47-2151",
+      "occupation": "Pipelayers",
+      "automation_probability": 0.62,
+      "avg_annual_wage": 42860,
+      "education": "No formal educational credential",
+      "employed": 39620
+    },
+    {
+      "soc_code": "39-5093",
+      "occupation": "Shampooers",
+      "automation_probability": 0.79,
+      "avg_annual_wage": 20960,
+      "education": "No formal educational credential",
+      "employed": 15240
+    },
+    {
+      "soc_code": "15-2011",
+      "occupation": "Actuaries",
+      "automation_probability": 0.21,
+      "avg_annual_wage": 114120,
+      "education": "Bachelor's degree",
+      "employed": 19940
+    },
+    {
+      "soc_code": "39-4011",
+      "occupation": "Embalmers",
+      "automation_probability": 0.54,
+      "avg_annual_wage": 42260,
+      "education": "Postsecondary nondegree award",
+      "employed": 3710
+    },
+    {
+      "soc_code": "19-1032",
+      "occupation": "Foresters",
+      "automation_probability": 0.0081,
+      "avg_annual_wage": 60300,
+      "education": "Bachelor's degree",
+      "employed": 8420
+    },
+    {
+      "soc_code": "17-1022",
+      "occupation": "Surveyors",
+      "automation_probability": 0.38,
+      "avg_annual_wage": 63480,
+      "education": "Bachelor's degree",
+      "employed": 43340
+    },
+    {
+      "soc_code": "33-3011",
+      "occupation": "Bailiffs",
+      "automation_probability": 0.36,
+      "avg_annual_wage": 45740,
+      "education": "High school diploma or equivalent",
+      "employed": 17880
+    },
+    {
+      "soc_code": "41-2011",
+      "occupation": "Cashiers",
+      "automation_probability": 0.97,
+      "avg_annual_wage": 21680,
+      "education": "No formal educational credential",
+      "employed": 3541010
+    },
+    {
+      "soc_code": "19-2031",
+      "occupation": "Chemists",
+      "automation_probability": 0.1,
+      "avg_annual_wage": 80820,
+      "education": "Bachelor's degree",
+      "employed": 86660
+    },
+    {
+      "soc_code": "25-4012",
+      "occupation": "Curators",
+      "automation_probability": 0.0068,
+      "avg_annual_wage": 58910,
+      "education": "Master's degree",
+      "employed": 11170
+    },
+    {
+      "soc_code": "47-2121",
+      "occupation": "Glaziers",
+      "automation_probability": 0.73,
+      "avg_annual_wage": 47260,
+      "education": "High school diploma or equivalent",
+      "employed": 47140
+    },
+    {
+      "soc_code": "39-5011",
+      "occupation": "Barbers",
+      "automation_probability": 0.8,
+      "avg_annual_wage": 29900,
+      "education": "Postsecondary nondegree award",
+      "employed": 15900
+    },
+    {
+      "soc_code": "27-2031",
+      "occupation": "Dancers",
+      "automation_probability": 0.13,
+      "avg_annual_wage": 32739,
+      "education": "No formal educational credential",
+      "employed": 10060
+    },
+    {
+      "soc_code": "27-3041",
+      "occupation": "Editors",
+      "automation_probability": 0.055,
+      "avg_annual_wage": 66080,
+      "education": "Bachelor's degree",
+      "employed": 97170
+    },
+    {
+      "soc_code": "45-4021",
+      "occupation": "Fallers",
+      "automation_probability": 0.76,
+      "avg_annual_wage": 42900,
+      "education": "High school diploma or equivalent",
+      "employed": 5370
+    },
+    {
+      "soc_code": "23-1011",
+      "occupation": "Lawyers",
+      "automation_probability": 0.035,
+      "avg_annual_wage": 139880,
+      "education": "Doctoral or professional degree",
+      "employed": 619530
+    },
+    {
+      "soc_code": "49-9096",
+      "occupation": "Riggers",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 49030,
+      "education": "High school diploma or equivalent",
+      "employed": 21020
+    },
+    {
+      "soc_code": "47-2181",
+      "occupation": "Roofers",
+      "automation_probability": 0.9,
+      "avg_annual_wage": 42080,
+      "education": "No formal educational credential",
+      "employed": 116410
+    },
+    {
+      "soc_code": "43-3071",
+      "occupation": "Tellers",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 28060,
+      "education": "High school diploma or equivalent",
+      "employed": 496760
+    },
+    {
+      "soc_code": "27-2011",
+      "occupation": "Actors",
+      "automation_probability": 0.37,
+      "avg_annual_wage": 71314,
+      "education": "Some college, no degree",
+      "employed": 48620
+    },
+    {
+      "soc_code": "51-3011",
+      "occupation": "Bakers",
+      "automation_probability": 0.89,
+      "avg_annual_wage": 27110,
+      "education": "No formal educational credential",
+      "employed": 180450
+    },
+    {
+      "soc_code": "21-2011",
+      "occupation": "Clergy",
+      "automation_probability": 0.0081,
+      "avg_annual_wage": 49450,
+      "education": "Bachelor's degree",
+      "employed": 49320
+    },
+    {
+      "soc_code": "41-9012",
+      "occupation": "Models",
+      "automation_probability": 0.98,
+      "avg_annual_wage": 36560,
+      "education": "No formal educational credential",
+      "employed": 4390
+    },
+    {
+      "soc_code": "47-2082",
+      "occupation": "Tapers",
+      "automation_probability": 0.62,
+      "avg_annual_wage": 53790,
+      "education": "No formal educational credential",
+      "employed": 18480
+    }
+  ]
+}
