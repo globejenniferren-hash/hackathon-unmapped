@@ -1,0 +1,12 @@
+{
+  "name": "Aris Pratama",
+  "city": "Makassar",
+  "country": "Indonesia",
+  "language": "English",
+  "sector": "Logistics & Transit",
+  "sponsor": {
+    "exists": true,
+    "name": "Ministry of Manpower",
+    "program": "Pre-Employment Card Program"
+  }
+}

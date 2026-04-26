@@ -1,0 +1,192 @@
+{
+  "profile": {
+    "name": "Aris Pratama",
+    "age": 28,
+    "city": "Makassar",
+    "province": "South Sulawesi",
+    "country": "Indonesia",
+    "language": "English",
+    "household": "Lives with parents and younger sister",
+    "issuedOn": "2026-03-14",
+    "passportId": "UNM-ID-2026-08431"
+  },
+  "education": [
+    {
+      "level": "Primary",
+      "institution": "State Primary School 12, Makassar",
+      "years": "2003 — 2009",
+      "completed": true
+    },
+    {
+      "level": "Junior Secondary",
+      "institution": "State Junior High School 4, Makassar",
+      "years": "2009 — 2012",
+      "completed": true
+    },
+    {
+      "level": "Senior Secondary (Vocational)",
+      "institution": "Telkom Vocational High School, Makassar — Logistics track",
+      "years": "2012 — 2015",
+      "completed": true,
+      "note": "Graduated with focus on warehouse operations"
+    },
+    {
+      "level": "Short course",
+      "institution": "Pre-Employment Program: Digital Bookkeeping",
+      "years": "2022",
+      "completed": true,
+      "note": "40-hour government voucher program"
+    }
+  ],
+  "skills": [
+    {
+      "id": "skl_001",
+      "name": "Customer Service",
+      "translation": "Greeting, helping & resolving issues for customers",
+      "icon": "👋",
+      "automationExposure": 0.42,
+      "wage": "$210",
+      "sectorGrowth": 4,
+      "risk": "durable",
+      "evidence": [
+        {
+          "where": "Sari's Shop (family business)",
+          "city": "Makassar",
+          "from": "2018",
+          "to": "present",
+          "duration": "8 years (part-time)",
+          "detail": "Daily face-to-face service for 40–60 regular customers; handle complaints, returns, and store-credit tracking."
+        },
+        {
+          "where": "Sumber Rejeki Hardware Store",
+          "city": "Makassar",
+          "from": "2016",
+          "to": "2017",
+          "duration": "9 months",
+          "detail": "Cashier and floor assistant at a hardware shop; trained 2 newer staff on customer greeting protocol."
+        }
+      ]
+    },
+    {
+      "id": "skl_002",
+      "name": "Inventory & Stock",
+      "translation": "Tracking what comes in and what goes out",
+      "icon": "📦",
+      "automationExposure": 0.71,
+      "wage": "$250",
+      "sectorGrowth": -2,
+      "risk": "at-risk",
+      "evidence": [
+        {
+          "where": "Sari's Shop",
+          "city": "Makassar",
+          "from": "2020",
+          "to": "present",
+          "duration": "6 years",
+          "detail": "Manual stock-taking on a paper ledger every Sunday; reorder decisions for 80+ SKUs."
+        },
+        {
+          "where": "Digital Bookkeeping short course",
+          "city": "Online",
+          "from": "2022",
+          "to": "2022",
+          "duration": "40 hours",
+          "detail": "Learned spreadsheet stock tracking — applied at the shop but not yet at scale."
+        }
+      ]
+    },
+    {
+      "id": "skl_003",
+      "name": "Driving & Delivery",
+      "translation": "Safely moving people or goods",
+      "icon": "🛵",
+      "automationExposure": 0.55,
+      "wage": "$170",
+      "sectorGrowth": 1,
+      "risk": "at-risk",
+      "evidence": [
+        {
+          "where": "Delivery app driver (gig)",
+          "city": "Makassar",
+          "from": "2021",
+          "to": "2023",
+          "duration": "2 years (evenings)",
+          "detail": "~1,800 completed deliveries; 4.92★ rating; valid motorbike license."
+        },
+        {
+          "where": "Family shop deliveries",
+          "city": "Makassar",
+          "from": "2019",
+          "to": "present",
+          "duration": "7 years",
+          "detail": "Daily deliveries within a 5 km radius using own motorbike."
+        }
+      ]
+    },
+    {
+      "id": "skl_004",
+      "name": "Cooking for Groups",
+      "translation": "Preparing food at scale for a community",
+      "icon": "🍲",
+      "automationExposure": 0.18,
+      "wage": "$190",
+      "sectorGrowth": 6,
+      "risk": "durable",
+      "evidence": [
+        {
+          "where": "Melati Kindergarten",
+          "city": "Makassar",
+          "from": "2023",
+          "to": "present",
+          "duration": "3 years",
+          "detail": "Cooks lunch for 35 children, 3 days a week. Coordinates the menu with parents and handles dietary needs."
+        }
+      ]
+    }
+  ],
+  "missedIncome": {
+    "currentMonthly": "$275",
+    "potentialMonthly": "$510",
+    "gapMonthly": "$235",
+    "annualGap": "$2,820",
+    "reasoning": [
+      "Customer Service skill is underused — local retail floor lead roles pay around $360/mo.",
+      "Motorbike license + delivery rating qualifies you for fleet-coordinator roles ($405/mo) you haven't applied to.",
+      "Cooking-for-groups skill matches 12 catering openings within 8 km, averaging $315/mo."
+    ],
+    "missedOpenings": [
+      { "title": "Floor Lead — Indomaret Convenience", "monthly": "$360", "distance": "1.2 km", "openSince": "11 days" },
+      { "title": "Fleet Coordinator — J&T Express", "monthly": "$405", "distance": "3.4 km", "openSince": "4 days" },
+      { "title": "Catering Cook — Cendekia Kindergarten", "monthly": "$315", "distance": "2.1 km", "openSince": "6 days" }
+    ]
+  },
+  "forwardPaths": [
+    {
+      "id": "fwd_001",
+      "addSkill": "Spreadsheets & basic SQL",
+      "viaProgram": "Pre-Employment: Data for Small Business (60h)",
+      "unlocks": ["Inventory Analyst — $490", "Junior Ops Coordinator — $530"],
+      "incomeLift": "+$215/mo",
+      "timeToReady": "2 months",
+      "difficulty": "moderate"
+    },
+    {
+      "id": "fwd_002",
+      "addSkill": "Cold-chain handling certificate",
+      "viaProgram": "National Cold-Chain Certification (3 weeks)",
+      "unlocks": ["Cold-Chain Technician — $405", "Pharma Logistics Runner — $445"],
+      "incomeLift": "+$130/mo",
+      "timeToReady": "3 weeks",
+      "difficulty": "easy"
+    },
+    {
+      "id": "fwd_003",
+      "addSkill": "Group facilitation & training",
+      "viaProgram": "Local Trainers Foundation — Train-the-Trainer (6 weeks)",
+      "unlocks": ["Community Logistics Trainer — $365", "Mentor — $320"],
+      "incomeLift": "+$90/mo",
+      "timeToReady": "6 weeks",
+      "difficulty": "easy"
+    }
+  ]
+}
