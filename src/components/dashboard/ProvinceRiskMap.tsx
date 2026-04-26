@@ -1,11 +1,10 @@
 import type { Feature, FeatureCollection } from "geojson";
 import L, { type PathOptions } from "leaflet";
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { GeoJSON, MapContainer, TileLayer, useMap } from "react-leaflet";
+import { GeoJSON, MapContainer, useMap } from "react-leaflet";
 import { formatPct01 } from "../../lib/dashboardFormat";
-import type { BoundaryLoadDiagnostics } from "../../lib/localBoundaryGeoJson";
-import { loadCachedIdnAdm1Boundary, localCachedBoundaryUrl } from "../../lib/localBoundaryGeoJson";
-import { getRisk, riskBand } from "../../lib/loadDashboardData";
+import { loadCachedIdnAdm1Boundary } from "../../lib/localBoundaryGeoJson";
+import { getRisk } from "../../lib/loadDashboardData";
 import {
   computeBoundaryMockMatchDiagnostics,
   getShapeLabel,
@@ -14,6 +13,7 @@ import {
   type BoundaryMockMatchDiagnostics,
 } from "../../lib/provinceNameMatch";
 import type { ProvinceRiskResponse } from "../../types/dashboard";
+import type { ProvincialMetricKey } from "./MapCanvas";
 
 const RISK_FILL = {
   low: "#22c55e",
@@ -22,6 +22,47 @@ const RISK_FILL = {
   critical: "#dc2626",
   missing: "#cbd5e1",
 } as const;
+
+const GAP_FILL = {
+  low: "#fbbf24",
+  medium: "#f59e0b",
+  high: "#ea580c",
+  critical: "#b91c1c",
+  missing: "#cbd5e1",
+} as const;
+
+function hexToRgb(hex: string): { r: number; g: number; b: number } {
+  const clean = hex.replace("#", "");
+  const full = clean.length === 3 ? clean.split("").map((c) => c + c).join("") : clean;
+  const n = Number.parseInt(full, 16);
+  return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
+}
+
+function rgbToHex(r: number, g: number, b: number): string {
+  const toHex = (v: number) => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, "0");
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+function lerpColor(a: string, b: string, t: number): string {
+  const c1 = hexToRgb(a);
+  const c2 = hexToRgb(b);
+  const u = Math.max(0, Math.min(1, t));
+  return rgbToHex(c1.r + (c2.r - c1.r) * u, c1.g + (c2.g - c1.g) * u, c1.b + (c2.b - c1.b) * u);
+}
+
+function continuousFillForRisk(risk01: number, metric: ProvincialMetricKey): string {
+  const stops =
+    metric === "gap"
+      ? ["#fef3c7", "#fde68a", "#f59e0b", "#ea580c", "#b91c1c"]
+      : ["#e6f2ef", "#bfded7", "#7fb4aa", "#3f8f82", "#1f6b62"];
+  const t = Math.max(0, Math.min(1, risk01));
+  const scaled = t * (stops.length - 1);
+  const idx = Math.floor(scaled);
+  const frac = scaled - idx;
+  const left = stops[Math.max(0, Math.min(stops.length - 1, idx))];
+  const right = stops[Math.max(0, Math.min(stops.length - 1, idx + 1))];
+  return lerpColor(left, right, frac);
+}
 
 function escapeHtml(s: string): string {
   return s
@@ -35,7 +76,8 @@ function buildMapTooltipHtml(
   geoLabel: string,
   pid: string | null,
   provinces: ProvinceRiskResponse["provinces"],
-  year: number
+  year: number,
+  metric: ProvincialMetricKey
 ): string {
   const label = geoLabel.trim() || "Unknown";
   const escGeo = escapeHtml(label);
@@ -51,7 +93,7 @@ function buildMapTooltipHtml(
     if (!sameName) {
       lines.push(`<span class="dash-map-tip-meta">Mock: ${escapeHtml(prov.name)}</span>`);
     }
-    lines.push(`Risk: ${formatPct01(r)}`);
+    lines.push(`${metric === "gap" ? "Response gap" : "AI risk"}: ${formatPct01(r)}`);
   } else {
     lines.push(`<span class="dash-map-tip-meta">No mock risk match</span>`);
   }
@@ -68,6 +110,7 @@ export type ProvinceRiskMapProps = {
   fallback: ReactNode;
   /** Called when boundary ↔ mock match stats change (for Demo Diagnostics). */
   onBoundaryMatchDiagnostics?: (d: BoundaryMockMatchDiagnostics | null) => void;
+  metric: ProvincialMetricKey;
 };
 
 function MapFitBounds({ collection }: { collection: FeatureCollection }) {
@@ -86,26 +129,6 @@ function MapFitBounds({ collection }: { collection: FeatureCollection }) {
   return null;
 }
 
-function BoundaryDevDiag({ d }: { d: BoundaryLoadDiagnostics }) {
-  return (
-    <div className="dash-map-boundary-diag" aria-label="Boundary load diagnostics">
-      <span className="dash-map-boundary-diag__label">Boundary (dev)</span>
-      <code className="dash-map-boundary-diag__url">{d.url}</code>
-      <span className={d.validationOk ? "dash-map-boundary-diag__ok" : "dash-map-boundary-diag__bad"}>
-        {d.validationOk ? "valid" : "invalid"} — {d.validationReason}
-      </span>
-      {d.rawFeatureCount != null && (
-        <span>
-          features: {d.renderedFeatureCount ?? 0} rendered / {d.rawFeatureCount} in file
-        </span>
-      )}
-      {d.firstFeaturePropertyKeys && d.firstFeaturePropertyKeys.length > 0 && (
-        <span>first feature keys: {d.firstFeaturePropertyKeys.join(", ")}</span>
-      )}
-    </div>
-  );
-}
-
 export function ProvinceRiskMap({
   selectedYear,
   provinceRiskData,
@@ -113,11 +136,11 @@ export function ProvinceRiskMap({
   onSelectProvince,
   fallback,
   onBoundaryMatchDiagnostics,
+  metric,
 }: ProvinceRiskMapProps) {
   const [phase, setPhase] = useState<"loading" | "ready" | "fallback">("loading");
   const [collection, setCollection] = useState<FeatureCollection | null>(null);
   const [fallbackMessage, setFallbackMessage] = useState<string | null>(null);
-  const [diagnostics, setDiagnostics] = useState<BoundaryLoadDiagnostics | null>(null);
   const matchCbRef = useRef(onBoundaryMatchDiagnostics);
   matchCbRef.current = onBoundaryMatchDiagnostics;
 
@@ -126,14 +149,11 @@ export function ProvinceRiskMap({
     setPhase("loading");
     setCollection(null);
     setFallbackMessage(null);
-    setDiagnostics({ ...emptyDiagnostics(), url: localCachedBoundaryUrl() });
     matchCbRef.current?.(null);
 
     (async () => {
       const result = await loadCachedIdnAdm1Boundary(ac.signal);
       if (ac.signal.aborted) return;
-
-      setDiagnostics(result.diagnostics);
 
       if (result.status === "ok") {
         if (import.meta.env.DEV) {
@@ -174,18 +194,18 @@ export function ProvinceRiskMap({
       );
       const prov = pid ? provinceRiskData.provinces.find((p) => p.id === pid) : undefined;
       const r = prov ? getRisk(prov, selectedYear) : null;
-      const band = r != null ? riskBand(r, provinceRiskData.legend) : "missing";
-      const fill = band === "missing" ? RISK_FILL.missing : RISK_FILL[band];
+      const palette = metric === "gap" ? GAP_FILL : RISK_FILL;
+      const fill = r == null ? palette.missing : continuousFillForRisk(r, metric);
       const selected = pid != null && pid === selectedProvince;
       return {
         fillColor: fill,
-        fillOpacity: band === "missing" ? 0.45 : 0.82,
+        fillOpacity: r == null ? 0.45 : 0.82,
         color: selected ? "#0f766e" : "#f1f5f9",
         weight: selected ? 2.2 : 0.55,
         opacity: 1,
       };
     },
-    [provinceRiskData, selectedYear, selectedProvince]
+    [provinceRiskData, selectedYear, selectedProvince, metric]
   );
 
   const onEach = useCallback(
@@ -197,7 +217,7 @@ export function ProvinceRiskMap({
       );
       const prov = pid ? provinceRiskData.provinces.find((p) => p.id === pid) : undefined;
       const r = prov ? getRisk(prov, selectedYear) : null;
-      const tip = buildMapTooltipHtml(label, pid, provinceRiskData.provinces, selectedYear);
+      const tip = buildMapTooltipHtml(label, pid, provinceRiskData.provinces, selectedYear, metric);
       layer.bindTooltip(tip, { sticky: true, direction: "auto", className: "dash-map-tooltip" });
       layer.on("click", () => {
         if (pid) onSelectProvince(pid);
@@ -210,7 +230,7 @@ export function ProvinceRiskMap({
         path.setStyle(styleFeature(feature));
       });
     },
-    [onSelectProvince, provinceRiskData, selectedYear, styleFeature]
+    [onSelectProvince, provinceRiskData, selectedYear, styleFeature, metric]
   );
 
   const geoKey = useMemo(
@@ -218,16 +238,11 @@ export function ProvinceRiskMap({
     [selectedYear, selectedProvince, collection]
   );
 
-  const cacheUrl = useMemo(() => localCachedBoundaryUrl(), []);
-
-  const showDevDiag = import.meta.env.DEV && diagnostics;
-
   if (phase === "loading") {
     return (
       <div className="dash-map-wrap dash-map-wrap--loading" aria-busy="true">
         <div className="dash-map-skeleton" />
         <p className="dash-map-load">Loading cached boundaries…</p>
-        {showDevDiag && <BoundaryDevDiag d={diagnostics} />}
       </div>
     );
   }
@@ -239,7 +254,6 @@ export function ProvinceRiskMap({
           {fallbackMessage ?? "Cached boundary file missing. Showing province grid fallback."}
         </p>
         {fallback}
-        {showDevDiag && <BoundaryDevDiag d={diagnostics} />}
       </div>
     );
   }
@@ -255,14 +269,6 @@ export function ProvinceRiskMap({
         minZoom={3}
         maxZoom={10}
       >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> · <a href="https://carto.com/">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
-        />
-        <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png"
-          opacity={0.55}
-        />
         <MapFitBounds collection={collection} />
         <GeoJSON
           key={geoKey}
@@ -271,21 +277,6 @@ export function ProvinceRiskMap({
           onEachFeature={onEach}
         />
       </MapContainer>
-      <p className="dash-map-meta">
-        Indonesia ADM1 · Cached local boundaries · <code>{cacheUrl}</code>
-      </p>
-      {showDevDiag && diagnostics && <BoundaryDevDiag d={diagnostics} />}
     </div>
   );
-}
-
-function emptyDiagnostics(): BoundaryLoadDiagnostics {
-  return {
-    url: "",
-    validationOk: false,
-    validationReason: "Loading…",
-    rawFeatureCount: null,
-    renderedFeatureCount: null,
-    firstFeaturePropertyKeys: null,
-  };
 }
