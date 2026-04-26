@@ -1,5 +1,7 @@
 import { readConversationSkills } from "@/lib/conversationSkills";
 
+const CACHE_KEY = "unmapped.pathways.simulate.v1";
+
 export type PathwaysSimulateResponse = {
   current_estimated_earnings: { display: string; usd_equivalent?: number };
   potential_earnings: { display: string; usd_equivalent?: number };
@@ -29,7 +31,40 @@ export type PathwaysSimulateResponse = {
   sources?: string[];
 };
 
+type CachedEntry = {
+  city: string;
+  data: PathwaysSimulateResponse;
+  updated_at: number;
+};
+
+function readCache(city: string): PathwaysSimulateResponse | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as CachedEntry;
+    if (!parsed || parsed.city !== city || !parsed.data) return null;
+    // Keep one city snapshot stable for 15 minutes to align tabs.
+    if (Date.now() - Number(parsed.updated_at || 0) > 15 * 60 * 1000) return null;
+    return parsed.data;
+  } catch {
+    return null;
+  }
+}
+
+function writeCache(city: string, data: PathwaysSimulateResponse) {
+  if (typeof window === "undefined") return;
+  try {
+    const entry: CachedEntry = { city, data, updated_at: Date.now() };
+    window.localStorage.setItem(CACHE_KEY, JSON.stringify(entry));
+  } catch {
+    // best effort
+  }
+}
+
 export async function fetchPathwaysSimulate(cityLabel: string): Promise<PathwaysSimulateResponse> {
+  const cached = readCache(cityLabel);
+  if (cached) return cached;
   const skills = readConversationSkills();
   const payload = {
     skills: skills.map((s) => ({
@@ -46,9 +81,13 @@ export async function fetchPathwaysSimulate(cityLabel: string): Promise<Pathways
       body: JSON.stringify(payload),
     });
     if (!res.ok) throw new Error(`pathways_${res.status}`);
-    return (await res.json()) as PathwaysSimulateResponse;
+    const data = (await res.json()) as PathwaysSimulateResponse;
+    writeCache(cityLabel, data);
+    return data;
   } catch {
     const fallback = await fetch("/mock/pathwaysSimulateResponse.json");
-    return (await fallback.json()) as PathwaysSimulateResponse;
+    const data = (await fallback.json()) as PathwaysSimulateResponse;
+    writeCache(cityLabel, data);
+    return data;
   }
 }

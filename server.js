@@ -265,6 +265,10 @@ app.post("/api/pathways/simulate", async (req, res) => {
   const idnWb = readDataJson("data", "worldbank", "IDN.json");
   const escoSlim = readDataJson("data", "taxonomy", "esco-occupations-slim.json");
   const frey = readDataJson("data", "automation", "frey-osborne.json");
+  const riskRows = Array.isArray(payload?.risk_rows) ? payload.risk_rows : [];
+  const currentUsd = Number(payload?.current_usd ?? fallback.current_estimated_earnings.usd_equivalent ?? 275);
+  const potentialUsd = Number(payload?.target_usd ?? fallback.potential_earnings.usd_equivalent ?? 510);
+  const gapUsd = Number(payload?.gap_usd ?? fallback.monthly_gap.usd_equivalent ?? 235);
 
   try {
     const result = await callClaudeJSON(
@@ -302,10 +306,24 @@ Rules:
 - Use Indonesian Rupiah (Rp) as primary wage display everywhere.
 - Keep values realistic for Indonesia context using provided data.
 - Use provided user skills, ESCO occupations/skills, Frey-Osborne risk context, and IDN World Bank bundle.
+- IMPORTANT: "pathways" MUST directly address the income gap drivers in "why_gap_exists". Each suggested skill_to_add should map to at least one identified gap reason and unlock roles that close the monthly gap.
+- IMPORTANT: wages should be coherent with current_estimated_earnings and potential_earnings. Do not output pathways that reduce earnings or are disconnected from the gap target.
+- Keep wages in Rp as primary display, with internally consistent USD equivalents.
 - Keep reasons concise and practical.
 
 Data context:
 skills_payload: ${JSON.stringify(payload?.skills || [], null, 0)}
+risk_rows: ${JSON.stringify(riskRows, null, 0)}
+income_target_context: ${JSON.stringify(
+  {
+    current_usd_estimate: currentUsd,
+    potential_usd_estimate: potentialUsd,
+    monthly_gap_usd: gapUsd,
+    city: String(payload?.city || "Makassar")
+  },
+  null,
+  0
+)}
 worldbank_idn_bundle: ${JSON.stringify(idnWb || {}, null, 0).slice(0, 20000)}
 esco_slim: ${JSON.stringify(escoSlim || {}, null, 0).slice(0, 16000)}
 frey_osborne_sample: ${JSON.stringify((frey?.occupations || []).slice(0, 120), null, 0)}

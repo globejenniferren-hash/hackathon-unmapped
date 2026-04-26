@@ -479,11 +479,6 @@ function VoiceScreen() {
                   Mic transcription is not available here. Tap a prompt chip to continue with text.
                 </p>
               )}
-              <p className="text-[10px] text-graphite-light">
-                debug: stage={stage} | recognitionActive={String(Boolean(recognitionRef.current) && stillListeningRef.current)} |
-                lastEvent={debugLastEvent}
-                {debugLastError ? ` | lastError=${debugLastError}` : ""}
-              </p>
             </div>
 
             {/* Mic — central */}
