@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import type { z } from "zod";
 import { fetchResource } from "@/lib/api";
 import { readinessSearchSchema, getCity } from "@/lib/readiness";
+import { readPassportSkillPrefill } from "@/lib/passportPrefill";
 
 type ReadinessSearch = z.infer<typeof readinessSearchSchema>;
 
@@ -49,7 +50,16 @@ function PassportPage() {
   const [openSkill, setOpenSkill] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchResource<PassportData>("passport").then(setData).catch(() => setData(null));
+    fetchResource<PassportData>("passport")
+      .then((base) => {
+        const prefillSkills = readPassportSkillPrefill();
+        if (prefillSkills.length) {
+          setData({ ...base, skills: prefillSkills });
+          return;
+        }
+        setData(base);
+      })
+      .catch(() => setData(null));
   }, []);
 
   if (!data) {

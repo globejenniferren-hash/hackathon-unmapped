@@ -10,6 +10,21 @@ This contract is for frontend integration from Lovable. Endpoints are live under
 
 ## Endpoints
 
+### Canonical vs compatibility routes
+
+- Canonical (person2) contracts are:
+  - `GET /api/demo/user`
+  - `GET /api/dashboard/province-risk`
+  - `GET /api/dashboard/interventions` and `POST /api/dashboard/interventions`
+  - `POST /api/skills/extract`
+  - `POST /api/risk/score`
+  - `POST /api/data-intake/analyze`
+- Compatibility aliases are exposed for Lovable/mobile flows:
+  - `GET /api/profile`
+  - `GET /api/passport`
+  - `GET /api/dashboard/provinces`
+  - `GET /api/dashboard/interventions-legacy`
+
 ### `GET /api/demo/user`
 
 Purpose: return the current user profile.

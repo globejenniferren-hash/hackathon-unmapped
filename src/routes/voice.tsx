@@ -1,13 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MobileFrame } from "@/components/MobileFrame";
 import { fetchResource } from "@/lib/api";
+import { savePassportSkillPrefill } from "@/lib/passportPrefill";
+import { saveConversationSkills } from "@/lib/conversationSkills";
 
 type Confidence = "high" | "low";
 type FollowUp = { q: string; options: string[] };
 type Skill = {
   id: string;
   name: string;
+  iscoCode?: string;
   translation: string;
   evidenceQuote: string;
   icon: string;
@@ -22,6 +25,163 @@ type SkillsData = {
   transcript: string;
   skills: Skill[];
 };
+
+type ApiSkill = {
+  name?: string;
+  isco_code?: string;
+  isco_title?: string;
+  evidence?: string;
+  confidence?: string;
+  related_esco_skills?: string[];
+  verification_questions?: string[];
+  assessment_notes?: string;
+};
+
+type ApiSkillExtractionResponse = {
+  skills?: ApiSkill[];
+  follow_up_questions?: string[];
+};
+
+type SpeechRecognitionAlternativeLike = { transcript: string };
+type SpeechRecognitionResultLike = {
+  isFinal: boolean;
+  0: SpeechRecognitionAlternativeLike;
+  length: number;
+};
+type SpeechRecognitionEventLike = {
+  resultIndex: number;
+  results: {
+    [index: number]: SpeechRecognitionResultLike;
+    length: number;
+  };
+};
+type SpeechRecognitionLike = {
+  lang: string;
+  continuous: boolean;
+  interimResults: boolean;
+  onstart: (() => void) | null;
+  onresult: ((event: SpeechRecognitionEventLike) => void) | null;
+  onerror: ((event: { error?: string; message?: string }) => void) | null;
+  onend: (() => void) | null;
+  start: () => void;
+  stop: () => void;
+  abort: () => void;
+};
+type SpeechRecognitionCtor = new () => SpeechRecognitionLike;
+
+const ICONS = ["🛠️", "🧠", "📦", "🧾", "🧰", "🚚", "🖥️", "📊"];
+const DEFAULT_OPENING_PROMPTS: OpeningPrompt[] = [
+  { emoji: "🏪", text: "I help at my family's shop", hint: "selling, stocking, talking to customers" },
+  { emoji: "🛵", text: "I drive people or deliver things", hint: "rideshare, truck, delivery" },
+  { emoji: "🔧", text: "I fix or build things with my hands", hint: "repair, construction, crafts" },
+];
+
+function pickIcon(skillName: string, idx: number): string {
+  const name = skillName.toLowerCase();
+  if (name.includes("drive") || name.includes("transport")) return "🛵";
+  if (name.includes("cook") || name.includes("food")) return "🍲";
+  if (name.includes("customer") || name.includes("service")) return "👋";
+  if (name.includes("stock") || name.includes("inventory")) return "📦";
+  return ICONS[idx % ICONS.length];
+}
+
+function mapApiToVoiceData(
+  api: ApiSkillExtractionResponse,
+  transcript: string,
+  openingPrompts: OpeningPrompt[],
+  fallbackSkills: Skill[]
+): SkillsData {
+  const normalized = Array.isArray(api.skills)
+    ? api.skills
+        .map((s, idx) => {
+          const name = String(s.name ?? "").trim();
+          if (!name) return null;
+          const confidenceWord = String(s.confidence ?? "").toLowerCase();
+          const confidence: Confidence = confidenceWord === "high" ? "high" : "low";
+          const related = Array.isArray(s.related_esco_skills) ? s.related_esco_skills : [];
+          const verification = Array.isArray(s.verification_questions)
+            ? s.verification_questions.filter(Boolean).slice(0, 2)
+            : [];
+          const followUps = [
+            {
+              q:
+                verification[0] ??
+                api.follow_up_questions?.[idx] ??
+                `Can you share one concrete task where you use ${name}?`,
+              options: ["Daily", "Sometimes", "Rarely"],
+            },
+            {
+              q:
+                verification[1] ??
+                `How confident are you doing ${name} on your own?`,
+              options: ["Very", "Somewhat", "Need support"],
+            },
+          ];
+          return {
+            id: `api_skl_${idx + 1}`,
+            name,
+            iscoCode: String(s.isco_code ?? "").trim() || undefined,
+            translation: String(s.isco_title ?? related[0] ?? "Work skill identified from your speech."),
+            evidenceQuote: String(s.evidence ?? "Captured from your voice transcript"),
+            icon: pickIcon(name, idx),
+            confidence,
+            confidenceReason:
+              String(s.assessment_notes ?? "").trim() ||
+              "Preliminary match from conversation; verify in the next step.",
+            followUps,
+            evidencePrompt: `Any proof of ${name} (photo, sample, or reference).`,
+          } satisfies Skill;
+        })
+        .filter((s): s is Skill => s !== null)
+    : [];
+
+  return {
+    openingPrompts,
+    transcript,
+    skills: normalized.length ? normalized : fallbackSkills,
+  };
+}
+
+function toPassportPrefillSkills(skills: Skill[]) {
+  const year = String(new Date().getFullYear());
+  return skills.map((s, idx) => ({
+    id: `voice_${idx + 1}`,
+    name: s.name,
+    translation: s.translation,
+    icon: s.icon,
+    evidence: [
+      {
+        where: "Conversation capture",
+        city: "Self-reported",
+        from: year,
+        to: "present",
+        duration: "in-progress verification",
+        detail: s.evidenceQuote || "Captured during voice conversation.",
+      },
+    ],
+  }));
+}
+
+async function postSkillExtraction(transcript: string): Promise<ApiSkillExtractionResponse> {
+  const response = await fetch("/api/skills/extract", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ transcript }),
+  });
+  if (!response.ok) {
+    throw new Error(`Skill extraction failed (${response.status})`);
+  }
+  return (await response.json()) as ApiSkillExtractionResponse;
+}
+
+function getSpeechRecognitionCtor(): SpeechRecognitionCtor | null {
+  if (typeof window === "undefined") return null;
+  const w = window as Window & {
+    SpeechRecognition?: SpeechRecognitionCtor;
+    webkitSpeechRecognition?: SpeechRecognitionCtor;
+  };
+  return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
+}
 
 function ConfidenceBadge({ confidence }: { confidence: Confidence }) {
   if (confidence === "high") {
@@ -52,27 +212,195 @@ export const Route = createFileRoute("/voice")({
 
 function VoiceScreen() {
   const [data, setData] = useState<SkillsData | null>(null);
+  const [voiceSupported, setVoiceSupported] = useState(false);
+  const [voiceError, setVoiceError] = useState<string | null>(null);
+  const [liveTranscript, setLiveTranscript] = useState("");
+  const [debugLastEvent, setDebugLastEvent] = useState("idle");
+  const [debugLastError, setDebugLastError] = useState<string | null>(null);
   const [stage, setStage] = useState<Stage>("ask");
   const [revealed, setRevealed] = useState(0);
   const [skillIdx, setSkillIdx] = useState(0);
-  // answers keyed by `${skillIdx}-${followUpIdx}` (final) and `rec-${...}` (voice marker)
+  // answers keyed by `${skillIdx}-${followUpIdx}`
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [evidence, setEvidence] = useState<Record<string, boolean>>({});
   const [playingKey, setPlayingKey] = useState<string | null>(null);
   const [recordingKey, setRecordingKey] = useState<string | null>(null);
   const timers = useRef<number[]>([]);
-  const recordTimer = useRef<number | null>(null);
+  const openingPromptsRef = useRef<OpeningPrompt[]>([]);
+  const fallbackSkillsRef = useRef<Skill[]>([]);
+  const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
+  const stillListeningRef = useRef(false);
+  const finalTranscriptRef = useRef("");
 
   useEffect(() => {
-    fetchResource<SkillsData>("skillExtraction").then(setData).catch(() => setData(null));
+    fetchResource<SkillsData>("skillExtraction")
+      .then((seed) => {
+        setData(seed);
+        openingPromptsRef.current = seed.openingPrompts ?? [];
+        fallbackSkillsRef.current = seed.skills ?? [];
+      })
+      .catch(() => {
+        setData({
+          openingPrompts: DEFAULT_OPENING_PROMPTS,
+          transcript: "",
+          skills: [],
+        });
+        openingPromptsRef.current = DEFAULT_OPENING_PROMPTS;
+        fallbackSkillsRef.current = [];
+        setVoiceError("Could not load demo prompts. You can still type or use mic.");
+      });
+    setVoiceSupported(getSpeechRecognitionCtor() !== null);
     return () => {
       timers.current.forEach(clearTimeout);
-      if (recordTimer.current) clearTimeout(recordTimer.current);
       if (typeof window !== "undefined" && window.speechSynthesis) {
         window.speechSynthesis.cancel();
       }
+      try {
+        stillListeningRef.current = false;
+        recognitionRef.current?.abort();
+      } catch {
+        // no-op
+      }
     };
   }, []);
+
+  const startListening = useCallback(
+    async (seedText?: string) => {
+      // Prompt chips still support direct text path.
+      if (seedText?.trim()) {
+        setVoiceError(null);
+        setLiveTranscript(seedText.trim());
+        setDebugLastEvent("seed_text_used");
+        setStage("thinking");
+        const api = await postSkillExtraction(seedText.trim());
+        const next = mapApiToVoiceData(
+          api,
+          seedText.trim(),
+          openingPromptsRef.current,
+          fallbackSkillsRef.current
+        );
+        setData(next);
+        saveConversationSkills(
+          next.skills.map((s) => ({
+            name: s.name,
+            isco_code: s.iscoCode,
+          }))
+        );
+        savePassportSkillPrefill(toPassportPrefillSkills(next.skills));
+        setStage("reveal");
+        next.skills.forEach((_, i) => {
+          timers.current.push(window.setTimeout(() => setRevealed(i + 1), 600 * (i + 1)));
+        });
+        return;
+      }
+
+      if (stage === "ask") {
+        const Ctor = getSpeechRecognitionCtor();
+        if (!Ctor) {
+          setVoiceError("Speech recognition is not supported in this browser.");
+          return;
+        }
+        setVoiceError(null);
+        setLiveTranscript("");
+        finalTranscriptRef.current = "";
+        setDebugLastEvent("recording_started");
+        setDebugLastError(null);
+        setStage("listening");
+        setRevealed(0);
+        try {
+          const recognition = new Ctor();
+          recognition.lang = "en-US";
+          recognition.continuous = true;
+          recognition.interimResults = true;
+          recognition.onstart = () => {
+            setDebugLastEvent("recognition_started");
+          };
+          recognition.onresult = (event) => {
+            let finalText = finalTranscriptRef.current;
+            let interimText = "";
+            for (let i = event.resultIndex; i < event.results.length; i += 1) {
+              const result = event.results[i];
+              const segment = String(result?.[0]?.transcript ?? "").trim();
+              if (!segment) continue;
+              if (result.isFinal) finalText = `${finalText} ${segment}`.trim();
+              else interimText = `${interimText} ${segment}`.trim();
+            }
+            finalTranscriptRef.current = finalText;
+            setLiveTranscript(`${finalText} ${interimText}`.trim());
+          };
+          recognition.onerror = (event) => {
+            const err = String(event?.error ?? "unknown");
+            setDebugLastError(err);
+            setDebugLastEvent(`recognition_error:${err}`);
+          };
+          recognition.onend = () => {
+            if (stillListeningRef.current) {
+              setDebugLastEvent("recognition_restarting");
+              try {
+                recognition.start();
+              } catch (error) {
+                setDebugLastError(error instanceof Error ? error.message : "restart_failed");
+              }
+            } else {
+              setDebugLastEvent("recognition_ended");
+            }
+          };
+          recognitionRef.current = recognition;
+          stillListeningRef.current = true;
+          recognition.start();
+        } catch (error) {
+          stillListeningRef.current = false;
+          setStage("ask");
+          setVoiceError(error instanceof Error ? error.message : "Unable to start recording.");
+        }
+        return;
+      }
+
+      if (stage === "listening") {
+        setDebugLastEvent("recording_stopped");
+        stillListeningRef.current = false;
+        try {
+          recognitionRef.current?.stop();
+        } catch {
+          // no-op
+        }
+        setStage("thinking");
+        try {
+          const transcript = String(finalTranscriptRef.current || liveTranscript).trim();
+          if (!transcript) throw new Error("No speech captured. Please try again.");
+          setLiveTranscript(transcript);
+          const api = await postSkillExtraction(transcript);
+          const next = mapApiToVoiceData(
+            api,
+            transcript,
+            openingPromptsRef.current,
+            fallbackSkillsRef.current
+          );
+          setData(next);
+          saveConversationSkills(
+            next.skills.map((s) => ({
+              name: s.name,
+              isco_code: s.iscoCode,
+            }))
+          );
+          savePassportSkillPrefill(toPassportPrefillSkills(next.skills));
+          setStage("reveal");
+          next.skills.forEach((_, i) => {
+            timers.current.push(window.setTimeout(() => setRevealed(i + 1), 600 * (i + 1)));
+          });
+        } catch (error) {
+          setDebugLastEvent("capture_failed");
+          setStage("ask");
+          setVoiceError(error instanceof Error ? error.message : "Could not capture voice input.");
+        }
+      }
+    },
+    [liveTranscript, stage, voiceSupported]
+  );
+
+  const stopListening = useCallback(() => {
+    void startListening();
+  }, [startListening]);
 
   // Speak the question aloud using the browser's built-in TTS.
   const playQuestion = (text: string, key: string) => {
@@ -96,52 +424,29 @@ function VoiceScreen() {
   const toggleRecord = (key: string) => {
     if (recordingKey === key) {
       setRecordingKey(null);
-      if (recordTimer.current) clearTimeout(recordTimer.current);
       return;
     }
-    if (recordTimer.current) clearTimeout(recordTimer.current);
     setRecordingKey(key);
-    recordTimer.current = window.setTimeout(() => {
-      // key format: `${originalSkillIdx}-${followUpIdx}`
-      const [si, fi] = key.split("-").map(Number);
-      const opt = data?.skills[si]?.followUps[fi]?.options[0] ?? "Yes";
-      setAnswers((p) => ({ ...p, [key]: opt, [`rec-${key}`]: opt }));
-      setRecordingKey(null);
-    }, 2200);
   };
 
-  const startListening = () => {
-    if (!data) return;
-    setStage("listening");
-    setRevealed(0);
-    timers.current.push(window.setTimeout(() => setStage("thinking"), 1800));
-    timers.current.push(window.setTimeout(() => {
-      setStage("reveal");
-      data.skills.forEach((_, i) => {
-        timers.current.push(window.setTimeout(() => setRevealed(i + 1), 600 * (i + 1)));
-      });
-    }, 3000));
-  };
-
-  // Only low-confidence skills need a deep-dive. High-confidence ones are auto-confirmed.
-  const lowConfIdxs = useMemo(
+  // Only medium/lower confidence skills require verification.
+  const verifyIdxs = useMemo(
     () => (data ? data.skills.map((s, i) => (s.confidence === "low" ? i : -1)).filter((i) => i >= 0) : []),
     [data]
   );
-  const currentOrigIdx = lowConfIdxs[skillIdx];
+  const currentOrigIdx = verifyIdxs[skillIdx];
   const currentSkill = currentOrigIdx != null ? data?.skills[currentOrigIdx] : undefined;
   const skillAnswered = currentSkill
     ? currentSkill.followUps.every((_, fi) => answers[`${currentOrigIdx}-${fi}`])
     : false;
 
   const goNextSkill = () => {
-    if (skillIdx < lowConfIdxs.length - 1) setSkillIdx(skillIdx + 1);
+    if (skillIdx < verifyIdxs.length - 1) setSkillIdx(skillIdx + 1);
     else setStage("done");
   };
 
-  // Auto-skip the deep-dive entirely if every skill is already high-confidence.
   const enterDeepDive = () => {
-    if (lowConfIdxs.length === 0) setStage("done");
+    if (verifyIdxs.length === 0) setStage("done");
     else {
       setSkillIdx(0);
       setStage("deepDive");
@@ -159,7 +464,6 @@ function VoiceScreen() {
         {(stage === "ask" || stage === "listening" || stage === "thinking") && data && (
           <section className="space-y-5 animate-in fade-in duration-500">
             <div className="space-y-2">
-              
               <h1 className="font-serif text-[26px] leading-[1.15] text-graphite">
                 What do you do <span className="italic squiggle">in your day</span>?
               </h1>
@@ -167,13 +471,32 @@ function VoiceScreen() {
                 Any work counts — at home, in a shop, on the road, in a field.
                 Big or small. Just talk, like you would to a friend.
               </p>
+              {voiceError && (
+                <p className="text-[12px] text-terracotta">{voiceError}</p>
+              )}
+              {!voiceSupported && (
+                <p className="text-[12px] text-graphite-light">
+                  Mic transcription is not available here. Tap a prompt chip to continue with text.
+                </p>
+              )}
+              <p className="text-[10px] text-graphite-light">
+                debug: stage={stage} | recognitionActive={String(Boolean(recognitionRef.current) && stillListeningRef.current)} |
+                lastEvent={debugLastEvent}
+                {debugLastError ? ` | lastError=${debugLastError}` : ""}
+              </p>
             </div>
 
             {/* Mic — central */}
             <div className="bg-gradient-to-br from-ochre/15 via-card to-terracotta/10 sticker p-7 flex flex-col items-center gap-4">
               <button
-                onClick={startListening}
-                disabled={stage !== "ask"}
+                onClick={() => {
+                  if (stage === "listening") {
+                    stopListening();
+                  } else if (stage === "ask") {
+                    void startListening();
+                  }
+                }}
+                disabled={stage === "thinking"}
                 className={`size-32 rounded-full flex items-center justify-center transition-all shadow-lg ${
                   stage === "listening"
                     ? "bg-terracotta text-paper animate-pulse scale-110"
@@ -186,9 +509,23 @@ function VoiceScreen() {
                 <MicIcon className="size-12" />
               </button>
               <p className="font-hand text-lg text-graphite text-center">
-                {stage === "listening" && "i'm listening… 🎙️"}
+                {stage === "listening" && "i'm listening… tap mic again to stop 🎙️"}
                 {stage === "thinking" && "let me think about that…"}
               </p>
+              {stage === "listening" && (
+                <button
+                  onClick={stopListening}
+                  className="px-4 py-1.5 rounded-full text-[12px] font-semibold bg-paper-warm text-graphite border border-ink-bleed hover:bg-paper"
+                >
+                  Stop listening
+                </button>
+              )}
+              {(stage === "listening" || stage === "thinking") && liveTranscript && (
+                <div className="w-full bg-paper-warm/70 rounded-xl border border-ink-bleed p-3">
+                  <p className="text-[10px] text-graphite-light uppercase tracking-wider">Live transcript</p>
+                  <p className="text-[12px] text-graphite leading-relaxed">{liveTranscript}</p>
+                </div>
+              )}
             </div>
 
             {/* Prompt chips */}
@@ -201,7 +538,7 @@ function VoiceScreen() {
                   {data.openingPrompts.map((chip) => (
                     <button
                       key={chip.text}
-                      onClick={startListening}
+                      onClick={() => void startListening(chip.text)}
                       className="text-left bg-card sticker px-4 py-3 flex items-center gap-3 hover:-translate-y-0.5 hover:bg-ochre/10 transition-all"
                     >
                       <span className="text-2xl">{chip.emoji}</span>
@@ -274,16 +611,16 @@ function VoiceScreen() {
 
             {revealed === data.skills.length && (
               <div className="space-y-2 animate-in fade-in duration-700">
-                {lowConfIdxs.length > 0 ? (
+                {verifyIdxs.length > 0 ? (
                   <>
                     <p className="font-hand text-sm text-graphite-light text-center">
-                      {lowConfIdxs.length} skill{lowConfIdxs.length > 1 ? "s" : ""} need a bit more detail
+                      {verifyIdxs.length} skill{verifyIdxs.length > 1 ? "s" : ""} need verification
                     </p>
                     <button
                       onClick={enterDeepDive}
                       className="w-full py-4 bg-terracotta text-paper font-semibold rounded-full shadow-md hover:-translate-y-0.5 transition-all"
                     >
-                      Help us verify {lowConfIdxs.length} skill{lowConfIdxs.length > 1 ? "s" : ""} →
+                      Verify captured skills →
                     </button>
                   </>
                 ) : (
@@ -306,10 +643,10 @@ function VoiceScreen() {
             {/* Skill counter — only counts skills that need verification */}
             <div className="flex items-center justify-between">
               <p className="font-hand text-base text-graphite-light">
-                verifying {skillIdx + 1} of {lowConfIdxs.length}
+                verifying {skillIdx + 1} of {verifyIdxs.length}
               </p>
               <div className="flex gap-1.5">
-                {lowConfIdxs.map((_, i) => (
+                {verifyIdxs.map((_, i) => (
                   <div
                     key={i}
                     className={`h-1.5 rounded-full transition-all ${
@@ -344,10 +681,8 @@ function VoiceScreen() {
             <div className="space-y-3">
               {currentSkill.followUps.map((fu, fi) => {
                 const key = `${currentOrigIdx}-${fi}`;
-                const recKey = `rec-${key}`;
                 const isPlaying = playingKey === key;
                 const isRecording = recordingKey === key;
-                const hasVoiceReply = !!answers[recKey];
                 return (
                   <div key={fi} className="bg-card sticker p-4 space-y-3">
                     {/* Question + play button */}
@@ -376,8 +711,6 @@ function VoiceScreen() {
                       className={`w-full rounded-2xl py-3 px-4 flex items-center justify-center gap-2 transition-all ${
                         isRecording
                           ? "bg-terracotta text-paper shadow-md scale-[1.02]"
-                          : hasVoiceReply
-                          ? "bg-moss/20 text-graphite border border-moss/40"
                           : "bg-gradient-to-r from-terracotta/15 to-ochre/15 text-graphite hover:from-terracotta/25 hover:to-ochre/25 border border-terracotta/30"
                       }`}
                     >
@@ -385,8 +718,6 @@ function VoiceScreen() {
                       <span className="font-serif text-[14px]">
                         {isRecording
                           ? "listening… tap to stop"
-                          : hasVoiceReply
-                          ? `✓ "${answers[recKey]}" — tap to redo`
                           : "Tap and answer in your own words"}
                       </span>
                     </button>
@@ -473,7 +804,7 @@ function VoiceScreen() {
                     : "bg-graphite/15 text-graphite-light cursor-not-allowed"
                 }`}
               >
-                {skillIdx < lowConfIdxs.length - 1 ? "Next skill →" : "Finish ✓"}
+                {skillIdx < verifyIdxs.length - 1 ? "Next skill →" : "Finish ✓"}
               </button>
             </div>
           </section>

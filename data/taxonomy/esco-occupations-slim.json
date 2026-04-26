@@ -1,0 +1,94 @@
+{
+  "source": "ESCO API v1 (slim for skill extraction prompt)",
+  "generated_at": "2026-04-26T03:56:47.120Z",
+  "occupations": [
+    {
+      "title": "digital media designer",
+      "isco_code": "2166",
+      "skills": [
+        "tools for software configuration management",
+        "copyright legislation",
+        "design graphics",
+        "publishing strategy",
+        "provide multimedia content"
+      ]
+    },
+    {
+      "title": "taxi driver",
+      "isco_code": "8322",
+      "skills": [
+        "use communication devices",
+        "operate radio dispatch systems for taxis",
+        "ensure vehicle operability",
+        "effective perception of transport environment",
+        "operate GPS systems"
+      ]
+    },
+    {
+      "title": "telecommunications technician",
+      "isco_code": "7422",
+      "skills": [
+        "install electronic communication equipment",
+        "use session border controller",
+        "operate electronic measuring instruments",
+        "procurement of ICT network equipment",
+        "install cable TV services"
+      ]
+    },
+    {
+      "title": "building materials specialised seller",
+      "isco_code": "5223",
+      "skills": [
+        "identify customer's needs",
+        "provide customised building materials",
+        "identify construction materials from blueprints",
+        "e-commerce systems",
+        "issue sales invoices"
+      ]
+    },
+    {
+      "title": "crop production manager",
+      "isco_code": "6114",
+      "skills": [
+        "store crops",
+        "crop production principles",
+        "leadership principles",
+        "plant species",
+        "technical equipment for crop production"
+      ]
+    },
+    {
+      "title": "carpet weaver",
+      "isco_code": "7318",
+      "skills": [
+        "types of textile fibres",
+        "manufacture textile floor coverings",
+        "furniture, carpet and lighting equipment products",
+        "textile techniques",
+        "textile technologies"
+      ]
+    },
+    {
+      "title": "marketeer",
+      "isco_code": "2431",
+      "skills": [
+        "analyse external factors of companies",
+        "identify potential markets for companies",
+        "marketing principles",
+        "marketing mix",
+        "market pricing"
+      ]
+    },
+    {
+      "title": "solar energy technician",
+      "isco_code": "7411",
+      "skills": [
+        "inspect electrical supplies",
+        "mechanics",
+        "work ergonomically",
+        "install electrical and electronic equipment",
+        "mount photovoltaic panels"
+      ]
+    }
+  ]
+}

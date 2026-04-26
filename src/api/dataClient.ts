@@ -1,4 +1,4 @@
-export const USE_MOCK_API = true;
+export const USE_MOCK_API = String(import.meta.env.VITE_USE_MOCK_API ?? "").toLowerCase() === "true";
 
 export async function getUserProfile() {
   const url = USE_MOCK_API ? "/mock/userProfile.json" : "/api/demo/user";

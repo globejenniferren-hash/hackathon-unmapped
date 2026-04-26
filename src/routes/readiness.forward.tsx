@@ -1,21 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import type { z } from "zod";
-import { fetchResource } from "@/lib/api";
 import { readinessSearchSchema, getCity } from "@/lib/readiness";
+import { fetchPathwaysSimulate, type PathwaysSimulateResponse } from "@/lib/pathwaysSimulate";
 
 type ReadinessSearch = z.infer<typeof readinessSearchSchema>;
-
-type ForwardPath = {
-  id: string;
-  addSkill: string;
-  viaProgram: string;
-  unlocks: string[];
-  incomeLift: string;
-  timeToReady: string;
-  difficulty: "easy" | "moderate" | "hard";
-};
-type ForwardData = { forwardPaths: ForwardPath[] };
 
 export const Route = createFileRoute("/readiness/forward")({
   component: ForwardPage,
@@ -30,11 +19,12 @@ const difficultyMap = {
 function ForwardPage() {
   const search = Route.useSearch() as ReadinessSearch;
   const city = getCity(search.city);
-  const [data, setData] = useState<ForwardData | null>(null);
+  const [data, setData] = useState<PathwaysSimulateResponse | null>(null);
+  const [showSources, setShowSources] = useState(false);
 
   useEffect(() => {
-    fetchResource<ForwardData>("passport").then(setData).catch(() => setData(null));
-  }, []);
+    fetchPathwaysSimulate(city.label).then(setData).catch(() => setData(null));
+  }, [city.label]);
 
   if (!data) return <div className="text-center py-12 text-graphite-light text-sm">Loading…</div>;
 
@@ -48,11 +38,11 @@ function ForwardPage() {
       </div>
 
       <div className="space-y-4">
-        {data.forwardPaths.map((p, i) => {
-          const d = difficultyMap[p.difficulty];
+        {data.pathways.map((p, i) => {
+          const d = difficultyMap[p.difficulty] ?? difficultyMap.moderate;
           return (
             <div
-              key={p.id}
+              key={`${p.skill_to_add}-${i}`}
               className={`sticker p-5 space-y-3 ${
                 i === 0 ? "bg-moss/10 border-2 border-moss/40 sticker-tape" : "bg-card"
               }`}
@@ -60,8 +50,8 @@ function ForwardPage() {
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
                   <p className="font-hand text-sm text-terracotta">if you add ↓</p>
-                  <h2 className="font-serif text-xl text-graphite leading-tight">{p.addSkill}</h2>
-                  <p className="text-[11px] text-graphite-light italic mt-1">via {p.viaProgram}</p>
+                  <h2 className="font-serif text-xl text-graphite leading-tight">{p.skill_to_add}</h2>
+                  <p className="text-[11px] text-graphite-light italic mt-1">via {p.training_program}</p>
                 </div>
                 <span
                   className={`text-[10px] font-semibold px-2.5 py-1 rounded-full whitespace-nowrap ${d.color}`}
@@ -78,19 +68,28 @@ function ForwardPage() {
                   {p.unlocks.map((u, j) => (
                     <li key={j} className="text-sm text-graphite flex gap-2">
                       <span className="text-moss">→</span>
-                      <span>{u}</span>
+                      <span>
+                        {u.role} · <span className="text-moss font-semibold">{u.wage_display}</span>
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div className="grid grid-cols-2 gap-3 pt-3 border-t border-dashed border-ink-bleed">
-                <Stat label="Income lift" value={p.incomeLift} color="text-moss" />
-                <Stat label="Time" value={p.timeToReady} />
+                <Stat label="Income lift" value={p.income_lift_display} color="text-moss" />
+                <Stat label="Time" value={p.duration} />
               </div>
             </div>
           );
         })}
+      </div>
+
+      <div className="text-[11px] text-graphite-light">
+        <button className="underline" onClick={() => setShowSources((v) => !v)}>
+          {showSources ? "Hide sources" : "Sources"}
+        </button>
+        {showSources ? <p className="mt-1">{(data.sources ?? []).join(", ")}</p> : null}
       </div>
 
       <NextLink to="/readiness/weather" label="Next: resilience check →" />

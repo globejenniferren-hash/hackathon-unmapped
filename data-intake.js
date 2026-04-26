@@ -1,7 +1,11 @@
-const fs = require("fs");
-const path = require("path");
-const crypto = require("crypto");
-const { callClaude } = require("./server/claude-client");
+import fs from "fs";
+import path from "path";
+import crypto from "crypto";
+import { fileURLToPath } from "url";
+import { callClaude } from "./server/claude-client.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 function readCommittedJson(...segments) {
   const filePath = path.join(__dirname, ...segments);
@@ -956,7 +960,7 @@ function registerDataIntakeRoutes(app) {
   });
 }
 
-module.exports = {
+export {
   registerDataIntakeRoutes,
   ALLOWED_DATASETS,
   getMockProposedUpdates,

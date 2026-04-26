@@ -1,0 +1,60 @@
+{
+  "current_estimated_earnings": {
+    "display": "Rp 4.1M/mo",
+    "usd_equivalent": 275
+  },
+  "potential_earnings": {
+    "display": "Rp 7.6M/mo",
+    "usd_equivalent": 510
+  },
+  "monthly_gap": {
+    "display": "Rp 3.5M/mo",
+    "usd_equivalent": 235
+  },
+  "annual_gap": {
+    "display": "Rp 42M/yr",
+    "usd_equivalent": 2820
+  },
+  "why_gap_exists": [
+    {
+      "reason": "Customer service skill is underused — retail floor lead roles in Makassar pay around Rp 5.4M/mo.",
+      "skill": "Customer Service",
+      "potential_role": "Retail floor lead",
+      "potential_wage_display": "Rp 5.4M/mo"
+    },
+    {
+      "reason": "Delivery experience qualifies you for fleet coordinator roles you haven't pursued.",
+      "skill": "Driving + Delivery",
+      "potential_role": "Fleet coordinator",
+      "potential_wage_display": "Rp 6.1M/mo"
+    }
+  ],
+  "jobs_matching_skills": [
+    {
+      "title": "Retail floor lead",
+      "wage_display": "Rp 5.4M/mo",
+      "match_reason": "Your customer service + inventory skills"
+    },
+    {
+      "title": "Fleet coordinator",
+      "wage_display": "Rp 6.1M/mo",
+      "match_reason": "Your driving + route knowledge"
+    }
+  ],
+  "pathways": [
+    {
+      "skill_to_add": "Spreadsheets & basic SQL",
+      "training_program": "Pre-Employment: Data for Small Business",
+      "duration": "60 hours (2 months)",
+      "difficulty": "moderate",
+      "unlocks": [
+        { "role": "Inventory Analyst", "wage_display": "Rp 7.3M/mo" },
+        { "role": "Junior Ops Coordinator", "wage_display": "Rp 7.9M/mo" }
+      ],
+      "income_lift_display": "+Rp 3.2M/mo",
+      "automation_resilience_years": 10,
+      "sources": ["ESCO taxonomy", "Frey & Osborne (2017)"]
+    }
+  ],
+  "sources": ["World Bank WDI NY.GDP.PCAP.CD", "ILOSTAT wage estimates", "Frey & Osborne (2017)"]
+}

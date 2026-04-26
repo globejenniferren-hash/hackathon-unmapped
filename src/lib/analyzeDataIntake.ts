@@ -21,7 +21,7 @@ function pickFromCatalog(catalog: DataIntakeCatalog, documentFileName: string): 
 }
 
 /**
- * POST /api/data-intake/analyze with `{ documentId }` when not in mock mode; otherwise load
+ * POST /api/data-intake/analyze with `{ fileName }` when not in mock mode; otherwise load
  * `public/mock/dataIntakeAnalyze.json` and select the document bucket.
  */
 export async function analyzeDataIntake(documentFileName: string): Promise<DataIntakeAnalyzeResponse> {
@@ -33,7 +33,7 @@ export async function analyzeDataIntake(documentFileName: string): Promise<DataI
     const res = await fetch(publicUrl("api/data-intake/analyze"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ documentId: documentFileName }),
+      body: JSON.stringify({ fileName: documentFileName }),
     });
     if (!res.ok) throw new Error(String(res.status));
     return (await res.json()) as DataIntakeAnalyzeResponse;

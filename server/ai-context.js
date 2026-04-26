@@ -3,8 +3,12 @@
  * for Claude prompts and server-side enrichment.
  */
 
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 function readJsonFromRoot(relPath) {
   const full = path.join(__dirname, "..", relPath);
@@ -275,7 +279,7 @@ function worldBankIndonesiaBundle() {
   };
 }
 
-module.exports = {
+export {
   escoOccupations,
   socIscoCrosswalk,
   freyOsborne,

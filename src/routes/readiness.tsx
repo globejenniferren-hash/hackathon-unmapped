@@ -79,7 +79,7 @@ function ReadinessLayout() {
                 }
                 className="bg-transparent text-xs font-semibold text-graphite focus:outline-none"
               >
-                {CITIES.filter((c) => c.id === "makassar").map((c) => (
+                {CITIES.map((c) => (
                   <option key={c.id} value={c.id}>
                     {c.label}
                   </option>

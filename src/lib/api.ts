@@ -10,7 +10,7 @@ import provinceRiskMock from "@/mock/provinceRiskResponse.json";
 import interventionMock from "@/mock/interventionResponse.json";
 import passportMock from "@/mock/passportResponse.json";
 
-export const USE_MOCK_API = true;
+export const USE_MOCK_API = String(import.meta.env.VITE_USE_MOCK_API ?? "").toLowerCase() === "true";
 
 const MOCKS = {
   userProfile: userProfileMock,
@@ -26,7 +26,7 @@ const LIVE_ENDPOINTS: Record<keyof typeof MOCKS, string> = {
   skillExtraction: "/api/skills/extract",
   riskPathway: "/api/risk/score",
   provinceRisk: "/api/dashboard/provinces",
-  intervention: "/api/dashboard/interventions",
+  intervention: "/api/dashboard/interventions-legacy",
   passport: "/api/passport",
 };
 
@@ -38,7 +38,12 @@ export async function fetchResource<T>(key: ResourceKey): Promise<T> {
     await new Promise((r) => setTimeout(r, 50));
     return MOCKS[key] as unknown as T;
   }
-  const res = await fetch(LIVE_ENDPOINTS[key]);
-  if (!res.ok) throw new Error(`Failed to load ${key}: ${res.status}`);
-  return (await res.json()) as T;
+  try {
+    const res = await fetch(LIVE_ENDPOINTS[key]);
+    if (!res.ok) throw new Error(`Failed to load ${key}: ${res.status}`);
+    return (await res.json()) as T;
+  } catch {
+    // Keep UI usable if API is temporarily unavailable.
+    return MOCKS[key] as unknown as T;
+  }
 }

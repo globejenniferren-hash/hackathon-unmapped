@@ -1,11 +1,11 @@
-const {
+import {
   matchedFreyScoresForSkills,
   internetPenetrationIndonesia,
   worldBankIndonesiaBundle,
   employmentShareChange,
   idnWorldBank
-} = require("./ai-context");
-const { callClaude } = require("./claude-client");
+} from "./ai-context.js";
+import { callClaude } from "./claude-client.js";
 
 function buildRiskScoringSystemPrompt(matchedBlock, wbBlock, internetLine) {
   return `You are an automation risk analyst for UNMAPPED.
@@ -187,7 +187,7 @@ function latestPoint(series) {
   return { year: y, value: series[String(y)] };
 }
 
-module.exports = {
+export {
   buildRiskScoringSystemPrompt,
   validateRiskScore,
   runRiskScoring,
