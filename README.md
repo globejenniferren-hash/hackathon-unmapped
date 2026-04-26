@@ -91,6 +91,22 @@ Demo shows Indonesia. The same engine works for any LMIC country.
 
 ---
 
+## Current prototype status
+
+| Feature | Status |
+|---------|--------|
+| Voice/text skill input | ✅ Live — browser Speech API + Claude extraction |
+| Skills mapping to ISCO-08/ESCO | ✅ Live — Claude with real taxonomy data |
+| Resilience / AI risk scoring | ✅ Live — real Frey-Osborne + World Bank data |
+| Time slider (2026–2031) | ✅ Live — Wittgenstein + automation projections |
+| Government dashboard map | ✅ Live — Leaflet choropleth, 34 provinces |
+| AI data intake (report parsing) | ✅ Live in backend — NLP extraction pipeline functional |
+| Missed Income tab | ⚠️ Mock data — designed for live Claude but needs user-generated assessment data to personalize earnings gap |
+| Looking Forward tab | ⚠️ Mock data — pathway recommendations are templated; in production, Claude generates these based on individual skill profile + local training provider data |
+| Multi-country deployment | 🔲 Architecture supports it — engine is country-agnostic, needs local data upload per country |
+
+---
+
 ## Team
 
 Built for Hack-Nation Global AI Hackathon, April 2026.
