@@ -1,8 +1,5 @@
 node_modules/
-.env
-.env.local
-dist/
-.vite/
-.DS_Store
-
-data/projections/.pop-age-edattain.rds
+node_modules/
+node_modules/
+node_modules/
+node_modules/

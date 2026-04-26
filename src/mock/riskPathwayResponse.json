@@ -1,0 +1,57 @@
+{
+  "calibration": {
+    "city": "Makassar",
+    "internetPenetration": 0.72,
+    "comparison": {
+      "city": "Sumba",
+      "internetPenetration": 0.18,
+      "riskShift": "+24% higher displacement risk in Sumba for the same role"
+    }
+  },
+  "riskByYear": {
+    "2026": { "durable": 2, "atRisk": 1, "declining": 1, "overall": 0.42 },
+    "2027": { "durable": 2, "atRisk": 1, "declining": 1, "overall": 0.48 },
+    "2028": { "durable": 2, "atRisk": 2, "declining": 1, "overall": 0.55 },
+    "2029": { "durable": 1, "atRisk": 2, "declining": 1, "overall": 0.62 },
+    "2030": { "durable": 1, "atRisk": 2, "declining": 2, "overall": 0.69 },
+    "2031": { "durable": 1, "atRisk": 1, "declining": 3, "overall": 0.76 }
+  },
+  "pathways": [
+    {
+      "id": "pth_001",
+      "title": "Fleet Systems Steward",
+      "subtitle": "Digital fleet operations supervisor",
+      "description": "Manage AI-driven logistics with human-in-the-loop oversight at port operations.",
+      "earnings": "$550",
+      "earningsDelta": "+$275/mo",
+      "duration": "4 months",
+      "resilience": 0.92,
+      "displacementHorizon": 12,
+      "tag": "high-resilience"
+    },
+    {
+      "id": "pth_002",
+      "title": "Cold-Chain Technician",
+      "subtitle": "Refrigerated supply chain technician",
+      "description": "Maintenance of perishable-goods infrastructure across South Sulawesi.",
+      "earnings": "$405",
+      "earningsDelta": "+$130/mo",
+      "duration": "7 months",
+      "resilience": 0.81,
+      "displacementHorizon": 9,
+      "tag": "stable"
+    },
+    {
+      "id": "pth_003",
+      "title": "Community Logistics Trainer",
+      "subtitle": "Trains community members in logistics",
+      "description": "Train newcomers on warehouse safety, dispatch, and last-mile delivery.",
+      "earnings": "$365",
+      "earningsDelta": "+$90/mo",
+      "duration": "3 months",
+      "resilience": 0.88,
+      "displacementHorizon": 14,
+      "tag": "human-first"
+    }
+  ]
+}

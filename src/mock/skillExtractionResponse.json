@@ -1,0 +1,51 @@
+{
+  "openingPrompts": [
+    { "emoji": "🏪", "text": "I help at my family's shop", "hint": "selling, stocking, talking to customers" },
+    { "emoji": "🛵", "text": "I drive people or deliver things", "hint": "rideshare, truck, delivery" },
+    { "emoji": "🔧", "text": "I fix or build things with my hands", "hint": "repair, construction, crafts" },
+    { "emoji": "🍲", "text": "I cook or sell food", "hint": "small eatery, catering, street food" },
+    { "emoji": "🌾", "text": "I work on a farm or with animals", "hint": "rice, fishing, livestock" }
+  ],
+  "transcript": "I help at my family's shop — serving customers, managing the stock, and sometimes delivering orders on my motorbike.",
+  "skills": [
+    {
+      "id": "skl_001",
+      "name": "Customer Service",
+      "translation": "Greeting, helping & resolving issues for customers",
+      "evidenceQuote": "serving customers",
+      "icon": "👋",
+      "confidence": "high",
+      "confidenceReason": "You clearly described serving customers — no follow-up needed.",
+      "followUps": [],
+      "evidencePrompt": "A photo of your shop or workspace"
+    },
+    {
+      "id": "skl_002",
+      "name": "Inventory & Stock",
+      "translation": "Tracking what comes in and what goes out",
+      "evidenceQuote": "managing the stock",
+      "icon": "📦",
+      "confidence": "low",
+      "confidenceReason": "You mentioned managing stock — we want to understand how, to place this skill correctly.",
+      "followUps": [
+        { "q": "How do you keep track of stock?", "options": ["In my head", "On paper", "On a phone or computer"] },
+        { "q": "Do you decide what to reorder?", "options": ["Yes, always", "Sometimes", "Someone else does"] }
+      ],
+      "evidencePrompt": "A photo of a stock list or shelf"
+    },
+    {
+      "id": "skl_003",
+      "name": "Driving & Delivery",
+      "translation": "Safely moving people or goods",
+      "evidenceQuote": "delivering orders on my motorbike",
+      "icon": "🛵",
+      "confidence": "low",
+      "confidenceReason": "You drive sometimes — a few details (vehicle, license) help us verify.",
+      "followUps": [
+        { "q": "What do you usually drive?", "options": ["Motorbike", "Car", "Truck", "Other"] },
+        { "q": "Do you have a driver's license?", "options": ["Yes", "Expired", "No"] }
+      ],
+      "evidencePrompt": "A photo of your license or vehicle"
+    }
+  ]
+}

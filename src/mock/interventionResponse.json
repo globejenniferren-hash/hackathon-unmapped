@@ -1,0 +1,36 @@
+{
+  "interventions": [
+    {
+      "id": "int_001",
+      "name": "Vocational Reskilling Hubs",
+      "jobsCreated": 42000,
+      "costPerPerson": "$210",
+      "resilience": 0.84,
+      "duration": "6 months"
+    },
+    {
+      "id": "int_002",
+      "name": "Cold-Chain Infrastructure",
+      "jobsCreated": 18500,
+      "costPerPerson": "$365",
+      "resilience": 0.91,
+      "duration": "12 months"
+    },
+    {
+      "id": "int_003",
+      "name": "Digital Literacy Bootcamps",
+      "jobsCreated": 67000,
+      "costPerPerson": "$90",
+      "resilience": 0.62,
+      "duration": "2 months"
+    },
+    {
+      "id": "int_004",
+      "name": "Cooperative Logistics Network",
+      "jobsCreated": 24000,
+      "costPerPerson": "$270",
+      "resilience": 0.88,
+      "duration": "9 months"
+    }
+  ]
+}
