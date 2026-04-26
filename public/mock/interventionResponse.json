@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "dataSource": "UNMAPPED demo — ranked interventions (mock)",
+    "disclaimer": "Indicative ordering and job impacts for presentation only."
+  },
+  "country": "indonesia",
+  "byProvince": {
+    "id-jk": {
+      "interventions": [
+        {
+          "id": "int-jk-1",
+          "rank": 1,
+          "title": "Municipal youth reskilling hubs (services & logistics roles)",
+          "titleLocal": "Pusat pelatihan ulang pemuda (layanan & logistik)",
+          "description": "Target informal workers in high-exposure service clusters with certifiable short courses.",
+          "estimatedCostUsd": 5200000,
+          "baseJobsCreated": 12000,
+          "baseJobsProtected": 8000
+        },
+        {
+          "id": "int-jk-2",
+          "rank": 2,
+          "title": "Firm co-investment voucher for process automation with worker retention",
+          "titleLocal": "Voucher koinvestasi perusahaan (otomatisasi + retensi pekerja)",
+          "description": "Pair automation grants with a requirement to train retained staff for adjacent tasks.",
+          "estimatedCostUsd": 7800000,
+          "baseJobsCreated": 5000,
+          "baseJobsProtected": 15000
+        },
+        {
+          "id": "int-jk-3",
+          "rank": 3,
+          "title": "MSME data literacy & micro-app adoption program",
+          "titleLocal": "Literasi data UMKM & adopsi mikro-app",
+          "description": "Reduce displacement shock by making informal enterprises easier to support digitally.",
+          "estimatedCostUsd": 2200000,
+          "baseJobsCreated": 9000,
+          "baseJobsProtected": 6000
+        }
+      ]
+    },
+    "id-jb": {
+      "interventions": [
+        {
+          "id": "int-jb-1",
+          "rank": 1,
+          "title": "Regional industry-academy cohorts in manufacturing & textiles",
+          "titleLocal": "Kohort industri–akademi (manufaktur & tekstil)",
+          "description": "Place-based training aligned to supplier clusters; prioritize commutable districts.",
+          "estimatedCostUsd": 6200000,
+          "baseJobsCreated": 18000,
+          "baseJobsProtected": 12000
+        },
+        {
+          "id": "int-jb-2",
+          "rank": 2,
+          "title": "Rural-urban linkages for e-commerce and cold-chain work",
+          "titleLocal": "Keterkaitan desa–kota (e-commerce & rantai dingin)",
+          "description": "Pathways for young workers in informal agriculture and distribution edges.",
+          "estimatedCostUsd": 4100000,
+          "baseJobsCreated": 11000,
+          "baseJobsProtected": 7000
+        }
+      ]
+    },
+    "id-jt": {
+      "interventions": [
+        {
+          "id": "int-jt-1",
+          "rank": 1,
+          "title": "Cooperative training for agriculture mechanization with retention targets",
+          "titleLocal": "Pelatihan koperasi (mekanisasi agrikultur + retensi)",
+          "description": "Blend on-farm safety and repair skills to reduce unplanned job loss to automation.",
+          "estimatedCostUsd": 5000000,
+          "baseJobsCreated": 15000,
+          "baseJobsProtected": 10000
+        }
+      ]
+    },
+    "id-ji": {
+      "interventions": [
+        {
+          "id": "int-ji-1",
+          "rank": 1,
+          "title": "Port and logistics reskilling with SME pairing",
+          "titleLocal": "Reskilling pelabuhan & logistik berpasangan UMKM",
+          "description": "Focus on medium-risk informal roles near shipping and warehousing corridors.",
+          "estimatedCostUsd": 5800000,
+          "baseJobsCreated": 14000,
+          "baseJobsProtected": 11000
+        }
+      ]
+    },
+    "id-ba": {
+      "interventions": [
+        {
+          "id": "int-ba-1",
+          "rank": 1,
+          "title": "Tourism demand smoothing & service digitization for youth workers",
+          "titleLocal": "Pemulihan permintaan wisata + digitalisasi layanan",
+          "description": "Reduce vulnerability of informal hospitality and transport roles through certifiable skills.",
+          "estimatedCostUsd": 3300000,
+          "baseJobsCreated": 7000,
+          "baseJobsProtected": 5000
+        }
+      ]
+    },
+    "id-su": {
+      "interventions": [
+        {
+          "id": "int-su-1",
+          "rank": 1,
+          "title": "Plantation transition program for climate-smart and higher-skill work",
+          "titleLocal": "Transisi perkebunan (iklim + skill lebih tinggi)",
+          "description": "Pair climate adaptation with retraining for adjacent formalizable tasks.",
+          "estimatedCostUsd": 4400000,
+          "baseJobsCreated": 10000,
+          "baseJobsProtected": 8000
+        }
+      ]
+    },
+    "id-ss": {
+      "interventions": [
+        {
+          "id": "int-ss-1",
+          "rank": 1,
+          "title": "City-centered apprenticeship expansion for informal trade",
+          "titleLocal": "Perluasan magang perdagangan informal berbasis kota",
+          "description": "Uses anchor employers to create structured on-ramps from informal to formal roles.",
+          "estimatedCostUsd": 2900000,
+          "baseJobsCreated": 8000,
+          "baseJobsProtected": 5000
+        }
+      ]
+    },
+    "id-kt": {
+      "interventions": [
+        {
+          "id": "int-kt-1",
+          "rank": 1,
+          "title": "Resource-sector skills diversification for adjacent green jobs",
+          "titleLocal": "Diversifikasi skill sektor sumber daya (pekerjaan hijau sekitar)",
+          "description": "Transition informal workers in extraction-adjacent services toward service maintenance roles.",
+          "estimatedCostUsd": 6000000,
+          "baseJobsCreated": 6000,
+          "baseJobsProtected": 4000
+        }
+      ]
+    },
+    "id-pa": {
+      "interventions": [
+        {
+          "id": "int-pa-1",
+          "rank": 1,
+          "title": "Community service delivery and connectivity expansion",
+          "titleLocal": "Layanan komunitas & perluasan konektivitas",
+          "description": "Strengthen public-service digital adoption while training youth facilitators.",
+          "estimatedCostUsd": 2500000,
+          "baseJobsCreated": 4000,
+          "baseJobsProtected": 2000
+        }
+      ]
+    }
+  }
+}

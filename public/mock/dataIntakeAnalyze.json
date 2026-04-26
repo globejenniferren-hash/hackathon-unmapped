@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "mock": true,
+    "note": "Simulated AI extraction — POST /api/data-intake/analyze can replace this payload"
+  },
+  "documents": {
+    "telecom_regulator_connectivity_2026.pdf": {
+      "proposedUpdates": [
+        {
+          "id": "tele-jk-risk-1",
+          "dataset": "digitalReadiness",
+          "region": "DKI Jakarta",
+          "regionId": "id-jk",
+          "field": "riskByYear (2027–2029)",
+          "currentValue": "0.35 / 0.40 / 0.45",
+          "proposedValue": "0.33 / 0.35 / 0.41",
+          "confidence": 0.84,
+          "evidenceSnippet": "“Metro backbone completion … materially improved last-mile reliability for MSME digital adoption (Q2 2026).”",
+          "apply": {
+            "type": "riskByYear",
+            "provinceId": "id-jk",
+            "adjustments": { "2027": -0.02, "2028": -0.05, "2029": -0.04 }
+          }
+        },
+        {
+          "id": "tele-jb-risk-1",
+          "dataset": "digitalReadiness",
+          "region": "Jawa Barat",
+          "regionId": "id-jb",
+          "field": "riskByYear.2030",
+          "currentValue": "0.40",
+          "proposedValue": "0.37",
+          "confidence": 0.71,
+          "evidenceSnippet": "“Regulator notes accelerated fixed broadband penetration in Bandung Raya corridor.”",
+          "apply": {
+            "type": "riskByYear",
+            "provinceId": "id-jb",
+            "adjustments": { "2030": -0.03 }
+          }
+        }
+      ]
+    },
+    "ministry_training_catalog_2026.pdf": {
+      "proposedUpdates": [
+        {
+          "id": "train-jb-int-1",
+          "dataset": "interventionCatalog",
+          "region": "Jawa Barat",
+          "regionId": "id-jb",
+          "field": "intervention[int-jb-1].baseJobsCreated",
+          "currentValue": "18000",
+          "proposedValue": "19500",
+          "confidence": 0.77,
+          "evidenceSnippet": "“Catalog lists 12 additional certified modules under the 2026 national skills window.”",
+          "apply": {
+            "type": "intervention",
+            "provinceId": "id-jb",
+            "interventionId": "int-jb-1",
+            "patch": { "baseJobsCreated": 19500, "title": "Regional industry–academy cohorts (expanded 2026 catalog)" }
+          }
+        },
+        {
+          "id": "train-jk-int-1",
+          "dataset": "interventionCatalog",
+          "region": "DKI Jakarta",
+          "regionId": "id-jk",
+          "field": "intervention[int-jk-2].estimatedCostUsd",
+          "currentValue": "7800000",
+          "proposedValue": "7200000",
+          "confidence": 0.66,
+          "evidenceSnippet": "“Co-investment voucher unit cost revised downward after pilot procurement data.”",
+          "apply": {
+            "type": "intervention",
+            "provinceId": "id-jk",
+            "interventionId": "int-jk-2",
+            "patch": { "estimatedCostUsd": 7200000 }
+          }
+        }
+      ]
+    },
+    "provincial_labor_report_2026.pdf": {
+      "proposedUpdates": [
+        {
+          "id": "lab-national-1",
+          "dataset": "laborMarket",
+          "region": "National (display)",
+          "regionId": "national",
+          "field": "medianRealWageGrowthYoY",
+          "currentValue": "3.2%",
+          "proposedValue": "3.7%",
+          "confidence": 0.69,
+          "evidenceSnippet": "“Services wage index up 3.7% YoY in real terms (provincial bulletin aggregate, Jan–Jun).”",
+          "apply": {
+            "type": "laborMarket",
+            "medianRealWageGrowthYoY": 3.7,
+            "informalSharePct": 57.2
+          }
+        },
+        {
+          "id": "lab-ji-1",
+          "dataset": "laborMarket",
+          "region": "Jawa Timur",
+          "regionId": "id-ji",
+          "field": "displayNote",
+          "currentValue": "—",
+          "proposedValue": "Logistics corridor wage pressure easing",
+          "confidence": 0.58,
+          "evidenceSnippet": "“East Java logistics survey: vacancy fill rates improved vs 2025 baseline.”",
+          "apply": {
+            "type": "laborMarket",
+            "regionNoteByProvinceId": { "id-ji": "Logistics corridor wage pressure easing (simulated bulletin)" }
+          }
+        }
+      ]
+    }
+  }
+}

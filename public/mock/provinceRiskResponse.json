@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "Indonesia — province displacement risk (mock)",
+    "country": "indonesia",
+    "countryName": "Indonesia",
+    "dataSource": "UNMAPPED demo — synthetic indicators for World Bank Youth Summit",
+    "unit": "index_0_1",
+    "disclaimer": "Mock data for hackathon demo only, not an official government statistic."
+  },
+  "years": [2026, 2027, 2028, 2029, 2030, 2031],
+  "provinces": [
+    {
+      "id": "id-jk",
+      "name": "DKI Jakarta",
+      "nameLocal": "DKI Jakarta",
+      "region": "Java",
+      "populationHint": 10.5,
+      "riskByYear": {
+        "2026": 0.32,
+        "2027": 0.35,
+        "2028": 0.4,
+        "2029": 0.45,
+        "2030": 0.5,
+        "2031": 0.55
+      }
+    },
+    {
+      "id": "id-jb",
+      "name": "Jawa Barat",
+      "nameLocal": "Jawa Barat",
+      "region": "Java",
+      "populationHint": 48.7,
+      "riskByYear": {
+        "2026": 0.25,
+        "2027": 0.28,
+        "2028": 0.32,
+        "2029": 0.36,
+        "2030": 0.4,
+        "2031": 0.45
+      }
+    },
+    {
+      "id": "id-jt",
+      "name": "Jawa Tengah",
+      "nameLocal": "Jawa Tengah",
+      "region": "Java",
+      "populationHint": 36.5,
+      "riskByYear": {
+        "2026": 0.24,
+        "2027": 0.27,
+        "2028": 0.31,
+        "2029": 0.35,
+        "2030": 0.38,
+        "2031": 0.42
+      }
+    },
+    {
+      "id": "id-ji",
+      "name": "Jawa Timur",
+      "nameLocal": "Jawa Timur",
+      "region": "Java",
+      "populationHint": 40.0,
+      "riskByYear": {
+        "2026": 0.22,
+        "2027": 0.25,
+        "2028": 0.29,
+        "2029": 0.33,
+        "2030": 0.36,
+        "2031": 0.4
+      }
+    },
+    {
+      "id": "id-ba",
+      "name": "Bali",
+      "nameLocal": "Bali",
+      "region": "Nusa Tenggara",
+      "populationHint": 4.3,
+      "riskByYear": {
+        "2026": 0.28,
+        "2027": 0.31,
+        "2028": 0.35,
+        "2029": 0.39,
+        "2030": 0.44,
+        "2031": 0.5
+      }
+    },
+    {
+      "id": "id-su",
+      "name": "Sumatera Utara",
+      "nameLocal": "Sumatera Utara",
+      "region": "Sumatra",
+      "populationHint": 15.0,
+      "riskByYear": {
+        "2026": 0.2,
+        "2027": 0.23,
+        "2028": 0.27,
+        "2029": 0.31,
+        "2030": 0.34,
+        "2031": 0.38
+      }
+    },
+    {
+      "id": "id-ss",
+      "name": "Sulawesi Selatan",
+      "nameLocal": "Sulawesi Selatan",
+      "region": "Sulawesi",
+      "populationHint": 9.0,
+      "riskByYear": {
+        "2026": 0.19,
+        "2027": 0.22,
+        "2028": 0.25,
+        "2029": 0.29,
+        "2030": 0.32,
+        "2031": 0.36
+      }
+    },
+    {
+      "id": "id-kt",
+      "name": "Kalimantan Timur",
+      "nameLocal": "Kalimantan Timur",
+      "region": "Kalimantan",
+      "populationHint": 3.8,
+      "riskByYear": {
+        "2026": 0.18,
+        "2027": 0.2,
+        "2028": 0.23,
+        "2029": 0.26,
+        "2030": 0.29,
+        "2031": 0.32
+      }
+    },
+    {
+      "id": "id-pa",
+      "name": "Papua",
+      "nameLocal": "Papua",
+      "region": "Papua",
+      "populationHint": 1.0,
+      "riskByYear": {
+        "2026": 0.15,
+        "2027": 0.17,
+        "2028": 0.2,
+        "2029": 0.23,
+        "2030": 0.26,
+        "2031": 0.3
+      }
+    }
+  ],
+  "legend": {
+    "lowMax": 0.25,
+    "mediumMax": 0.45,
+    "highMax": 0.6,
+    "labels": { "low": "Lower risk", "medium": "Medium", "high": "High", "critical": "Severe" }
+  }
+}

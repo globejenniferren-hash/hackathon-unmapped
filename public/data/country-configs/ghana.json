@@ -1,0 +1,9 @@
+{
+  "countryCode": "ghana",
+  "displayName": "Ghana",
+  "locale": "en-GH",
+  "currency": "GHS",
+  "mapLabel": "Regions (placeholder for localization demo)",
+  "primaryAdminUnit": "region",
+  "sourcesNote": "Stub config — switch country in a production build to reconfigure copy and mock endpoints."
+}

@@ -1,0 +1,9 @@
+{
+  "countryCode": "indonesia",
+  "displayName": "Indonesia",
+  "locale": "id-ID",
+  "currency": "IDR",
+  "mapLabel": "Provinces (demo grid)",
+  "primaryAdminUnit": "province",
+  "sourcesNote": "Demo configuration — not an official data release."
+}
